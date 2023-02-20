@@ -15,6 +15,7 @@
   <!-- 메인서식 -->
 
   <!-- script 영역 -->
+  <script src="./script/common.js" defer></script>
 
   <title>하나금융그룹</title>
 </head>
@@ -22,9 +23,10 @@
   <!-- 헤더영역 서식 -->
   <header>
     <!-- 헤더상단 -->
+    <input type="checkbox" id="gnb" class="hidden">
     <div id="h_top">
       <!-- Lang Familysite 서식 -->
-      <ul class="select_tab">
+      <ul class="select_tab flex">
         <li>
           <div class="lang_tab">
             <a href="#none" title="lang">Lang</a>
@@ -62,24 +64,24 @@
       </ul>
       
       <!-- 헤더로고 -->
-      <h1>
+      <h1 id="logo">
         <a href="index.html" title="메인페이지바로가기">
           <img src="./images/common/header.logo.svg" alt="메인로고">
         </a>
       </h1>
 
       <!-- 사이트맵 햄버거 -->
-      <div>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-      </div>
+      <label id="burger" for="gnb">
+        <span class="burger1">&nbsp;</span>
+        <span class="burger2">&nbsp;</span>
+        <span class="burger3">&nbsp;</span>
+      </label>
     </div>
 
     <!-- 헤더하단 -->
     <div id="h_bot">
       <!-- GNB 1뎁스 -->
-      <ul class="gnb">
+      <ul class="gnb flex">
         <li>
           <a href="#none" title="그룹소개">그룹소개</a>
         </li>
@@ -97,8 +99,8 @@
         </li>
       </ul>
       <!-- LNB 2뎁스 -->
-      <div class="lnb">
-        <ul class="lnb_intro">
+      <div class="lnb flex">
+        <ul class="lnb_intro flex">
           <li>
             <a href="#none" title="그룹개요">그룹개요</a>
           </li>
@@ -118,7 +120,7 @@
             <a href="#none" title="회사위치">회사 위치</a>
           </li>
         </ul>
-        <ul class="lnb_ir">
+        <ul class="lnb_ir flex">
           <li>
             <a href="#none" title="기업지배구조">기업지배구조</a>
           </li>
@@ -138,7 +140,7 @@
             <a href="#none" title="주가정보">주가 정보</a>
           </li>
         </ul>
-        <ul class="lnb_esg">
+        <ul class="lnb_esg flex">
           <li>
             <a href="#none" title="ESG전략">ESG 전략</a>
           </li>
@@ -155,7 +157,7 @@
             <a href="#none" title="ESGReporting">ESG Reporting</a>
           </li>
         </ul>
-        <ul class="lnb_crew">
+        <ul class="lnb_crew flex">
           <li>
             <a href="#none" title="인재상">인재상</a>
           </li>
@@ -169,7 +171,7 @@
             <a href="#none" title="복리후생">복리 후생</a>
           </li>
         </ul>
-        <ul class="lnb_pr">
+        <ul class="lnb_pr flex">
           <li>
             <a href="#none" title="공지사항">공지사항</a>
           </li>
@@ -189,6 +191,9 @@
 
   <!-- 메인영역 서식 -->
   <main>
+    <section>
+      <img src="./images/main/mainpng.png" alt="">
+    </section>
     김민석바보
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>김민석바보<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>김민석바보<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>김민석바보<br><br><br><br><br><br><br><br><br><br><br><br>
   </main>

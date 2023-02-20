@@ -1,1 +1,129 @@
 @charset "utf-8";
+
+/* 헤더영역 서식 */
+header{
+  position:absolute;
+  width:100%;
+  height:200px;
+}
+/* 헤더 상단 */
+#h_top{
+  width:100%;
+  height:120px;
+  display:inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#h_top .select_tab{
+  margin-left:78px;
+}
+#h_top .select_tab .lang_tab{
+  margin-right:50px;
+}
+#h_top .select_tab .lang_tab, #h_top .select_tab .f_site{
+  position:relative;
+}
+#h_top .select_tab .lang_tab .lang_con, #h_top .select_tab .f_site .site_con{
+  position: absolute;
+  top:30px;
+}
+#h_top .select_tab .lang_tab .lang_con a, #h_top .select_tab .f_site .site_con a{
+  font-size:14px;
+  line-height:24px;
+  white-space: nowrap;
+}
+#h_top .select_tab li a{
+  color:#fff;
+  font-family: 'Hana';
+  font-weight: normal;
+  font-size:20px;
+}
+#logo{
+  width:182px;
+  height:32px;
+  display:inline-block;
+}
+#logo a img{
+  width:100%;
+}
+/* 사이트맵 햄버거 */
+#burger{
+  margin-right:78px;
+  height:30px;
+  display:grid;
+  grid-template-rows:repeat(3, 1fr);
+  justify-items: center;
+}
+#burger span{
+  background-color: #fff;
+  position:relative;
+  width:40px;
+  height:3px;
+  transition:0.3s;
+  border-radius: 35px;
+}
+#burger span:not(#burger span:first-child){
+  margin-top:10px;
+}
+#gnb:checked + #h_top #burger .burger1{
+  transform: rotate(45deg);
+  margin-top:15px;
+}
+#gnb:checked + #h_top #burger .burger2{
+  transform: rotate(-45deg);
+  margin-top:-3px;
+}
+#gnb:checked + #h_top #burger .burger3{
+  transform: scale(0);
+}
+
+/* 헤더하단 */
+#h_bot{
+  width:100%;
+  height:80px;
+}
+#h_bot .gnb{
+  max-width: 1260px;
+  width:100%; 
+  margin: 0 auto;
+  position: relative;
+}
+#h_bot .gnb li a:hover ~ #h_bot .lnb{
+  display:flex;
+}
+#h_bot .gnb > li{
+  width: 20%;
+}
+#h_bot .gnb > li a{
+  font-family: "Hana";
+  font-weight: bold;
+  font-size:20px;
+  text-align: center;
+  width: 100%; 
+  line-height: 80px;
+  color:#fff;
+  display:block;
+  white-space: nowrap;
+}
+#h_bot .lnb{
+  max-width:1260px;
+  width:100%;
+  position:absolute;
+  top:200px;
+  right:50%;
+  transform: translateX(50%);
+  display:none;
+}
+#h_bot .lnb ul{
+  width:20%;
+  align-items: center;
+  flex-direction: column;
+}
+#h_bot .lnb ul li a{
+  width:100%;
+  font-size:16px;
+  line-height:36px;
+  text-align: center;
+  white-space: nowrap;
+  color:#fff;
+}
