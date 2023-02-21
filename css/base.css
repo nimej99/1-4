@@ -5,12 +5,17 @@
 @import url(../font/HanaM.woff);
 @import url(../font/HanaB.woff);
 
+@import url(../font/NanumBarunGothic.ttf);
+@import url(../font/NanumBarunGothicBold.ttf);
+@import url(../font/NanumBarunGothicLight.ttf);
+@import url(../font/NanumBarunGothicUltraLight.ttf);
+
 :root{
   --f-color01:#231F20;
 }
 
 body{
-  font-family:'';
+  font-family:'나눔 고딕', arial, sans-serif;
   font-size:16px;
   color:var(--f-color01);
 }

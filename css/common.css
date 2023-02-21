@@ -6,6 +6,15 @@ header{
   width:100%;
   height:200px;
 }
+header:hover #h_top .select_tab a,
+header:hover #h_bot .gnb a,
+header:hover #h_bot .lnb a
+{
+  color:var(--f-color01);
+}
+header:hover #h_top #burger span{
+  background-color: var(--f-color01);
+}
 /* 헤더 상단 */
 #h_top{
   width:100%;
@@ -22,29 +31,36 @@ header{
 }
 #h_top .select_tab .lang_tab, #h_top .select_tab .f_site{
   position:relative;
+  z-index:100;
 }
 #h_top .select_tab .lang_tab .lang_con, #h_top .select_tab .f_site .site_con{
   position: absolute;
   top:30px;
+  z-index:100;
 }
 #h_top .select_tab .lang_tab .lang_con a, #h_top .select_tab .f_site .site_con a{
+  font-family:'나눔 고딕';
   font-size:14px;
   line-height:24px;
   white-space: nowrap;
+  transition:0.3s;
 }
 #h_top .select_tab li a{
   color:#fff;
-  font-family: 'Hana';
-  font-weight: normal;
-  font-size:20px;
+  /* font-family: 'Hana'; */
+  /* font-weight: normal; */
+  font-size:16px;
+  transition:0.3s;
 }
 #logo{
   width:182px;
   height:32px;
   display:inline-block;
+  z-index:100;
 }
 #logo a img{
   width:100%;
+  transition: 0.3s;
 }
 /* 사이트맵 햄버거 */
 #burger{
@@ -53,6 +69,8 @@ header{
   display:grid;
   grid-template-rows:repeat(3, 1fr);
   justify-items: center;
+  z-index:9999;
+  cursor: pointer;
 }
 #burger span{
   background-color: #fff;
@@ -65,15 +83,15 @@ header{
 #burger span:not(#burger span:first-child){
   margin-top:10px;
 }
-#gnb:checked + #h_top #burger .burger1{
+#gnb:checked ~ #h_top #burger .burger1{
   transform: rotate(45deg);
   margin-top:15px;
 }
-#gnb:checked + #h_top #burger .burger2{
+#gnb:checked ~ #h_top #burger .burger2{
   transform: rotate(-45deg);
   margin-top:-3px;
 }
-#gnb:checked + #h_top #burger .burger3{
+#gnb:checked ~ #h_top #burger .burger3{
   transform: scale(0);
 }
 
@@ -87,6 +105,7 @@ header{
   width:100%; 
   margin: 0 auto;
   position: relative;
+  z-index:100;
 }
 #h_bot .gnb li a:hover ~ #h_bot .lnb{
   display:flex;
@@ -95,8 +114,8 @@ header{
   width: 20%;
 }
 #h_bot .gnb > li a{
-  font-family: "Hana";
-  font-weight: bold;
+  /* font-family: "Hana"; */
+  /* font-weight: normal; */
   font-size:20px;
   text-align: center;
   width: 100%; 
@@ -104,11 +123,13 @@ header{
   color:#fff;
   display:block;
   white-space: nowrap;
+  transition:0.3s;
 }
 #h_bot .lnb{
   max-width:1260px;
   width:100%;
   position:absolute;
+  z-index:100;
   top:200px;
   right:50%;
   transform: translateX(50%);
@@ -126,4 +147,11 @@ header{
   text-align: center;
   white-space: nowrap;
   color:#fff;
+  transition:0.3s;
+}
+#hover_bg{
+  width:100%;
+  height:450px;
+  background: rgba(255, 255, 255, 0.7);
+  position:absolute;
 }
