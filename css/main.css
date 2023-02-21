@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* 메인 영역 서식 */
+
+/* 메인 슬라이드 서식 */
+#main_slider{
+  width:100%;
+  height:calc(100vh + 160px);
+  position:relative;
+}
+#main_slider .m_slider{}
+#main_slider .m_slider .m_slider_list{}
+#main_slider .m_slider .m_slider_list li{}
+#main_slider .m_slider .m_slider_list li img{
+  width:100%;
+  height:calc(100vh + 160px);
+}
+
+/* 메인 탭메뉴 서식 */
+#main_tab{}
+#main_tab .m_tab{}
+#main_tab .m_tab .m_tab_con{
+  width:100%;
+  height:160px;
+  position:absolute;
+  bottom:-160px;
+}
+#main_tab .m_tab .m_tab_con > ul{
+  width:100%;
+  height:100%;
+  align-items: center;
+  text-align: center;
+}
+#main_tab .m_tab .m_tab_con > ul > li:not(#main_tab .m_tab .m_tab_con > ul > li:last-child){
+  width:16.6%;
+  height:160px;
+  line-height:160px;
+  background: rgb(255, 255, 255,.6);
+}
+#main_tab .m_tab .m_tab_con > ul > li:last-child{
+  width:50%;
+  background:rgb(0, 129, 119,.6);
+}
+/* 주가정보 탭 */
+#main_tab .m_tab .m_tab_con > ul > li:last-child ul{
+  height:160px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#main_tab .m_tab .m_tab_con > ul > li:last-child ul li a{
+  flex-direction: column;
+}

@@ -11,7 +11,8 @@
 @import url(../font/NanumBarunGothicUltraLight.ttf);
 
 :root{
-  --f-color01:#231F20;
+  --color-black:#231F20;
+  --color-green:#008177;
 }
 
 body{

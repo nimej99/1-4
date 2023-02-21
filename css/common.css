@@ -10,10 +10,10 @@ header:hover #h_top .select_tab a,
 header:hover #h_bot .gnb a,
 header:hover #h_bot .lnb a
 {
-  color:var(--f-color01);
+  color:var(--color-black);
 }
 header:hover #h_top #burger span{
-  background-color: var(--f-color01);
+  background-color: var(--color-black);
 }
 /* 헤더 상단 */
 #h_top{
