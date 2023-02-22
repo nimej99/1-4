@@ -49,9 +49,14 @@
   width:47px;height:47px;
   margin-bottom:10px;
 }
-#main_tab .m_tab .m_tab_con > ul > li p{
+#main_tab .m_tab .m_tab_con > ul > li .t_label{
+  width:100%;
+  height:100%;
   font-weight: bold;
   font-size:20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #main_tab .m_tab .m_tab_con > ul > li:last-child{
   width:50%;
@@ -96,4 +101,61 @@
   font-size:50px;
   font-weight: bold;
   color:#fff;
+}
+/* 탭메뉴 컨텐츠 서식 */
+#g_check:checked ~ #tab_con #guest,
+#i_check:checked ~ #tab_con #investor,
+#c_check:checked ~ #tab_con #crew
+{
+  display:block;
+}
+#g_checked:checked ~ #tab_con > #investor,
+#g_checked:checked ~ #tab_con > #crew,
+#i_checked:checked ~ #tab_con > div:not(#investor),
+#i_checked:checked ~ #tab_con > #guest:not(#investor),
+#c_checked:checked ~ #tab_con > div:not(#crew)
+#c_checked:checked ~ #tab_con > #guest:not(#investor)
+{
+  display:none;
+}
+#tab_con{
+  width:100%;
+}
+#guest{}
+#guest .guest_wrap,
+#investor .investor_wrap,
+#crew .crew_wrap
+{
+  width:90%;
+  margin:0 auto;
+}
+#guest .guest_wrap ul,
+#investor .investor_wrap ul,
+#crew .crew_wrap ul
+{
+  align-items: center;
+  gap:30px;
+}
+#guest .guest_wrap ul li,
+#investor .investor_wrap ul li,
+#crew .crew_wrap ul li
+{
+  width:33.3%;
+  border:1px solid #222;
+  border-radius:0 20px 0 20px;
+  color:#fff;
+  background: #ccc;
+}
+#guest .guest_wrap ul li h4,
+#investor .investor_wrap ul li h4,
+#crew .crew_wrap ul li h4
+{
+  font-family: 'Hana';
+  font-weight: bold;
+  font-size:35px;
+}
+#guest .guest_wrap ul li p{
+  margin-top:16px;
+  font-weight:bold;
+  font-size:20px;
 }
