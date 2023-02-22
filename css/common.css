@@ -15,16 +15,19 @@ header:hover #h_bot .lnb a
 header:hover #h_top #burger span{
   background-color: var(--color-black);
 }
+header:hover #h_bot .gnb::after{
+  border-top:1px solid rgba(0, 0, 0, 0.1);
+}
 /* 헤더 상단 */
 #h_top{
   width:100%;
   height:120px;
-  display:inline-flex;
+  display:flex;
   justify-content: space-between;
   align-items: center;
 }
 #h_top .select_tab{
-  margin-left:78px;
+  margin-left:80px;
 }
 #h_top .select_tab .lang_tab{
   margin-right:50px;
@@ -51,12 +54,16 @@ header:hover #h_top #burger span{
   /* font-weight: normal; */
   font-size:16px;
   transition:0.3s;
+  width:100%;
+  display:block;
 }
 #logo{
   width:182px;
   height:32px;
-  display:inline-block;
   z-index:100;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
 }
 #logo a img{
   width:100%;
@@ -64,7 +71,7 @@ header:hover #h_top #burger span{
 }
 /* 사이트맵 햄버거 */
 #burger{
-  margin-right:78px;
+  margin-right:80px;
   height:30px;
   display:grid;
   grid-template-rows:repeat(3, 1fr);
@@ -99,6 +106,7 @@ header:hover #h_top #burger span{
 #h_bot{
   width:100%;
   height:80px;
+  overflow: hidden;
 }
 #h_bot .gnb{
   max-width: 1260px;
@@ -107,8 +115,27 @@ header:hover #h_top #burger span{
   position: relative;
   z-index:100;
 }
+#h_bot .gnb::after{
+  content:'';
+  display:block;
+  min-width:2440px;
+  border-top:1px solid rgba(255,255,255,0.2);
+  position:absolute;
+  top:0;
+  left:-500px;
+}
 #h_bot .gnb li a:hover ~ #h_bot .lnb{
   display:flex;
+}
+#h_bot .gnb li a:hover::after{
+  /* box-shadow: 0 0 0 3px var(--color-green) inset; */
+  width:20%;
+  content:'';
+  display:block;
+  /* border-top: 1px solid var(--color-green); */
+  border-top: 1px solid var(--color-black);
+  position:absolute;
+  top:0;
 }
 #h_bot .gnb > li{
   width: 20%;
@@ -129,7 +156,7 @@ header:hover #h_top #burger span{
   max-width:1260px;
   width:100%;
   position:absolute;
-  z-index:100;
+  z-index:101;
   top:200px;
   right:50%;
   transform: translateX(50%);
@@ -140,7 +167,11 @@ header:hover #h_top #burger span{
   align-items: center;
   flex-direction: column;
 }
+#h_bot .lnb ul li{
+  width:100%;
+}
 #h_bot .lnb ul li a{
+  display: block;
   width:100%;
   font-size:16px;
   line-height:36px;
@@ -152,6 +183,7 @@ header:hover #h_top #burger span{
 #hover_bg{
   width:100%;
   height:450px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 1);
   position:absolute;
+  z-index:1;
 }
