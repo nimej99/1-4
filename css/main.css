@@ -130,7 +130,7 @@
 #investor .investor_wrap,
 #crew .crew_wrap
 {
-  width:60%;
+  width:90%;
   margin:0 auto;
   padding:50px 0px;
 }
@@ -171,14 +171,21 @@
 }
 
 /* 탭 컨텐츠 배경이미지 */
+#tab_con #guest .guest_wrap ul li:first-child,
+#tab_con #guest .guest_wrap ul li:nth-child(2),
+
+
 #tab_con #guest .guest_wrap ul li:first-child{
-  background: url(../images/main/naruto.png) center center;
+  background: url(../images/main/naruto.png) center center no-repeat;
+  background-size: 550px;
 }
 #tab_con #guest .guest_wrap ul li:nth-child(2){
-  background: url(../images/main/ESG.png) center center;
+  background: url(../images/main/ESG.png) center center no-repeat;
+  background-size: 550px;
 }
 #tab_con #guest .guest_wrap ul li:last-child{
-  background: url(../images/main/news.png) center center;
+  background: url(../images/main/news.png) center center no-repeat;
+  background-size: 550px;
 }
 
 #tab_con #investor .investor_wrap ul li:first-child{
