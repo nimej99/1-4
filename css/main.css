@@ -31,7 +31,7 @@
   align-items: center;
   text-align: center;
 }
-#main_tab .m_tab .m_tab_con > ul > li:not(#main_tab .m_tab .m_tab_con > ul > li:last-child){
+.m_tab .m_tab_con > ul > li:not(#main_tab .m_tab .m_tab_con > ul > li:last-child){
   width:16.66666666666667%;
   height:100px;
   background: rgb(255, 255, 255,.6);
@@ -110,14 +110,14 @@
 {
   display:block;
 }
-#g_check:checked ~ .m_tab .m_tab_con > ul > li:first-of-type,
-#i_check:checked ~ .m_tab .m_tab_con > ul > li:nth-of-type(2),
-#c_check:checked ~ .m_tab .m_tab_con > ul > li:nth-of-type(3){
+#g_check:checked ~ .m_tab .m_tab_con > ul > li:first-child,
+#i_check:checked ~ .m_tab .m_tab_con > ul > li:nth-child(2),
+#c_check:checked ~ .m_tab .m_tab_con > ul > li:nth-child(3){
   background: none;
 }
-#g_check:checked ~ .m_tab .m_tab_con > ul > li:first-child label,
-#i_check:checked ~ .m_tab .m_tab_con > ul > li:nth-child(2) label,
-#c_check:checked ~ .m_tab .m_tab_con > ul > li:nth-child(3) label
+#main_tab #g_check:checked ~ .m_tab .m_tab_con > ul > li:first-child,
+#main_tab #i_check:checked ~ .m_tab .m_tab_con > ul > li:nth-child(2),
+#main_tab #c_check:checked ~ .m_tab .m_tab_con > ul > li:nth-child(3)
 {
   background:rgb(0, 129, 119,.6);
   color:#fff;
