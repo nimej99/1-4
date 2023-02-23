@@ -127,7 +127,7 @@ header:hover #h_bot .gnb::after{
 #h_bot .gnb li a:hover ~ #h_bot .lnb{
   display:flex;
 }
-#h_bot .gnb li a:hover::after{
+#h_bot .gnb li:hover::after{
   /* box-shadow: 0 0 0 3px var(--color-green) inset; */
   width:20%;
   content:'';
@@ -169,6 +169,16 @@ header:hover #h_bot .gnb::after{
 }
 #h_bot .lnb ul li{
   width:100%;
+}
+#h_bot .lnb li:hover::after{
+  /* box-shadow: 0 0 0 3px var(--color-green) inset; */
+  width:20%;
+  content:'';
+  display:block;
+  /* border-top: 1px solid var(--color-green); */
+  border-top: 1px solid var(--color-black);
+  position:absolute;
+  top:-80px;
 }
 #h_bot .lnb ul li a{
   display: block;
@@ -226,3 +236,5 @@ footer{
 #footer_wrap address .adress_right > li:nth-child(2n-1){
   font-weight: lighter;
 }
+/* 탭 컨텐츠 배경이미지 */
+

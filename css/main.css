@@ -110,6 +110,18 @@
 {
   display:block;
 }
+#g_check:checked ~ .m_tab .m_tab_con > ul > li:first-of-type,
+#i_check:checked ~ .m_tab .m_tab_con > ul > li:nth-of-type(2),
+#c_check:checked ~ .m_tab .m_tab_con > ul > li:nth-of-type(3){
+  background: none;
+}
+#g_check:checked ~ .m_tab .m_tab_con > ul > li:first-child label,
+#i_check:checked ~ .m_tab .m_tab_con > ul > li:nth-child(2) label,
+#c_check:checked ~ .m_tab .m_tab_con > ul > li:nth-child(3) label
+{
+  background:rgb(0, 129, 119,.6);
+  color:#fff;
+}
 #tab_con{
   width:100%;
 }
@@ -120,6 +132,7 @@
 {
   width:90%;
   margin:0 auto;
+  padding:50px 0px;
 }
 #guest .guest_wrap ul,
 #investor .investor_wrap ul,
@@ -133,6 +146,7 @@
 #crew .crew_wrap ul li
 {
   width:33.3%;
+  height:550px;
   border-radius:0 20px 0 20px;
   color:#fff;
   background: #ccc;
