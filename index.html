@@ -205,25 +205,22 @@
     </section>
     <section id="main_tab">
       <h2 class="hidden">메인 탭매뉴</h2>
-      <input type="radio" name="tac_check" id="g_check" checked>
-      <input type="radio" name="tac_check" id="i_check">
-      <input type="radio" name="tac_check" id="c_check">
+      <input type="radio" name="tac_check" id="g_check" class="hidden" checked>
+      <input type="radio" name="tac_check" id="i_check" class="hidden">
+      <input type="radio" name="tac_check" id="c_check" class="hidden">
       <nav class="m_tab">
         <div class="m_tab_con">
           <ul class="flex">
             <li class="flex">
               <label for="g_check" class="t_label flex">
-              <img src="./icons/user.svg" alt="손님">
               손님</label>
             </li>
             <li class="flex">
               <label for="i_check" class="t_label flex">
-              <img src="./icons/inverstor.svg" alt="손님">
               투자자</label>
             </li>
             <li class="flex">
               <label for="c_check" class="t_label flex">
-              <img src="./icons/crew.svg" alt="손님">
               입사지원자</label>
             </li>
             <li>
@@ -310,7 +307,36 @@
   </main>
 
   <!-- 푸터영역 서식 -->
-  <footer></footer>
+  <footer>
+    <div id="footer_wrap" class="flex">
+      <h2>
+        <a href="index.html" title="">
+          <img src="./images/common/header.logo.svg" alt="로고">
+        </a>
+      </h2>
+      <address class="flex">
+        <ul class="adress_left">
+          <li>서울특별시 중구 을지로 00</li>
+          <li>00-0000-0000</li>
+          <li>Copyright &copy; HANA FINANCIAL GROUP 2012. ALL RIGHT RESERVED.</li>
+        </ul>
+        <ul class="adress_right">
+          <li>
+            <a href="map" title="하나맵">하나맵</a>
+          </li>
+          <li>
+            <a href="개인정보처리방침" title="개인정보처리방침">개인정보처리방침</a>
+          </li>
+          <li>
+            <a href="고객정보취급방침" title="고객정보취급방침">고객정보취급방침</a>
+          </li>
+          <li>
+            <a href="신용정보취급활용체제" title="신용정보취급활용체제">신용정보취급활용체제</a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </footer>
   
 </body>
 </html>

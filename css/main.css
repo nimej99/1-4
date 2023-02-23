@@ -5,7 +5,7 @@
 /* 메인 슬라이드 서식 */
 #main_slider{
   width:100%;
-  height:calc(100vh + 160px);
+  height:calc(100vh + 100px);
   position:relative;
 }
 #main_slider .m_slider{}
@@ -13,7 +13,7 @@
 #main_slider .m_slider .m_slider_list li{}
 #main_slider .m_slider .m_slider_list li img{
   width:100%;
-  height:calc(100vh + 160px);
+  height:calc(100vh + 100px);
 }
 
 /* 메인 탭메뉴 서식 */
@@ -21,9 +21,9 @@
 #main_tab .m_tab{}
 #main_tab .m_tab .m_tab_con{
   width:100%;
-  height:160px;
+  height:100px;
   position:absolute;
-  bottom:-160px;
+  bottom:-100px;
 }
 #main_tab .m_tab .m_tab_con > ul{
   width:100%;
@@ -33,8 +33,9 @@
 }
 #main_tab .m_tab .m_tab_con > ul > li:not(#main_tab .m_tab .m_tab_con > ul > li:last-child){
   width:16.66666666666667%;
-  height:160px;
+  height:100px;
   background: rgb(255, 255, 255,.6);
+  color:#444;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -65,7 +66,7 @@
 /* 주가정보 탭 */
 #main_tab .m_tab .m_tab_con > ul > li:last-child .ii{
   width:100%;
-  height:160px;
+  height:100px;
   justify-content: space-evenly;
   align-items: center;
 }

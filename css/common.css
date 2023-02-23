@@ -187,3 +187,42 @@ header:hover #h_bot .gnb::after{
   position:absolute;
   z-index:1;
 }
+
+/* 푸터영역서식 */
+footer{
+  width: 100%;
+  background: #444;
+  color:#fff;
+}
+#footer_wrap{
+  width:90%;
+  margin: 0 auto;
+  padding: 20px 0px;
+  align-items: center;
+}
+#footer_wrap h2{
+  width:108px; height:52px;
+  margin-right:50px;
+}
+#footer_wrap h2 a img{
+  width:100%;
+  height:100%;
+}
+#footer_wrap address{
+  width:calc(100% - 108px);
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Hana';
+  font-size:14px;
+  font-style: normal;
+  line-height:24px;
+}
+#footer_wrap address .adress_left li{
+  font-weight: bold;
+}
+#footer_wrap address .adress_right >  li:nth-child(2n){
+  font-weight: bold;
+}
+#footer_wrap address .adress_right > li:nth-child(2n-1){
+  font-weight: lighter;
+}
