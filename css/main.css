@@ -130,7 +130,7 @@
 #investor .investor_wrap,
 #crew .crew_wrap
 {
-  width:90%;
+  width:60%;
   margin:0 auto;
   padding:50px 0px;
 }
@@ -139,17 +139,16 @@
 #crew .crew_wrap ul
 {
   align-items: center;
-  gap:30px;
+  gap:50px;
 }
 #guest .guest_wrap ul li,
 #investor .investor_wrap ul li,
 #crew .crew_wrap ul li
 {
   width:33.3%;
-  height:550px;
+  height:300px;
   border-radius:0 20px 0 20px;
   color:#fff;
-  background: #ccc;
 }
 
 #guest .guest_wrap ul li:hover,
@@ -169,4 +168,35 @@
   margin-top:16px;
   font-weight:bold;
   font-size:20px;
+}
+
+/* 탭 컨텐츠 배경이미지 */
+#tab_con #guest .guest_wrap ul li:first-child{
+  background: url(../images/main/naruto.png) center center;
+}
+#tab_con #guest .guest_wrap ul li:nth-child(2){
+  background: url(../images/main/ESG.png) center center;
+}
+#tab_con #guest .guest_wrap ul li:last-child{
+  background: url(../images/main/news.png) center center;
+}
+
+#tab_con #investor .investor_wrap ul li:first-child{
+  background: url(../images/main/property.png) center center;
+}
+#tab_con #investor .investor_wrap ul li:nth-child(2){
+  background: url(../images/main/board.png) center center;
+}
+#tab_con #investor .investor_wrap ul li:last-child{
+  background: url(../images/main/quote.png) center center;
+}
+
+#tab_con #crew .crew_wrap ul li:first-child{
+  background: url(../images/main/recruit.png) center center;
+}
+#tab_con #crew .crew_wrap ul li:nth-child(2){
+  background: url(../images/main/rolemodel.png) center center;
+}
+#tab_con #crew .crew_wrap ul li:last-child{
+  background: url(../images/main/prize.png) center center;
 }
