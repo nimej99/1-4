@@ -109,15 +109,6 @@
 {
   display:block;
 }
-#g_checked:checked ~ #tab_con > #investor,
-#g_checked:checked ~ #tab_con > #crew,
-#i_checked:checked ~ #tab_con > div:not(#investor),
-#i_checked:checked ~ #tab_con > #guest:not(#investor),
-#c_checked:checked ~ #tab_con > div:not(#crew)
-#c_checked:checked ~ #tab_con > #guest:not(#investor)
-{
-  display:none;
-}
 #tab_con{
   width:100%;
 }
@@ -141,10 +132,15 @@
 #crew .crew_wrap ul li
 {
   width:33.3%;
-  border:1px solid #222;
   border-radius:0 20px 0 20px;
   color:#fff;
   background: #ccc;
+}
+
+#guest .guest_wrap ul li:hover,
+#investor .investor_wrap ul li:hover,
+#crew .crew_wrap ul li:hover{
+  box-shadow: 0 0 0 3px var(--color-green);
 }
 #guest .guest_wrap ul li h4,
 #investor .investor_wrap ul li h4,
