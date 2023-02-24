@@ -8,6 +8,8 @@ let loGo = document.querySelector('#logo > a > img');
     lNb.style.display='flex';
     hoverBg.style.display='block';
     loGo.setAttribute('src', './images/common/header.logo.hover.svg');
+    langCon.classList.add('hidden');
+    siteCon.classList.add('hidden');
   });
   header.addEventListener('mouseleave', function(){
     lNb.style.display='none';
@@ -28,3 +30,23 @@ let siteCon = document.querySelector('.site_con');
  fSite.addEventListener('click', function(){
   siteCon.classList.toggle('hidden');
  });
+
+ //메인이나 다른영역 클릭시 히든
+ document.querySelector('main').addEventListener('click', function(){
+  langCon.classList.add('hidden');
+  siteCon.classList.add('hidden');
+ });
+ document.querySelector('#h_bot').addEventListener('click', function(){
+  langCon.classList.add('hidden');
+  siteCon.classList.add('hidden');
+ });
+ document.querySelector('#hover_bg').addEventListener('click', function(){
+  langCon.classList.add('hidden');
+  siteCon.classList.add('hidden');
+ });
+ document.querySelector('#burger').addEventListener('click', function(){
+  langCon.classList.add('hidden');
+  siteCon.classList.add('hidden');
+ });
+ 
+
