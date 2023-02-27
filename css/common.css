@@ -50,8 +50,8 @@ header:hover #h_bot .gnb::after{
 }
 #h_top .select_tab li a{
   color:#fff;
-  /* font-family: 'Hana'; */
-  /* font-weight: normal; */
+  font-family: 'Hana2.0'; 
+  font-weight: normal; 
   font-size:16px;
   transition:0.3s;
   width:100%;
@@ -141,8 +141,8 @@ header:hover #h_bot .gnb::after{
   width: 20%;
 }
 #h_bot .gnb > li a{
-  /* font-family: "Hana"; */
-  /* font-weight: normal; */
+  font-family: "Hana2.0"; 
+  font-weight: normal; 
   font-size:20px;
   text-align: center;
   width: 100%; 
@@ -192,11 +192,85 @@ header:hover #h_bot .gnb::after{
 }
 #hover_bg{
   width:100%;
-  height:450px;
+  height:500px;
   background: rgba(255, 255, 255, 1);
   position:absolute;
   z-index:1;
 }
+
+/* 사이트맵 서식 */
+#gnb:checked ~ #sitemap{
+  display:block;
+}
+#sitemap{
+  width:100%;
+  height:100vh;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:5000;
+  background: #fff;
+}
+#sitemap h2{
+  width:140px;
+  height:28px;
+  margin:50px 0px 50px 80px;
+}
+#sitemap h2 img{
+  width:100%;
+}
+#sitemap .sitemap_wrap{
+  max-width:1260px;
+  width:100%;
+  margin:0 auto;
+  display: flex;
+  flex-direction: column;
+}
+#sitemap .sitemap_wrap > li{
+  height:10vh;
+  align-items:flex-start;
+  font-family: 'Hana2.0';
+  font-weight: normal;
+  font-size:24px;
+  line-height: 34px;
+  margin-bottom:80px;
+}
+#sitemap .sitemap_wrap > li > a{
+  margin:0 50px;
+}
+#sitemap .sitemap_wrap > li .site_map2{
+  
+}
+#sitemap .sitemap_wrap > li .site_map2 > li{
+  font-family: 'Hana2.0';
+  font-weight: lighter;
+  font-size:16px;
+  line-height:36px;
+  margin:0 30px;
+}
+#sitemap .sitemap_wrap > li .site_map2 > li .site_map3{
+  font-size:14px;
+  line-height: 34px;
+} 
+#member{
+  position: absolute;
+  right:5%;
+  bottom:5%;
+}
+#member li{
+  margin:0px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* 푸터영역서식 */
 footer{
@@ -222,7 +296,7 @@ footer{
   width:calc(100% - 108px);
   justify-content: space-between;
   align-items: center;
-  font-family: 'Hana';
+  font-family: 'Hana2.0';
   font-size:14px;
   font-style: normal;
   line-height:24px;

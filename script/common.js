@@ -15,6 +15,8 @@ let loGo = document.querySelector('#logo > a > img');
     lNb.style.display='none';
     hoverBg.style.display='none';
     loGo.setAttribute('src', './images/common/header.logo.svg');
+    langCon.classList.add('hidden');
+    siteCon.classList.add('hidden');
   });
 
 // Lang Familysite
@@ -26,9 +28,11 @@ let siteCon = document.querySelector('.site_con');
 
  selectTab.addEventListener('click', function(){
   langCon.classList.toggle('hidden');
+  siteCon.classList.add('hidden');
  });
  fSite.addEventListener('click', function(){
   siteCon.classList.toggle('hidden');
+  langCon.classList.add('hidden');
  });
 
  //메인이나 다른영역 클릭시 히든

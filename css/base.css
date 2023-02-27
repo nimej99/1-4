@@ -1,9 +1,12 @@
 @charset "utf-8";
 
 /* 기본서식 하나체 */
-@import url(../font/HanaL.woff);
-@import url(../font/HanaM.woff);
-@import url(../font/HanaB.woff);
+@import url(../font/Hana2UL.ttf);
+@import url(../font/Hana2L.ttf);
+@import url(../font/Hana2CM.ttf);
+@import url(../font/Hana2M.ttf);
+@import url(../font/Hana2B.ttf);
+@import url(../font/Hana2H.ttf);
 
 @import url(../font/NanumBarunGothic.ttf);
 @import url(../font/NanumBarunGothicBold.ttf);
