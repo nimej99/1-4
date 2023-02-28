@@ -17,40 +17,56 @@ let loGo = document.querySelector('#logo > a > img');
     loGo.setAttribute('src', './images/common/header.logo.svg');
     langCon.classList.add('hidden');
     siteCon.classList.add('hidden');
+    Lang.classList.remove('exid_180');
+    familySite.classList.remove('exid_180');
   });
 
 // Lang Familysite
 let selectTab = document.querySelector('.select_tab a');
 let langCon = document.querySelector('.lang_con');
+let Lang = document.querySelector('.Lang');
 let fSite = document.querySelector('.f_site a');
 let siteCon = document.querySelector('.site_con');
+let familySite = document.querySelector('.Familysite');
 
 
  selectTab.addEventListener('click', function(){
   langCon.classList.toggle('hidden');
+  Lang.classList.toggle('exid_180');
   siteCon.classList.add('hidden');
+  familySite.classList.remove('exid_180');
  });
  fSite.addEventListener('click', function(){
   siteCon.classList.toggle('hidden');
+  familySite.classList.toggle('exid_180');
   langCon.classList.add('hidden');
+  Lang.classList.remove('exid_180');
  });
 
  //메인이나 다른영역 클릭시 히든
  document.querySelector('main').addEventListener('click', function(){
   langCon.classList.add('hidden');
   siteCon.classList.add('hidden');
+  Lang.classList.remove('exid_180');
+  familySite.classList.remove('exid_180');
  });
  document.querySelector('#h_bot').addEventListener('click', function(){
   langCon.classList.add('hidden');
   siteCon.classList.add('hidden');
+  Lang.classList.remove('exid_180');
+  familySite.classList.remove('exid_180');
  });
  document.querySelector('#hover_bg').addEventListener('click', function(){
   langCon.classList.add('hidden');
   siteCon.classList.add('hidden');
+  Lang.classList.remove('exid_180');
+  familySite.classList.remove('exid_180');
  });
  document.querySelector('#burger').addEventListener('click', function(){
   langCon.classList.add('hidden');
   siteCon.classList.add('hidden');
+  Lang.classList.remove('exid_180');
+  familySite.classList.remove('exid_180');
  });
  
 
