@@ -151,9 +151,9 @@
   color:#fff;
 }
 
-#guest .guest_wrap ul li:hover,
-#investor .investor_wrap ul li:hover,
-#crew .crew_wrap ul li:hover{
+#guest .guest_wrap > ul > li:hover,
+#investor .investor_wrap > ul > li:hover,
+#crew .crew_wrap > ul > li:hover{
   box-shadow: 0 0 0 3px var(--color-green);
 }
 #guest .guest_wrap > ul > li h4,
@@ -208,4 +208,32 @@
 }
 #tab_con #crew .crew_wrap > ul > li:last-child{
   background: url(../images/main/prize.png) center center;
+}
+
+/* 다운로드 서식 */
+.t_download{
+  padding:0px 0px 00px 30px;
+}
+.t_download h5{
+  font-weight: bold;
+  font-size:20px;
+}
+.t_download span{
+  font-weight: bold;
+  font-size: 20px;
+}
+.t_download .g_download{
+  align-items: center;
+  margin-top:20px;
+}
+.t_download .g_download li{
+  width:25%;
+  text-align: center;
+  color:var(--color-black);
+  background: #fff;
+  border-radius: 20px;
+  padding:10px 0px;
+  font-size:12px;
+  font-weight: bold;
+  margin-right:20px;
 }
