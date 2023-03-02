@@ -6,14 +6,14 @@ let loGo = document.querySelector('#logo > a > img');
 
   header.addEventListener('mouseenter', function(){
     lNb.style.display='flex';
-    hoverBg.style.display='block';
+    hoverBg.style.opacity='1';
     loGo.setAttribute('src', './images/common/header.logo.hover.svg');
     langCon.classList.add('hidden');
     siteCon.classList.add('hidden');
   });
   header.addEventListener('mouseleave', function(){
     lNb.style.display='none';
-    hoverBg.style.display='none';
+    hoverBg.style.opacity='0';
     loGo.setAttribute('src', './images/common/header.logo.svg');
     langCon.classList.add('hidden');
     siteCon.classList.add('hidden');

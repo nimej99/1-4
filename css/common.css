@@ -218,6 +218,8 @@ header:hover #h_bot .gnb::after{
   background: #fff;
   position:absolute;
   z-index:1;
+  opacity: 0;
+  transition: .3s;
 }
 
 /* 사이트맵 서식 */
