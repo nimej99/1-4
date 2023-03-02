@@ -7,14 +7,54 @@
   width:100%;
   height:calc(100vh + 100px);
   position:relative;
+  overflow: hidden;
 }
-#main_slider .m_slider{}
-#main_slider .m_slider .m_slider_list{}
-#main_slider .m_slider .m_slider_list li{}
+#main_slider .m_slider{
+}
+#main_slider .m_slider .m_slider_list{
+  width:300%;
+}
+#main_slider .m_slider .m_slider_list li{
+  width:100%;
+}
 #main_slider .m_slider .m_slider_list li img{
   width:100%;
   height:calc(100vh + 100px);
 }
+
+/* 좌, 우 버튼 서식 */
+.d_btn{
+  width:100%;
+  height:100vh;
+  padding:0px 80px;
+  justify-content: space-between;
+  align-items: center;
+  position:absolute;
+  top:0;
+  color:rgba(255, 255, 255, .6);
+}
+.d_btn > li{}
+.d_btn > li i.fa-chevron-left,.d_btn > li i.fa-chevron-right{
+  font-size:50px;
+  cursor: pointer;
+}
+
+/* 컨트롤 버튼 서식 */
+.ctrl_btn{ 
+  width: 528px;
+  height:5px;
+  justify-content: space-evenly;
+  align-items: center;
+  position:absolute;
+  top:850px;
+  left:80px;
+}
+.ctrl_btn > li{
+  width:160px;
+}
+.ctrl_btn > li > .progress_tag{
+}
+
 
 /* 메인 탭메뉴 서식 */
 #main_tab{}
@@ -98,6 +138,11 @@
 #main_tab .m_tab .m_tab_con > ul > li:last-child .ii li a #n{
   padding-top:10px;
 }
+#main_tab .m_tab .m_tab_con > ul > li:last-child .ii li a .fa-play{
+  transform: rotate(90deg);
+  color:#00f;
+  font-size: 16px;
+}
 #main_tab .m_tab .m_tab_con > ul > li:last-child .ii li:nth-child(2) a{
   font-size:40px;
   font-weight: bold;
@@ -142,8 +187,8 @@
   gap:50px;
 }
 #guest .guest_wrap > ul > li,
-#investor .investor_wrap > ul li,
-#crew .crew_wrap > ul li
+#investor .investor_wrap > ul > li,
+#crew .crew_wrap > ul > li
 {
   width:33.3%;
   height:300px;
@@ -178,45 +223,53 @@
 /* 탭 컨텐츠 배경이미지 */
 
 #tab_con #guest .guest_wrap > ul > li:first-child{
-  background: url(../images/main/naruto.png) center center no-repeat;
+  background: url(../images/main/tab01.png) center center no-repeat;
   background-size: 550px;
+  object-fit: cover;
 }
 #tab_con #guest .guest_wrap > ul > li:nth-child(2){
-  background: url(../images/main/ESG.png) center center no-repeat;
+  background: url(../images/main/tab02.png) center center no-repeat;
   background-size: 550px;
 }
 #tab_con #guest .guest_wrap > ul > li:last-child{
-  background: url(../images/main/news.png) center center no-repeat;
+  background: url(../images/main/tab03.png) center center no-repeat;
   background-size: 550px;
 }
 
 #tab_con #investor .investor_wrap > ul > li:first-child{
-  background: url(../images/main/property.png) center center;
+  background: url(../images/main/tab04.png) center center no-repeat;
+  background-size: 550px;
 }
 #tab_con #investor .investor_wrap > ul > li:nth-child(2){
-  background: url(../images/main/board.png) center center;
+  background: url(../images/main/tab05.png) center center no-repeat;
+  background-size: 550px;
 }
 #tab_con #investor .investor_wrap > ul > li:last-child{
-  background: url(../images/main/quote.png) center center;
+  background: url(../images/main/tab06.png) center center no-repeat;
+  background-size: 550px;
 }
 
 #tab_con #crew .crew_wrap > ul > li:first-child{
-  background: url(../images/main/recruit.png) center center;
+  background: url(../images/main/tab07.png) center center no-repeat;
+  background-size: 550px;
 }
 #tab_con #crew .crew_wrap > ul > li:nth-child(2){
-  background: url(../images/main/rolemodel.png) center center;
+  background: url(../images/main/tab08.png) center center no-repeat;
+  background-size: 550px;
 }
 #tab_con #crew .crew_wrap > ul > li:last-child{
-  background: url(../images/main/prize.png) center center;
+  background: url(../images/main/tab09.png) center center no-repeat;
+  background-size: 550px;
 }
 
 /* 다운로드 서식 */
 .t_download{
-  padding:0px 0px 00px 30px;
+  padding:5% 0px 0px 30px;
 }
 .t_download h5, .t_download span{
   font-weight: bold;
   font-size:16px;
+  line-height: 21px;
 }
 .t_download .g_download{
   align-items: center;

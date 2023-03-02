@@ -33,16 +33,16 @@ header:hover #h_bot .gnb::after{
   margin-right:50px;
 }
 #h_top .select_tab .lang_tab, #h_top .select_tab .f_site{
+  height:100%;
   position:relative;
-  z-index:100;
+  z-index:3000;
 }
 #h_top .select_tab .lang_tab .Lang::after, #h_top .select_tab .f_site .Familysite::after{
   position: absolute;
   right:-20px;
   top:2px;
   content:'\f107';
-  font-family:'Font Awesome 5 Free';
-  font-weight: bold;
+  font:var(--fa-font-solid);
   font-size: 16px;
   cursor:pointer;
 }
@@ -50,18 +50,23 @@ header:hover #h_bot .gnb::after{
   transform: rotate(180deg);
 }
 #h_top .select_tab .lang_tab .lang_con, #h_top .select_tab .f_site .site_con{
-  width:100%;
-  background-color: #fff;
   position: absolute;
   top:30px;
-  z-index:9999;
+  padding:0 20px;
+  border:1px solid #333;
+  border-radius: 20px;
+  background: #fff;
 }
 #h_top .select_tab .lang_tab .lang_con a, #h_top .select_tab .f_site .site_con a{
   font-family:'나눔 고딕';
   font-size:14px;
   line-height:24px;
-  white-space: nowrap;
   transition:0.3s;
+  white-space: nowrap;
+}
+#h_top .select_tab .lang_tab .lang_con a:hover, #h_top .select_tab .f_site .site_con a:hover{
+  color:var(--color-green);
+  font-weight: bold;
 }
 #h_top .select_tab li a{
   color:#fff;
@@ -138,6 +143,7 @@ header:hover #h_bot .gnb::after{
   position:absolute;
   top:0;
   left:-500px;
+  z-index: -1;
 }
 #h_bot .gnb li a:hover ~ #h_bot .lnb{
   display:flex;
@@ -208,7 +214,8 @@ header:hover #h_bot .gnb::after{
 #hover_bg{
   width:100%;
   height:500px;
-  background: rgba(255, 255, 255, 1);
+  /* background: rgba(255, 255, 255, 1); */
+  background: #fff;
   position:absolute;
   z-index:1;
 }
@@ -318,6 +325,9 @@ footer{
 }
 #footer_wrap address .adress_left li{
   font-weight: bold;
+}
+#footer_wrap address .adress_right li a{
+  color:#fff;
 }
 #footer_wrap address .adress_right >  li:nth-child(2n){
   font-weight: bold;
