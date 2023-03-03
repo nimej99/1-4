@@ -217,7 +217,7 @@ header:hover #h_bot .gnb::after{
   /* background: rgba(255, 255, 255, 1); */
   background: #fff;
   position:absolute;
-  z-index:1;
+  z-index:2;
   opacity: 0;
   transition: 0.3s;
 }
