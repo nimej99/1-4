@@ -19,6 +19,9 @@
   <!-- script 영역 -->
   <script src="./script/common.js" defer></script>
 
+  <!-- 메인스크립트 -->
+  <script src="./script/main.js" defer></script>
+
   <title>하나금융그룹</title>
 </head>
 <body>
@@ -26,7 +29,7 @@
   <header>
     <!-- 헤더상단 -->
     <input type="checkbox" id="gnb" class="hidden">
-    <div id="hover_bg" class=""></div>
+    <div id="hover_bg"></div>
     <div id="h_top">
       <!-- Lang Familysite 서식 -->
       <ul class="select_tab flex">
@@ -190,9 +193,11 @@
         </ul>
       </div>
     </div>
-    <div id="sitemap" class="hidden">
+    <div id="sitemap">
       <h2>
-        <img src="./images/common/header.logo.hover.svg" alt="로고">
+        <a href="index.html" title="메인페이지바로가기">
+          <img src="./images/common/header.logo.hover.svg" alt="로고">
+        </a>
       </h2>
       <ul class="sitemap_wrap">
         <li class="flex">
@@ -334,21 +339,21 @@
         </ul>
         <ul class="d_btn flex">
           <li>
-            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-left" class="prev"></i>
           </li>
           <li>
-            <i class="fa-solid fa-chevron-right"></i>
+            <i class="fa-solid fa-chevron-right" class="next"></i>
           </li>
         </ul>
         <ul class="ctrl_btn flex">
           <li>
-            <span class="bar"></span>
+            <span class="bar" id="bar1"></span>
           </li>
           <li>
-            <span class="bar"></span>
+            <span class="bar" id="bar2"></span>
           </li>
           <li>
-            <span class="bar"></span>
+            <span class="bar" id="bar3"></span>
           </li>
         </ul>
       </article>
