@@ -112,3 +112,191 @@
 }
 
 /* 하나금융 소개 .intro 서식 */
+.intro{
+  width: 100%;
+}
+.intro > h3{
+  display: none;
+}
+.intro > .intro_wrap > h4{
+  display: none;
+}
+.intro > .mission > h4{
+  display: none;
+}
+.intro > .intro_wrap .intro_bg{
+  background-image: url(../images/sub/intro_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.intro > .intro_wrap > .intro_bg > ul{
+  margin: 0px auto;
+  width: 1200px;
+  padding: 170px 0px;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  text-align: center;
+}
+.intro >.intro_wrap > .intro_bg > ul > li{
+
+}
+.intro >.intro_wrap > .intro_bg > ul > li > p{
+  line-height: 30px;
+  font-size: 20px;
+}
+.intro >.intro_wrap > .intro_bg > ul > li > p:first-of-type{
+  display: inline-block;
+  margin-bottom: 25px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  border-bottom: 3px solid #D91B27;
+}
+.intro >.intro_wrap > .intro_bg > ul > li > div{
+  width: 50px;
+  height: 50px;
+  padding: 50px;
+  margin: 0px auto;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.intro >.intro_wrap > .intro_bg > ul > li > div > img{
+  width: 40px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+.intro >.intro_wrap > .intro_bg > ul > li > p:nth-of-type(2){
+  padding-top: 30px;
+}
+.intro >.intro_wrap > .intro_bg > ul > li > p:nth-of-type(2) > span{
+  font-size: 40px;
+  font-weight: bold;
+}
+.intro >.intro_wrap > .intro_bg > ul > li > p:last-of-type{
+  color: #C0C0C0;
+  padding-top: 30px;
+  line-height: 25px;
+}
+
+/* 하나금융 미션과 비전 .mission 서식 */
+.intro > .mission{
+  width: 100%;
+  background-image: url(../images/sub/mission_bg.jpg);
+  background-size: 100%;
+  padding: 170px 0px;
+}
+.intro > .mission > div{
+  text-align: center;
+  color: #fff;
+}
+.intro > .mission > .mission_box{
+  width: 1200px;
+  margin: 0px auto;
+  background: rgba(27,27,27,.78);
+  border-radius: 30px;
+  padding: 56px 0px;
+  margin-bottom: 100px;
+}
+.intro > .mission > .mission_box > p:first-of-type{
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 13px;
+}
+.intro > .mission > .mission_box > p:nth-of-type(2){
+  font-size: 30px;
+  font-weight: bold;
+  color: #419390;
+  padding-bottom: 42px;
+}
+.intro > .mission > .mission_box > p:nth-of-type(3){
+  font-size: 25px;
+  line-height: 45px;
+  padding-bottom: 50px;
+}
+.intro > .mission > .mission_box > p:last-of-type{
+  font-size: 25px;
+  line-height: 45px;
+}
+.intro > .mission > .vision_box{
+  width: 1200px;
+  margin: 0px auto;
+  background: rgba(27,27,27,.78);
+  border-radius: 30px;
+  padding: 56px 0px;
+}
+.intro > .mission > .vision_box > p:first-of-type{
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 13px;
+}
+.intro > .mission > .vision_box > p:nth-of-type(2){
+  font-size: 30px;
+  font-weight: bold;
+  color: #419390;
+  padding-bottom: 42px;
+}
+.intro > .mission > .vision_box > p:nth-of-type(3){
+  font-size: 25px;
+  line-height: 45px;
+  padding-bottom: 50px;
+}
+.intro > .mission > .vision_box > p:last-of-type{
+  font-size: 25px;
+  line-height: 45px;
+}
+
+/* 연혁 .history */
+.history{
+  background: #221D1E;
+  padding: 250px 0px;
+}
+.history > h3{
+  display: none;
+}
+.history > article{
+  color: #fff;
+}
+.history > article > h3{
+  font-family: 'Hana2.0';
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+.history > article > img{
+  width: 60px;
+  position: absolute;
+  left: 37%;
+}
+.history > article > dl{
+  width: 1000px;
+  margin: 0px auto;
+}
+.history > article > dl::after{
+  content: '';
+  font-size: 1000px;
+  border: 1px solid #fff;
+  transform: translate(-100px, -50px);
+}
+.history > article > dl > dt{
+  text-align: left;
+  font-size: 36px;
+  font-weight: 700;
+  padding-top: 150px;
+  border-right: 1px solid #fff;
+}
+.history > article > dl > dd{
+  text-indent: 150px;
+  font-size: 25px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.history > article > dl > dd > span{
+  font-weight: 600;
+  font-size: 30px;
+  color:#7B7B7B;
+  padding-right: 10px;
+}
