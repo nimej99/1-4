@@ -7,3 +7,75 @@ header{
 header:hover{
   background-color: #fff;
 }
+#hover_bg:hover{
+  background: #fff;
+}
+main{
+  padding-top:200px;
+}
+#login{
+  height: calc(100vh - 336px);
+  text-align: center;
+}
+#login h2{
+  font-size: 30px;
+  font-weight:bolder;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+#login> p{
+  font-size: 18px;
+  color: #999999;
+}
+#l_wrap{
+  padding: 30px 0px;
+  width: 400px;
+  margin: 0 auto;
+  flex-direction: column;
+  text-align: center;
+}
+#l_wrap > input{
+  height: 50px;
+  margin: 5px 0px;
+  border:none;
+  border-bottom: 1px solid var(--color-green);
+}
+#i_store{
+  accent-color: var(--color-red);
+}
+.log_info{
+  margin: 20px 0px;
+  position: relative;
+}
+.log_info > li:first-child{
+  width: 30%;
+  text-align: left;
+}
+.log_info > li:nth-child(2){
+  width: 50%;
+  text-align:end;
+}
+.log_info > li:nth-child(2)> a:hover{
+  color: var(--color-green);
+  font-weight: bold;
+}
+.log_info >li:last-child{
+  width: 20%;
+  text-align: end;
+}
+.log_info >li:last-child span:hover{
+  color: var(--color-green);
+  font-weight: bold;
+}
+
+  #l_wrap >p{
+    margin: 5px 0px;
+  }
+  #l_submit{
+    background: var(--color-green);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
