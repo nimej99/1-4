@@ -168,7 +168,7 @@ i.fa-chevron-left, i.fa-chevron-right{
 .ii li a #n{
   padding-top:10px;
 }
-.fa-play{
+#n .fa-play{
   transform: rotate(90deg);
   color:#00f;
   font-size: 16px;
