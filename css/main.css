@@ -34,6 +34,7 @@
   justify-content: space-between;
   align-items: center;
   position:absolute;
+  z-index:1;
   top:50%;
   transform: translateY(-50%);
   color:rgba(255, 255, 255, .6);
@@ -74,6 +75,9 @@ i.fa-chevron-left, i.fa-chevron-right{
   animation-duration:5s;
   animation-timing-function:linear;
   animation-play-state: paused;
+}
+#bar1.play, #bar2.play, #bar3.play{
+  animation-play-state: running;
 }
 
 @keyframes progressBar {
