@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+header{
+  background: #444;
+}
+header::after{
+  display:block;
+  padding-top:200px;
+}
+header:hover{
+  background: #fff;
+}
