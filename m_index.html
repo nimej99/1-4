@@ -17,7 +17,7 @@
   <!-- 폰트어썸CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <!-- script 영역 -->
-  <script src="./script/common.js" defer></script>
+  <!-- <script src="./script/common.js" defer></script> -->
 
   <!-- 메인스크립트 -->
   <script src="./script/main.js" defer></script>
@@ -27,26 +27,27 @@
 <body>
   <!-- 헤더영역 서식 -->
   <header>
+    <input type="checkbox" id="#m_sitemap">
     <div id="m_header_wrap" class="flex">
 
       <h1>
         <img src="./images/common/header.logo.svg" alt="헤더로고">
       </h1>
 
-      <div class="m_lang_tab">
-        <a href="#none" title="language">
-          <i class="fa-solid fa-globe"></i>
+      <div class="m_lang_tab flex">
+        <a href="#none" title="language" class="flex">
+          <img src="./images/common/lang.png" alt="언어탭">
         </a>
-        <div class="m_lang_con hidden">
+        <div class="m_lang_con ">
           <a href="#none" title="KOR">KOR</a>
-          <a href="#none" title="KOR">KOR</a>
+          <a href="#none" title="ENG">ENG</a>
           <a href="#none" title="JPN">JPN</a>
           <a href="#none" title="CHN">CHN</a>
         </div>
       </div>
 
       <!-- 토글버튼 서식 -->
-      <label id="burger" for="gnb">
+      <label id="burger" for="m_sitemap">
         <span class="burger1">&nbsp;</span>
         <span class="burger2">&nbsp;</span>
         <span class="burger3">&nbsp;</span>
