@@ -191,7 +191,7 @@
         </ul>
       </div>
     </div>
-    <div id="sitemap">
+    <div id="sitemap" class="hidden">
       <h2>
         <a href="index.html" title="메인페이지바로가기">
           <img src="./images/common/header.logo.hover.svg" alt="로고">
@@ -319,10 +319,62 @@
   </header>
 
   <!-- 메인영역 서식 -->
-  <main></main>
+  <main>
+    <article id="join">
+      <h2>회원가입</h2>
+      <p>하나금융 그룹의 다양한 서비스와 혜택을 누리세요.</p>
+      <form action="회원가입저장php" method="post" name="join">
+        <fieldset id="j_wrap" class="flex">
+          <legend class="hidden">레전드 회원가입 폼</legend>
+          <input type="text" name="j_name" placeholder="이름">
+          <input type="text" name="j_id" placeholder="아이디">
+          <input type="password" name="j_pw" placeholder="패스워드">
+          <input type="password" name="j_pwc" placeholder="패스워드 확인">
+          <p>
+            <input type="checkbox" name="u_agree" id="u_agree">
+            <label for="u_agree">서비스 이용약관에 동의합니다. (필수)</label>
+          </p>
+          <p>
+            <input type="checkbox" name="p_agree" id="p_agree">
+            <label for="p_agree">개인정보 수집이용과 처리방침에 동의합니다. (선택)</label>
+          </p>
+          <input type="submit" name="j_submit" value="회원가입" id="j_submit">
+        </fieldset>
+      </form>
+    </article>
+  </main>
 
   <!-- 푸터영역 서식 -->
-  <footer></footer>
+  <footer>
+    <div id="footer_wrap" class="flex">
+      <h2>
+        <a href="index.html" title="">
+          <img src="./images/common/header.logo.svg" alt="로고">
+        </a>
+      </h2>
+      <address class="flex">
+        <ul class="adress_left">
+          <li>서울특별시 중구 을지로 00</li>
+          <li>00-0000-0000</li>
+          <li>Copyright &copy; HANA FINANCIAL GROUP 2012. ALL RIGHT RESERVED.</li>
+        </ul>
+        <ul class="adress_right">
+          <li>
+            <a href="map" title="하나맵">하나맵</a>
+          </li>
+          <li>
+            <a href="개인정보처리방침" title="개인정보처리방침">개인정보처리방침</a>
+          </li>
+          <li>
+            <a href="고객정보취급방침" title="고객정보취급방침">고객정보취급방침</a>
+          </li>
+          <li>
+            <a href="신용정보취급활용체제" title="신용정보취급활용체제">신용정보취급활용체제</a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </footer>
   
 </body>
 </html>

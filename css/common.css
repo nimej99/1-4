@@ -220,10 +220,12 @@ header:hover #h_bot .gnb::after{
   z-index:2;
   opacity: 0;
   transition: 0.3s;
+  display: none;
 }
 
 /* 사이트맵 서식 */
 #gnb:checked ~ #sitemap{
+  display:block;
   z-index:5000;
   opacity: 1;
 }
