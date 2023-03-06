@@ -238,6 +238,7 @@ header:hover #h_bot .gnb::after{
   z-index:-1;
   background: #fff;
   opacity: 0;
+  display: none;
   transition: 0.3s;
 }
 #sitemap h2{

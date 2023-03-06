@@ -21,10 +21,10 @@
   <script src="./script/common.js" defer></script>
 </head>
 <body>
-<header>
+  <header>
     <!-- 헤더상단 -->
     <input type="checkbox" id="gnb" class="hidden">
-    <div id="hover_bg" class="hidden"></div>
+    <div id="hover_bg"></div>
     <div id="h_top">
       <!-- Lang Familysite 서식 -->
       <ul class="select_tab flex">
@@ -188,9 +188,11 @@
         </ul>
       </div>
     </div>
-    <div id="sitemap" class="hidden">
+    <div id="sitemap">
       <h2>
-        <img src="./images/common/header.logo.hover.svg" alt="로고">
+        <a href="index.html" title="메인페이지바로가기">
+          <img src="./images/common/header.logo.hover.svg" alt="로고">
+        </a>
       </h2>
       <ul class="sitemap_wrap">
         <li class="flex">
@@ -312,77 +314,59 @@
       </ul>
     </div>
   </header>
-      <!--메인영역-->
-      <main>
-        <section id="login">
-          <div class="login-title-wrap">
-            <h2 class="login-title">로그인</h2>
-    
-            <ul class="text-icon-check">
-              <li><i class="fa-sharp fa-solid fa-check"></i>하나은행 홈페이지는 인터넷 주소창에 보안 자물쇠 이미지가 있습니다.</li>						
-              <li><i class="fa-sharp fa-solid fa-check"></i>하나은행에서는 보안승급, 보안강화 등을 이유로 자물쇠카드 번호 35개 전체 입력을 요구하지 않습니다.</li>
-              <li><i class="fa-sharp fa-solid fa-check"></i>하나원큐와 하나은행 인터넷뱅킹을 동시에 로그인할 수 없습니다. 하나원큐 자동로그인 설정 중인 경우,
-                <br>하나원큐인증 로그인 시 주의해주세요!
-                <span class="t_red_1" style="font-size: 13px;">(반드시 앱 알림 방식으로만 로그인, 인터넷뱅킹 사용 중 하나원큐 실행 금지)</span>
-              </li>
-            </ul>
-          </div>
-        <div class="login-wrapper">
-            <!-- <form method="post" action="#" id="login-form"> -->
-                <input type="text" name="userId" placeholder="아이디" id="id_name">
-                <input type="password" name="userPw" placeholder="비밀번호" id="pw_name">
-                <div id="red_alert">&nbsp;</div>
-                <div class="id_pw">
-                <label for="id_remember">
-                    <input type="checkbox" id="id_remember">아이디 저장
-                </label>
-                <span><span><a href="#;" title="아이디찾기">아이디 찾기</a></span> <span class="bar01">&#x007C;</span><span> <a href="#;" title="비밀번호 찾기">비밀번호 찾기</a></span></span>
-                
-                </div>
-                <input type="submit" value="로그인" id="log_btn">
-                <input type="button" value="회원가입" id="join_btn" onclick="location.href='join.html';">
-                <!-- <a href="join.html" title="회원가입"></a> -->
-                <p>간편 로그인</p>
-                <a href="javascript:;" title="네이버로 간편 로그인"><img src="./images/naverLogo.png" alt="네이버"></a>
-                <a href="javascript:;" title="카카오톡로 간편 로그인"><img src="./images/kakaoLogo.png" alt="카카오톡"></a>
-                <a href="javascript:;" title="구글로 간편 로그인"><img src="./images/googleLogo.png" alt="구글"></a>
-            <!-- </form> -->
-        </div>
-        <div id="new_mnu">
-            <div id="log_sld">
-            <a href="javascript:;" title="신메뉴페이지로 이동">
-                <img src="./images/login_event_bnnr01.jpg" alt="신메뉴 배너">
-                <img src="./images/login_event_bnnr02.jpg" alt="신메뉴 배너">
-                <img src="./images/login_event_bnnr03.jpg" alt="신메뉴 배너">
-            </a>
-            <!-- <ul class="log_c_btn">
-                <li class="on">&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-            </ul> -->
-            <!-- <ul class="c_btn">
-                <li>&nbsp;</li><페이지번호-->
-                <!-- <li ><i class="fas fa-pause"></i></li>일시정지/플레이 아이콘
-            </ul> -->
-        </div>
-        </div>
-    </section>
-    </main>
+  <!-- 메인영역 서식 -->
   <main>
-    <i class="fa-sharp fa-solid fa-check"></i>
-          <div class="login-wrap">
-          <main class="wrap-inner">
-            <div class="login-title-wrap">
-              <h2 class="login-title">로그인</h2>
-      
-              <ul class="text-icon-check">
-                <li><i class="fa-sharp fa-solid fa-check"></i>하나은행 홈페이지는 인터넷 주소창에 보안 자물쇠 이미지가 있습니다.</li>						
-                <li><i class="fa-sharp fa-solid fa-check"></i>하나은행에서는 보안승급, 보안강화 등을 이유로 자물쇠카드 번호 35개 전체 입력을 요구하지 않습니다.</li>
-                <li><i class="fa-sharp fa-solid fa-check"></i>하나원큐와 하나은행 인터넷뱅킹을 동시에 로그인할 수 없습니다. 하나원큐 자동로그인 설정 중인 경우,
-                  <br>하나원큐인증 로그인 시 주의해주세요!
-                  <span class="t_red_1" style="font-size: 13px;">(반드시 앱 알림 방식으로만 로그인, 인터넷뱅킹 사용 중 하나원큐 실행 금지)</span>
-                </li>
-              </ul>
-            </div>
+    <article id="login">
+      <h2>로그인</h2>
+      <p>하나금융 그룹에 오신 것을 환영합니다.</p>
+      <form action="로그인php" method="post" name="login">
+        <fieldset id="l_wrap" class="flex">
+          <legend class="hidden">레전드 로그인 폼</legend>
+          <input type="text" name="l_mail" placeholder="이메일">
+          <input type="password" name="l_pw" placeholder="패스워드">
+          <ul class="log_info flex">
+            <li>
+              <input type="checkbox" name="i_store" id="i_store">
+              <label for="i_store">아이디 저장</label>
+            </li>
+            <li><a href="#">아이디/비밀번호 찾기&nbsp; </a></li>
+            <li><a href="#">| &nbsp;<span>회원가입</span></a></li>
+          </ul>
+          <input type="submit" name="l_submit" value="로그인" id="l_submit">
+        </fieldset>
+      </form>
+    </article>
+  </main>
+  <!-- 푸터영역 서식 -->
+  <footer>
+    <div id="footer_wrap" class="flex">
+      <h2>
+        <a href="index.html" title="">
+          <img src="./images/common/header.logo.svg" alt="로고">
+        </a>
+      </h2>
+      <address class="flex">
+        <ul class="adress_left">
+          <li>서울특별시 중구 을지로 00</li>
+          <li>00-0000-0000</li>
+          <li>Copyright &copy; HANA FINANCIAL GROUP 2012. ALL RIGHT RESERVED.</li>
+        </ul>
+        <ul class="adress_right">
+          <li>
+            <a href="map" title="하나맵">하나맵</a>
+          </li>
+          <li>
+            <a href="개인정보처리방침" title="개인정보처리방침">개인정보처리방침</a>
+          </li>
+          <li>
+            <a href="고객정보취급방침" title="고객정보취급방침">고객정보취급방침</a>
+          </li>
+          <li>
+            <a href="신용정보취급활용체제" title="신용정보취급활용체제">신용정보취급활용체제</a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </footer>
 </body>
 </html>
