@@ -1,5 +1,55 @@
 @charset "utf-8";
 
+/* 원형내비게이션 #m_nav서식 */
+#m_nav{
+  position: fixed;
+  right: 40px;
+  top: 38%;
+  z-index: 150;
+}
+#m_nav > ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#m_nav > ul > li{
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  background: rgba(104, 104, 104, 0.5);
+  border-radius: 50px;
+  margin: 10px 0px;
+  text-align: center;
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+}
+#m_nav a{
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  text-align: right;
+  padding-right: 10px;
+}
+#m_nav > ul > li > span{
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  background: #333;
+  position: absolute;
+  left: 0px;
+}
+#m_nav > ul > li:hover{
+  width:150px;
+}
+/* #m_nav > ul > li:hover a{
+  width:calc(180px - 30px);
+} */
 /* main itro 서식 */
 .main_intro{
   position: relative;
@@ -17,22 +67,22 @@
   text-align: center;
 }
 .main_intro > p:first-of-type{
-  top: 35%;
+  top: 37%;
   right: 50%;
   transform: translate(50%, 50%);
-  font-size: 50px;
+  font-size: 40px;
   color: #ffff;
   font-weight: bold;
   font-family: 'Hana2.0';
 }
 .main_intro > p:last-of-type{
-  top: 47%;
+  top: 45%;
   right: 50%;
   transform: translate(50%, 50%);
   font-size: 20px;
   color: #fff;
   line-height: 35px;
-  font-weight: bold;
+  font-weight: 400;
 }
 .main_intro > a {
   position: absolute;
@@ -119,20 +169,30 @@
   display: none;
 }
 .intro > .intro_wrap > h4{
-  display: none;
+  position: absolute;
+  font-size: 40px;
+  color: #fff;
+  font-family: 'Hana2.0';
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 .intro > .mission > h4{
   display: none;
 }
+.intro > .intro_wrap{
+  position: relative;
+}
 .intro > .intro_wrap .intro_bg{
   background-image: url(../images/sub/intro_bg.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 200%;
+  height: 100vh;
 }
 .intro > .intro_wrap > .intro_bg > ul{
   margin: 0px auto;
   width: 1200px;
-  padding: 170px 0px;
+  padding: 400px 0px;
   display: flex;
   justify-content: space-around;
   color: #fff;
@@ -142,8 +202,8 @@
 
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p{
-  line-height: 30px;
-  font-size: 20px;
+  line-height: 23px;
+  font-size: 18px;
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p:first-of-type{
   display: inline-block;
@@ -176,8 +236,8 @@
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p:last-of-type{
   color: #C0C0C0;
-  padding-top: 30px;
-  line-height: 25px;
+  padding-top: 12px;
+  line-height: 20px;
 }
 
 /* 하나금융 미션과 비전 .mission 서식 */
@@ -192,7 +252,7 @@
   color: #fff;
 }
 .intro > .mission > .mission_box{
-  width: 1200px;
+  width: 1100px;
   margin: 0px auto;
   background: rgba(27,27,27,.78);
   border-radius: 30px;
@@ -200,57 +260,57 @@
   margin-bottom: 100px;
 }
 .intro > .mission > .mission_box > p:first-of-type{
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
-  padding-bottom: 13px;
+  padding-bottom: 28px;
 }
 .intro > .mission > .mission_box > p:nth-of-type(2){
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   color: #419390;
   padding-bottom: 42px;
 }
 .intro > .mission > .mission_box > p:nth-of-type(3){
-  font-size: 25px;
-  line-height: 45px;
+  font-size: 20px;
+  line-height: 30px;
   padding-bottom: 50px;
 }
 .intro > .mission > .mission_box > p:last-of-type{
-  font-size: 25px;
-  line-height: 45px;
+  font-size: 20px;
+  line-height: 30px;
 }
 .intro > .mission > .vision_box{
-  width: 1200px;
+  width: 1100px;
   margin: 0px auto;
   background: rgba(27,27,27,.78);
   border-radius: 30px;
   padding: 56px 0px;
 }
 .intro > .mission > .vision_box > p:first-of-type{
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
-  padding-bottom: 13px;
+  padding-bottom: 28px;
 }
 .intro > .mission > .vision_box > p:nth-of-type(2){
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   color: #419390;
   padding-bottom: 42px;
 }
 .intro > .mission > .vision_box > p:nth-of-type(3){
-  font-size: 25px;
-  line-height: 45px;
+  font-size: 20px;
+  line-height: 30px;
   padding-bottom: 50px;
 }
 .intro > .mission > .vision_box > p:last-of-type{
-  font-size: 25px;
-  line-height: 45px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 /* 연혁 .history */
 .history{
   background: #221D1E;
-  padding: 250px 0px;
+  padding: 200px 0px;
 }
 .history > h3{
   display: none;
@@ -262,34 +322,32 @@
 .history > article > h3{
   font-family: 'Hana2.0';
   font-weight: bold;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 60px;
-  padding-bottom: 50px;
   text-align: center;
 }
 .history > article > img{
   width: 60px;
   position: absolute;
-  left: 37%;
+  left: 39%;
 }
 .history > article > dl{
-  width: 1000px;
+  width: 850px;
   margin: 0px auto;
   z-index: -1;
 }
 .history > article > dl::after{
   position: absolute;
-  height: 1290px;
+  height: 1190px;
   width: 2px;
   background: #7B7B7B;
   content: '';
-  top: 330px;
-  left: 565px;
+  transform: translate(113px, -1200px);
 }
 .history > article > dl > dt{
   text-align: left;
   color: #7B7B7B;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700;
   padding-top: 150px;
   display: inline-block;
@@ -298,12 +356,12 @@
   position: absolute;
   z-index: 1;
   content: '';
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   display: inline-block;
   background: #7B7B7B;
   border-radius: 50%;
-  transform: translate(14px, 10px);
+  transform: translate(26px, 0px);
 }
 .history > article > dl > dt:hover::after{
   border: 5px solid #fff;
@@ -312,13 +370,13 @@
 }
 .history > article > dl > dd{
   text-indent: 150px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400;
   padding-bottom: 10px;
 }
 .history > article > dl > dd > span{
   font-weight: 600;
-  font-size: 30px;
+  font-size: 28px;
   color:#7B7B7B;
   padding-right: 10px;
 }
@@ -356,9 +414,9 @@
   padding-bottom: 20px;
 }
 .strategy > article > ul > li > div > span{
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 34.5px;
+  line-height: 25px;
   text-align: center;
   display: block;
   padding-bottom: 17px;
@@ -383,7 +441,7 @@
 }
 .trust > article > h2{
   font-family: 'hana2.0';
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
   padding-bottom: 30px;
 }
@@ -392,18 +450,18 @@
   padding-bottom: 30px;
 }
 .trust > article > h3{
-  font-size: 35px;
+  font-size: 24px;
   font-weight: 600;
   padding-bottom: 30px;
 }
 .trust > article > h4{
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
   color: #419390;
   padding-bottom: 30px;
 }
 .trust > article > p{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 28px;
   padding-bottom: 90px;
@@ -414,13 +472,14 @@
 }
 .trust > article > ul > li > strong{
   display: block;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   padding-bottom: 10px;
 }
 .trust > article > ul > li > p{
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 400;
+  line-height: 28px;
 }
 .hana_pr{
   padding-bottom: 150px;
@@ -433,15 +492,16 @@
   margin: 0px auto;
 }
 .hana_pr > article > h2{
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
   color: #419390;
   padding-bottom: 10px
 }
 .hana_pr > article > h3{
-  font-size: 35px;
-  font-weight: 600;
-  padding-bottom: 30px
+  font-family: 'hana2.0';
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 40px;
 }
 .hana_pr > article > .video_box{
   position: relative;
@@ -451,19 +511,20 @@
 }
 .hana_pr > article > .video_box > .text_box{
   position: absolute;
-  bottom: 50px;
-  left: 50px;
+  bottom: 30px;
+  left: 30px;
 }
 .hana_pr > article > .video_box > .text_box > p{
   text-align: left;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 200;
   line-height: 30px;
   color: #fff;
 }
 .hana_pr > article > .video_box > .play_btn{
   position: absolute;
-  top: 50%;width: 100px;
+  top: 50%;
+  width: 100px;
   height: 100px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
@@ -471,6 +532,10 @@
   transform: translate(-50%,-50%);
 }
 .hana_pr > article > .video_box > .play_btn > .fas{
-  color: #221D1E;
   font-size: 50px;
+  color: #221D1E;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
