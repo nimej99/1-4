@@ -340,3 +340,19 @@ address{
   font-weight: lighter;
 }
 
+/* 상단버튼 서식 */
+#top_btn{
+  position: fixed;
+  z-index: 100;
+  bottom:2rem;
+  right:2rem;
+}
+.t_btn_b{
+  width:40px;
+  height:40px;
+  background:hsla(0,0%,100%,.6) url(../images/common/btn-top.png) no-repeat center center;
+  background-size: 20px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 30%);
+  z-index: 101;
+}

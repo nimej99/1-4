@@ -13,9 +13,9 @@ main{
   height:calc(100vh - 336px);
   text-align: center;
 }
-#join h2{
+#join > h2{
   font-size: 30px;
-  margin:30px 0px;
+  padding:30px 0px;
 }
 #j_wrap{
   padding:30px 0px;
