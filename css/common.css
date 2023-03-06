@@ -7,8 +7,7 @@ header{
   height:200px;
 }
 header:hover #h_top .select_tab a,
-header:hover #h_bot .gnb a,
-header:hover #h_bot .lnb a
+header:hover #h_bot .gnb a
 {
   color:var(--color-black);
 }
@@ -61,7 +60,6 @@ header:hover #h_bot .gnb::after{
   font-family:'나눔 고딕';
   font-size:14px;
   line-height:24px;
-  transition:0.3s;
   white-space: nowrap;
 }
 #h_top .select_tab .lang_tab .lang_con a:hover, #h_top .select_tab .f_site .site_con a:hover{
@@ -73,7 +71,6 @@ header:hover #h_bot .gnb::after{
   font-family: 'Hana2.0'; 
   font-weight: normal; 
   font-size:16px;
-  transition:0.3s;
   width:100%;
   display:block;
 }
@@ -154,7 +151,7 @@ header:hover #h_bot .gnb::after{
   content:'';
   display:block;
   /* border-top: 1px solid var(--color-green); */
-  border-top: 1px solid var(--color-black);
+  border-top: 1px solid var(--color-green);
   position:absolute;
   top:0;
 }
@@ -197,7 +194,7 @@ header:hover #h_bot .gnb::after{
   content:'';
   display:block;
   /* border-top: 1px solid var(--color-green); */
-  border-top: 1px solid var(--color-black);
+  border-top: 1px solid var(--color-green);
   position:absolute;
   top:-80px;
 }
@@ -208,8 +205,11 @@ header:hover #h_bot .gnb::after{
   line-height:36px;
   text-align: center;
   white-space: nowrap;
-  color:#fff;
-  transition:0.3s;
+  color:var(--color-black);
+}
+.lnb ul li a:hover{
+  color:var(--color-green);
+  font-weight: bold;
 }
 #hover_bg{
   width:100%;
