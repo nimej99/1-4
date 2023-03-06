@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" type="image/x-icon" href="./images/common/favicon.ico">
+  <!-- 초기화 -->
+  <link rel="stylesheet" href="./css/css_reset.css" type="text/css">
+  <!-- 기본서식 -->
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+  <!-- 공통서식 -->
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <!-- 로그인서식 -->
+  <link rel="stylesheet" href="./css/login.css" type="text/css">
+  <!-- 폰트어썸CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <!-- script 영역 -->
+  <script src="./script/common.js" defer></script>
+</head>
+<body>
+<header>
+    <!-- 헤더상단 -->
+    <input type="checkbox" id="gnb" class="hidden">
+    <div id="hover_bg" class="hidden"></div>
+    <div id="h_top">
+      <!-- Lang Familysite 서식 -->
+      <ul class="select_tab flex">
+        <li>
+          <div class="lang_tab flex">
+            <a href="#none" title="lang" class="Lang">Lang</a>
+            <div class="lang_con hidden">
+              <a href="#none" title="kor">KOR</a>
+              <a href="#none" title="eng">ENG</a>
+              <a href="#none" title="jpn">JPN</a>
+              <a href="#none" title="chn">CHN</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="f_site flex">
+            <a href="#none" title="familysite" class="Familysite">Familysite</a>
+            <div class="site_con hidden">
+              <a href="https://www.hanafn.com:8002/main.do" title="하나금융그룹">하나금융그룹</a>
+              <a href="https://www.kebhana.com/" title="하나은행">하나은행</a>
+              <a href="https://www.hanaw.com/main/main/index.cmd" title="하나증권">하나증권</a>
+              <a href="https://www.hanacard.co.kr/" title="하나카드">하나카드</a>
+              <a href="https://www.hanacapital.co.kr/index.hnc" title="하나캐피탈">하나캐피탈</a>
+              <a href="https://www.hanalife.co.kr/" title="하나생명">하나생명</a>
+              <a href="https://www.hanainsure.co.kr/" title="하나손해보험">하나손해보험</a>
+              <a href="https://www.hanasavings.com/" title="하나저축은행">하나저축은행</a>
+              <a href="https://www.hanatrust.com/" title="하나자산신탁">하나자산신탁</a>
+              <a href="https://www.hana-aamc.com/" title="하나대체투자자산운용">하나대체투자자산운용</a>
+              <a href="http://www.hanafni.com/" title="하나에프앤아이">하나에프앤아이</a>
+              <a href="https://www.hanaventures.co.kr/main" title="하나벤처스">하나벤처스</a>
+              <a href="https://www.hanais.com/" title="하나펀드서비스">하나펀드서비스</a>
+              <a href="https://www.hanati.co.kr/kor/main.jsp" title="하나금융티아이">하나금융티아이</a>
+              <a href="https://www.finnq.com/" title="하나금융파인드">하나금융파인드</a>
+              <a href="https://www.hanafind.com/" title="핀크">핀크</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      
+      <!-- 헤더로고 -->
+      <h1 id="logo">
+        <a href="index.html" title="메인페이지바로가기">
+          <img src="./images/common/header.logo.svg" alt="메인로고">
+        </a>
+      </h1>
+
+      <!-- 사이트맵 햄버거 -->
+      <label id="burger" for="gnb">
+        <span class="burger1">&nbsp;</span>
+        <span class="burger2">&nbsp;</span>
+        <span class="burger3">&nbsp;</span>
+      </label>
+    </div>
+
+    <!-- 헤더하단 -->
+    <div id="h_bot">
+      <!-- GNB 1뎁스 -->
+      <ul class="gnb flex">
+        <li>
+          <a href="#none" title="그룹소개">그룹소개</a>
+        </li>
+        <li>
+          <a href="#none" title="투자정보">투자정보</a>
+        </li>
+        <li>
+          <a href="#none" title="ESG경영">ESG 경영</a>
+        </li>
+        <li>
+          <a href="#none" title="인재채용">인재채용</a>
+        </li>
+        <li>
+          <a href="#none" title="PR센터">PR센터</a>
+        </li>
+      </ul>
+      <!-- LNB 2뎁스 -->
+      <div class="lnb flex">
+        <ul class="lnb_intro flex">
+          <li>
+            <a href="#none" title="그룹개요">그룹개요</a>
+          </li>
+          <li>
+            <a href="#none" title="경영진">경영진</a>
+          </li>
+          <li>
+            <a href="#none" title="하나네트워크">하나 네트워크</a>
+          </li>
+          <li>
+            <a href="#none" title="기업아이덴티티">기업 아이덴티티</a>
+          </li>
+          <li>
+            <a href="#none" title="연혁">연혁</a>
+          </li>
+          <li>
+            <a href="#none" title="회사위치">회사 위치</a>
+          </li>
+        </ul>
+        <ul class="lnb_ir flex">
+          <li>
+            <a href="#none" title="기업지배구조">기업지배구조</a>
+          </li>
+          <li>
+            <a href="#none" title="투자정보">투자 정보</a>
+          </li>
+          <li>
+            <a href="#none" title="공시정보">공시 정보</a>
+          </li>
+          <li>
+            <a href="#none" title="재무정보">재무 정보</a>
+          </li>
+          <li>
+            <a href="#none" title="IR정보">IR 정보</a>
+          </li>
+          <li>
+            <a href="#none" title="주가정보">주가 정보</a>
+          </li>
+        </ul>
+        <ul class="lnb_esg flex">
+          <li>
+            <a href="#none" title="ESG전략">ESG 전략</a>
+          </li>
+          <li>
+            <a href="#none" title="ESG금융">ESG 금융</a>
+          </li>
+          <li>
+            <a href="#none" title="ESG활동">ESG 활동</a>
+          </li>
+          <li>
+            <a href="#none" title="ESG성과">ESG 성과</a>
+          </li>
+          <li>
+            <a href="#none" title="ESGReporting">ESG Reporting</a>
+          </li>
+        </ul>
+        <ul class="lnb_crew flex">
+          <li>
+            <a href="#none" title="인재상">인재상</a>
+          </li>
+          <li>
+            <a href="#none" title="채용절차">채용 절차</a>
+          </li>
+          <li>
+            <a href="#none" title="채용정보">채용 정보</a>
+          </li>
+          <li>
+            <a href="#none" title="복리후생">복리 후생</a>
+          </li>
+        </ul>
+        <ul class="lnb_pr flex">
+          <li>
+            <a href="#none" title="공지사항">공지사항</a>
+          </li>
+          <li>
+            <a href="#none" title="보도자료">보도자료</a>
+          </li>
+          <li>
+            <a href="#none" title="광고">광고</a>
+          </li>
+          <li>
+            <a href="#none" title="스포츠">스포츠</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="sitemap" class="hidden">
+      <h2>
+        <img src="./images/common/header.logo.hover.svg" alt="로고">
+      </h2>
+      <ul class="sitemap_wrap">
+        <li class="flex">
+          <a href="#none" title="그룹소개">그룹소개</a>
+          <ul class="flex site_map2">
+            <li>
+              <a href="#none" title="그룹개요">그룹개요</a>
+              <ul class="site_map3">
+                <li>
+                  <a href="#none" title="회사소개">회사소개</a>
+                </li>
+                <li>
+                  <a href="#none" title="비전과미션">비전과 미션</a>
+                </li>
+                <li>
+                  <a href="#none" title="전략목표">전략목표</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#none" title="경영진">경영진</a>
+            </li>
+            <li>
+              <a href="#none" title="하나네트워크">하나 네트워크</a>
+            </li>
+            <li>
+              <a href="#none" title="기업아이덴티티">기업 아이덴티티</a>
+            </li>
+            <li>
+              <a href="#none" title="연혁">연혁</a>
+            </li>
+            <li>
+              <a href="#none" title="회사위치">회사 위치</a>
+            </li>
+          </ul>
+        </li>
+        <li class="flex">
+          <a href="#none" title="투자정보">투자정보</a>
+          <ul class="flex site_map2">
+            <li>
+              <a href="#none" title="기업지배구조">기업지배구조</a>
+            </li>
+            <li>
+              <a href="#none" title="투자정보">투자 정보</a>
+            </li>
+            <li>
+              <a href="#none" title="공시정보">공시 정보</a>
+            </li>
+            <li>
+              <a href="#none" title="재무정보">재무 정보</a>
+            </li>
+            <li>
+              <a href="#none" title="IR정보">IR 정보</a>
+            </li>
+          </ul>
+        </li>
+        <li class="flex">
+          <a href="#none" title="ESG경영">ESG경영</a>
+          <ul class="flex site_map2">
+            <li>
+              <a href="#none" title="ESG전략">ESG 전략</a>
+            </li>
+            <li>
+              <a href="#none" title="ESG금융">ESG 금융</a>
+            </li>
+            <li>
+              <a href="#none" title="ESG활동">ESG 활동</a>
+            </li>
+            <li>
+              <a href="#none" title="ESG성과">ESG 성과</a>
+            </li>
+            <li>
+              <a href="#none" title="ESGReporting">ESG Reporting</a>
+            </li>
+          </ul>
+        </li>
+        <li class="flex">
+          <a href="#none" title="인재채용">인재채용</a>
+          <ul class="flex site_map2">
+            <li>
+              <a href="#none" title="인재상">인재상</a>
+            </li>
+            <li>
+              <a href="#none" title="채용절차">채용 절차</a>
+            </li>
+            <li>
+              <a href="#none" title="채용정보">채용 정보</a>
+            </li>
+            <li>
+              <a href="#none" title="복리후생">복리 후생</a>
+            </li>
+          </ul>
+        </li>
+        <li class="flex">
+          <a href="#none" title="PR센터">PR센터</a>
+          <ul class="flex site_map2">
+            <li>
+              <a href="#none" title="공지사항">공지사항</a>
+            </li>
+            <li>
+              <a href="#none" title="보도자료">보도자료</a>
+            </li>
+            <li>
+              <a href="#none" title="광고">광고</a>
+            </li>
+            <li>
+              <a href="#none" title="스포츠">스포츠</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul id="member" class="flex">
+        <li>
+          <a href="#none" title="LOGIN">LOGIN</a>
+        </li>
+        <li>
+          <a href="#none" title="JOIN">JOIN</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+      <!--메인영역-->
+      <main>
+        <section id="login">
+          <div class="login-title-wrap">
+            <h2 class="login-title">로그인</h2>
+    
+            <ul class="text-icon-check">
+              <li><i class="fa-sharp fa-solid fa-check"></i>하나은행 홈페이지는 인터넷 주소창에 보안 자물쇠 이미지가 있습니다.</li>						
+              <li><i class="fa-sharp fa-solid fa-check"></i>하나은행에서는 보안승급, 보안강화 등을 이유로 자물쇠카드 번호 35개 전체 입력을 요구하지 않습니다.</li>
+              <li><i class="fa-sharp fa-solid fa-check"></i>하나원큐와 하나은행 인터넷뱅킹을 동시에 로그인할 수 없습니다. 하나원큐 자동로그인 설정 중인 경우,
+                <br>하나원큐인증 로그인 시 주의해주세요!
+                <span class="t_red_1" style="font-size: 13px;">(반드시 앱 알림 방식으로만 로그인, 인터넷뱅킹 사용 중 하나원큐 실행 금지)</span>
+              </li>
+            </ul>
+          </div>
+        <div class="login-wrapper">
+            <!-- <form method="post" action="#" id="login-form"> -->
+                <input type="text" name="userId" placeholder="아이디" id="id_name">
+                <input type="password" name="userPw" placeholder="비밀번호" id="pw_name">
+                <div id="red_alert">&nbsp;</div>
+                <div class="id_pw">
+                <label for="id_remember">
+                    <input type="checkbox" id="id_remember">아이디 저장
+                </label>
+                <span><span><a href="#;" title="아이디찾기">아이디 찾기</a></span> <span class="bar01">&#x007C;</span><span> <a href="#;" title="비밀번호 찾기">비밀번호 찾기</a></span></span>
+                
+                </div>
+                <input type="submit" value="로그인" id="log_btn">
+                <input type="button" value="회원가입" id="join_btn" onclick="location.href='join.html';">
+                <!-- <a href="join.html" title="회원가입"></a> -->
+                <p>간편 로그인</p>
+                <a href="javascript:;" title="네이버로 간편 로그인"><img src="./images/naverLogo.png" alt="네이버"></a>
+                <a href="javascript:;" title="카카오톡로 간편 로그인"><img src="./images/kakaoLogo.png" alt="카카오톡"></a>
+                <a href="javascript:;" title="구글로 간편 로그인"><img src="./images/googleLogo.png" alt="구글"></a>
+            <!-- </form> -->
+        </div>
+        <div id="new_mnu">
+            <div id="log_sld">
+            <a href="javascript:;" title="신메뉴페이지로 이동">
+                <img src="./images/login_event_bnnr01.jpg" alt="신메뉴 배너">
+                <img src="./images/login_event_bnnr02.jpg" alt="신메뉴 배너">
+                <img src="./images/login_event_bnnr03.jpg" alt="신메뉴 배너">
+            </a>
+            <!-- <ul class="log_c_btn">
+                <li class="on">&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+            </ul> -->
+            <!-- <ul class="c_btn">
+                <li>&nbsp;</li><페이지번호-->
+                <!-- <li ><i class="fas fa-pause"></i></li>일시정지/플레이 아이콘
+            </ul> -->
+        </div>
+        </div>
+    </section>
+    </main>
+  <main>
+    <i class="fa-sharp fa-solid fa-check"></i>
+          <div class="login-wrap">
+          <main class="wrap-inner">
+            <div class="login-title-wrap">
+              <h2 class="login-title">로그인</h2>
+      
+              <ul class="text-icon-check">
+                <li><i class="fa-sharp fa-solid fa-check"></i>하나은행 홈페이지는 인터넷 주소창에 보안 자물쇠 이미지가 있습니다.</li>						
+                <li><i class="fa-sharp fa-solid fa-check"></i>하나은행에서는 보안승급, 보안강화 등을 이유로 자물쇠카드 번호 35개 전체 입력을 요구하지 않습니다.</li>
+                <li><i class="fa-sharp fa-solid fa-check"></i>하나원큐와 하나은행 인터넷뱅킹을 동시에 로그인할 수 없습니다. 하나원큐 자동로그인 설정 중인 경우,
+                  <br>하나원큐인증 로그인 시 주의해주세요!
+                  <span class="t_red_1" style="font-size: 13px;">(반드시 앱 알림 방식으로만 로그인, 인터넷뱅킹 사용 중 하나원큐 실행 금지)</span>
+                </li>
+              </ul>
+            </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/* 헤더영역 서식 */
+header{
+  background-color: #444;
+}
+header:hover{
+  background-color: #fff;
+}
