@@ -20,7 +20,7 @@ footer{
   width:100%;
   height:100%;
 }
-address{
+.m_address{
   width:calc(100% - 108px);
   justify-content: space-between;
   align-items: center;
@@ -29,15 +29,19 @@ address{
   font-style: normal;
   line-height:24px;
 }
-.adress_left li{
+.m_address_right{
+  position:absolute;
+  right: 0px;
+}
+.m_address_left li{
   font-weight: bold;
 }
-.adress_right li a{
+.m_address_right li a{
   color:#fff;
 }
-.adress_right >  li:nth-child(2n){
+.m_address_right >  li:nth-child(2n){
   font-weight: bold;
 }
-.adress_right > li:nth-child(2n-1){
+.m_address_right > li:nth-child(2n-1){
   font-weight: lighter;
 }
