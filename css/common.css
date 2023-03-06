@@ -328,16 +328,16 @@ address{
   font-style: normal;
   line-height:24px;
 }
-.adress_left li{
+.address_left li{
   font-weight: bold;
 }
-.adress_right li a{
+.address_right li a{
   color:#fff;
 }
-.adress_right >  li:nth-child(2n){
+.address_right >  li:nth-child(2n){
   font-weight: bold;
 }
-.adress_right > li:nth-child(2n-1){
+.address_right > li:nth-child(2n-1){
   font-weight: lighter;
 }
 
