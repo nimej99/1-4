@@ -5,7 +5,7 @@
   position: fixed;
   right: 40px;
   top: 38%;
-  z-index: 150;
+  z-index: 1;
 }
 #m_nav > ul{
   display: flex;
@@ -16,7 +16,7 @@
   height: 30px;
   width: 30px;
   line-height: 30px;
-  background: rgba(104, 104, 104, 0.5);
+  background: rgba(54, 54, 54, 0.5);
   border-radius: 50px;
   margin: 10px 0px;
   text-align: center;
@@ -30,8 +30,6 @@
   text-decoration: none;
   color: #fff;
   font-size: 16px;
-  text-align: right;
-  padding-right: 10px;
 }
 #m_nav > ul > li > span{
   width: 30px;
@@ -40,16 +38,14 @@
   line-height: 30px;
   border-radius: 50%;
   color: #fff;
-  background: #333;
+  background: #7B7B7B;
   position: absolute;
   left: 0px;
 }
 #m_nav > ul > li:hover{
   width:150px;
 }
-/* #m_nav > ul > li:hover a{
-  width:calc(180px - 30px);
-} */
+
 /* main itro 서식 */
 .main_intro{
   position: relative;
@@ -309,7 +305,7 @@
 
 /* 연혁 .history */
 .history{
-  background: #221D1E;
+  background: var(--color-black);
   padding: 200px 0px;
 }
 .history > h3{
@@ -363,9 +359,9 @@
   border-radius: 50%;
   transform: translate(26px, 0px);
 }
-.history > article > dl > dt:hover::after{
+.history_on{
   border: 5px solid #fff;
-  background: #221D1E;
+  background: var(--color-black);
   box-sizing: border-box;
 }
 .history > article > dl > dd{
@@ -427,6 +423,37 @@
 .strategy > article > ul > li img{
   width: 100%;
 }
+.strategy .hidden_box{
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.9);
+  display: none;
+}
+.strategy .hidden_box > div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+.strategy .hidden_box > div > p:first-of-type{
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.strategy .hidden_box > div > p:first-of-type > span{
+  color: var(--color-green);
+}
+.strategy .hidden_box > div > p:last-of-type{
+  font-size: 18px;
+  line-height: 25px;
+}
+.strategy .hidden_box > div > img{
+  padding-top: 17px;
+  width: 30.83px;
+  transform: rotate(45deg);
+}
+
 
 /* 하나인의 정직 .trust 서식 */
 .trust{
@@ -533,7 +560,7 @@
 }
 .hana_pr > article > .video_box > .play_btn > .fas{
   font-size: 50px;
-  color: #221D1E;
+  color: var(--color-black);
   position: relative;
   left: 50%;
   top: 50%;
