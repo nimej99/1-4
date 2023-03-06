@@ -11,9 +11,9 @@
   <!-- 기본서식 -->
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <!-- 공통서식 -->
-  <link rel="stylesheet" href="./css/m.common.css" type="text/css">
+  <link rel="stylesheet" href="./css/m_common.css" type="text/css">
   <!-- 메인서식 -->
-  <link rel="stylesheet" href="./css/m.main.css" type="text/css">
+  <link rel="stylesheet" href="./css/m_main.css" type="text/css">
   <!-- 폰트어썸CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <!-- script 영역 -->
@@ -26,245 +26,45 @@
 </head>
 <body>
   <!-- 헤더영역 서식 -->
+  <header>
+    <div id="m_header_wrap" class="flex">
 
+      <h1>
+        <img src="./images/common/header.logo.svg" alt="헤더로고">
+      </h1>
+
+      <div class="m_lang_tab">
+        <a href="#none" title="language">
+          <i class="fa-solid fa-globe"></i>
+        </a>
+        <div class="m_lang_con hidden">
+          <a href="#none" title="KOR">KOR</a>
+          <a href="#none" title="KOR">KOR</a>
+          <a href="#none" title="JPN">JPN</a>
+          <a href="#none" title="CHN">CHN</a>
+        </div>
+      </div>
+
+      <!-- 토글버튼 서식 -->
+      <label id="burger" for="gnb">
+        <span class="burger1">&nbsp;</span>
+        <span class="burger2">&nbsp;</span>
+        <span class="burger3">&nbsp;</span>
+      </label>
+
+      <div id="m_sitemap">
+
+      </div>
+    </div>
+  </header>
 
   <!-- 메인영역 서식 -->
   <main>
-    <section id="main_slider">
-      <h2 class="hidden">메인 슬라이드</h2>
-      <article class="m_slider">
-        <h2 class="hidden">메인 슬라이드</h2>
-        <ul class="m_slider_list flex">
-          <li>
-            <img src="./images/main/banner01.png" alt="배너1" class="fadeIn">
-          </li>
-          <li>
-            <img src="./images/main/banner02.png" alt="배너2" class="fadeOut">
-          </li>
-          <li>
-            <img src="./images/main/banner03.png" alt="배너3" class="fadeOut">
-          </li>
-        </ul>
-        <ul class="d_btn flex">
-          <li>
-            <i class="fa-solid fa-chevron-left" class="prev"></i>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right" class="next"></i>
-          </li>
-        </ul>
-        <ul class="ctrl_btn flex">
-          <li>
-            <span class="bar fadeIn" id="bar1"></span>
-          </li>
-          <li>
-            <span class="bar fadeOut" id="bar2"></span>
-          </li>
-          <li>
-            <span class="bar fadeOut" id="bar3"></span>
-          </li>
-        </ul>
-      </article>
-    </section>
-    <section id="main_tab">
-      <h2 class="hidden">메인 탭매뉴</h2>
-      <input type="radio" name="tac_check" id="g_check" class="hidden" checked>
-      <input type="radio" name="tac_check" id="i_check" class="hidden">
-      <input type="radio" name="tac_check" id="c_check" class="hidden">
-      <nav class="m_tab">
-        <div class="m_tab_con">
-          <ul class="flex">
-            <li class="flex">
-              <label for="g_check" class="t_label flex">
-              손님</label>
-            </li>
-            <li class="flex">
-              <label for="i_check" class="t_label flex">
-              투자자</label>
-            </li>
-            <li class="flex">
-              <label for="c_check" class="t_label flex">
-              입사지원자</label>
-            </li>
-            <li>
-              <ul class="flex ii">
-                <li>
-                  <a href="ir.html" title="주가정보" class="flex">
-                    <p>주가정보</p>
-                    <span id="c">하나금융지주</span>                    
-                  </a>
-                </li>
-                <li>
-                  <a href="ir.html" title="시장가" class="flex">
-                    12,130
-                  </a>
-                </li>
-                <li>
-                  <a href="ir.html" title="현재가" class="flex">
-                    <p>12,130</p>
-                    <span id="n">
-                      <i class="fa-solid fa-play"></i>
-                      70 (-0.57%)</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <article id="tab_con">
-        <h3 class="hidden">탭메뉴 컨텐츠</h3>
-        <div id="guest" class="hidden">
-          <div class="guest_wrap">
-            <ul class="flex">
-              <li class="t_intro">
-                <h4>하나금융소개</h4>
-                <p>
-                  대한민국의 금융역사와 함께한 금융파트너, 
-                  <br>
-                  하나금융그룹입니다.</p>
-              </li>
-              <li class="t_esg">
-                <h4>ESG 경영전략</h4>
-                <p>
-                  환경,사회,지배구조 전략으로 
-                  <br>
-                  고객의 행복과 더 나은 세상을 만들어 갑니다.
-                </p>
-                <div class="t_download">
-                  <h5>2021년</h5>
-                  <span>지속가능경영보고서</span>
-                  <ul class="g_download flex">
-                    <li>
-                      <a href="#none" title="국문">PDF(국문)</a>
-                    </li>
-                    <li>
-                      <a href="#none" title="영문">PDF(영문)</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="t_news">
-                <h4>보도자료</h4>
-                <p>
-                  하나금융그룹의
-                  <br>
-                  새로운 소식과 다양한 활동 전해드립니다.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="investor" class="hidden">
-          <div class="investor_wrap">
-            <ul class="flex">
-              <li class="t_property">
-                <h4>재무재표</h4>
-                <p>
-                  하나금융지주 및 자회사의
-                  <br>
-                  최근 공고용 제무제표를 제공합니다.
-                </p>
-              </li>
-              <li class="t_board">
-                <h4>기업지배구조</h4>
-                <p>
-                  탄탄한 기업지배구조 투명한 경영철학으로 
-                  <br>
-                  건전한 금융서비스를 제공하겠습니다.
-                </p>
-              </li>
-              <li class="t_quote">
-                <h4>실적발표</h4>
-                <p>
-                  하나금융지주는
-                  <br>
-                  정기적으로 경영실적을 공개합니다.
-                </p>
-                <div class="t_download">
-                  <h5>2021년</h5>
-                  <span>지속가능경영보고서</span>
-                  <ul class="g_download flex">
-                    <li>
-                      <a href="#none" title="국문">PDF(국문)</a>
-                    </li>
-                    <li>
-                      <a href="#none" title="영문">PDF(영문)</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="crew" class="hidden">
-          <div class="crew_wrap">
-            <ul class="flex">
-              <li class="t_recruit">
-                <h4>채용정보</h4>
-                <p>
-                  하나금융그룹 관계사의
-                  <br>
-                  채용정보를 제공합니다.
-                </p>
-              </li>
-              <li class="t_rolemodel">
-                <h4>인재상</h4>
-                <p>
-                  비전 달성을 위한 전문역량과 
-                  <br>
-                  리더십을 겸비한 리더
-                </p>
-              </li>
-              <li class="t_prize">
-                <h4>복리후생</h4>
-                <p>
-                  일과 삶의 행복을 위해 
-                  <br>
-                  다양한 복지제도를 제공합니다.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </article>
-    </section>
-    김민석 바보
+    <img src="./images/main/banner01.png" alt="">
   </main>
 
   <!-- 푸터영역 서식 -->
-  <footer>
-    <!-- 탑버튼 서식 -->
-    <a href="#" title="상단으로바로가기" id="top_btn"><div class="t_btn_b"></div></a>
-    <div id="footer_wrap" class="flex">
-      <h2>
-        <a href="index.html" title="">
-          <img src="./images/common/header.logo.svg" alt="로고">
-        </a>
-      </h2>
-      <address class="flex">
-        <ul class="adress_left">
-          <li>서울특별시 중구 을지로 00</li>
-          <li>00-0000-0000</li>
-          <li>Copyright &copy; HANA FINANCIAL GROUP 2012. ALL RIGHT RESERVED.</li>
-        </ul>
-        <ul class="adress_right">
-          <li>
-            <a href="map" title="하나맵">하나맵</a>
-          </li>
-          <li>
-            <a href="개인정보처리방침" title="개인정보처리방침">개인정보처리방침</a>
-          </li>
-          <li>
-            <a href="고객정보취급방침" title="고객정보취급방침">고객정보취급방침</a>
-          </li>
-          <li>
-            <a href="신용정보취급활용체제" title="신용정보취급활용체제">신용정보취급활용체제</a>
-          </li>
-        </ul>
-      </address>
-    </div>
-  </footer>
+  <footer></footer>
   
 </body>
 </html>
