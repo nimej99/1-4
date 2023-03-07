@@ -60,6 +60,7 @@ i.fa-chevron-left, i.fa-chevron-right{
   height:5px;
   border-radius: 10px;
   background: rgba(255, 255, 255, .6);
+  cursor: pointer;
 }
 .ctrl_btn li .bar{
   position:absolute;
@@ -69,6 +70,7 @@ i.fa-chevron-left, i.fa-chevron-right{
   height:5px;
   border-radius: 10px;
   background: var(--color-green);
+  cursor: pointer;
 }
 
 
