@@ -11,21 +11,21 @@ $(function(){
 
   mnu_n.click(function(){
     let n = $(this).index();
-    console.log(n);
+    // console.log(n);
 
     $('html, body').animate({scrollTop:$('section').eq(n+1).offset().top-0},500);
     return false;
   });
 
-  //인트로 텍스트 페이드인
   $(window).scroll(function(){
+    let sPos = $(this).scrollTop();
+    console.log(sPos);
 
-        let bottom_of_element = $(this).offset().top + $(this).outerHeight();
-        let bottom_of_window = $(window).scrollTop() + $(window).height();
-        
-        if( bottom_of_window > 0 ){
-          $('#main_intro_txt').fadeIn();
-        }
-        
-    }); 
+    if(sPos>=0){
+      $('#main_intro_txt').stop().fadeIn();
+      $('#main_intro_txt02').stop().fadeIn(1000);
+    }else if(sPos>=937){
+      $('#intro_txt').stop().fadeIn();
+    }
+  });
 });
