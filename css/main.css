@@ -65,7 +65,7 @@ i.fa-chevron-left, i.fa-chevron-right{
   position:absolute;
   top:0px;
   left:0px;
-  width:160px;
+  width:0px;
   height:5px;
   border-radius: 10px;
   background: var(--color-green);

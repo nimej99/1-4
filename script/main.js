@@ -2,8 +2,8 @@
 
 let ctrl_btn = document.querySelectorAll('.ctrl_btn > li');
 let m_slider_list = document.querySelectorAll('.m_slider_list > li');
-let prev_btn = document.querySelector('.d_btn .prev');
-let next_btn = document.querySelector('.d_btn .next');
+let prev_btn = document.getElementById('prev');
+let next_btn = document.getElementById('next');
 let img_progress = document.querySelectorAll('.ctrl_btn > li > span');
 
 let s_num = 0; //현재 슬라이드 페이지
@@ -83,3 +83,4 @@ function slideSelect() {
 
 prev_btn.addEventListener('click', slideLeft);
 next_btn.addEventListener('click', slideRight);
+for(btn of ctrl_btn) btn.addEventListener('click', slideSelect);
