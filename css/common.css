@@ -82,7 +82,7 @@ header:hover #h_bot .gnb::after{
   left:50%;
   transform: translateX(-50%);
 }
-#logo a img{
+#logo > a > img{
   width:100%;
   transition: 0.3s;
 }
@@ -106,6 +106,9 @@ header:hover #h_bot .gnb::after{
 }
 #burger span:not(#burger span:first-child){
   margin-top:10px;
+}
+#gnb:checked ~ #h_top #burger span{
+  background-color: var(--color-black);
 }
 #gnb:checked ~ #h_top #burger .burger1{
   transform: rotate(45deg);
