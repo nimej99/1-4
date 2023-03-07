@@ -70,24 +70,7 @@ i.fa-chevron-left, i.fa-chevron-right{
   border-radius: 10px;
   background: var(--color-green);
 }
-#bar1, #bar2, #bar3{
-  animation-name: progressBar;
-  animation-duration:5s;
-  animation-timing-function:linear;
-  animation-play-state: paused;
-}
-#bar1.play, #bar2.play, #bar3.play{
-  animation-play-state: running;
-}
 
-@keyframes progressBar {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
 
 /* 메인 탭메뉴 서식 */
 #main_tab{}
