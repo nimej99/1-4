@@ -54,6 +54,7 @@
   height: 100vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/sub/intro_img.jpg);
   background-size: 100%;
+  background-repeat: no-repeat;
 }
 .main_intro > h3{
   display: none;
