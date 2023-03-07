@@ -17,15 +17,41 @@ $(function(){
     return false;
   });
 
+  // 첫화면 텍스트 효과
+  $("#main_intro_txt").fadeIn(1000);
+  $("#main_intro_txt02").fadeIn(2000);
+  
   $(window).scroll(function(){
     let sPos = $(this).scrollTop();
     console.log(sPos);
 
-    if(sPos>=0){
-      $('#main_intro_txt').stop().fadeIn();
-      $('#main_intro_txt02').stop().fadeIn(1000);
-    }else if(sPos>=937){
-      $('#intro_txt').stop().fadeIn();
+    if(sPos>=937){
+      $(".intro").fadeIn(3000);
+      $('.count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 2000, // 2초 동안 애니메이션 효과 적용
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+      });
+    }else{
     }
   });
+  
+
+});
+
+const missionBox = document.querySelector('.mission_box');
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const missionBoxPosition = missionBox.offsetTop + missionBox.offsetHeight / 2;
+  
+  if (scrollPosition > missionBoxPosition) {
+    missionBox.classList.add('show');
+  }
 });

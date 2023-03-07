@@ -243,7 +243,6 @@
 }
 
 /* 하나금융 미션과 비전 .mission 서식 */
-
 .mission{
   width: 100%;
   background-image: url(../images/sub/mission_bg.jpg);
@@ -267,6 +266,12 @@
   border-radius: 30px;
   padding: 56px 0px;
   margin-bottom: 100px;
+  position: relative;
+  left: -5000px; /* 초기 위치를 스크롤 위치에서 왼쪽으로 이동 */
+  transition: 1s ease-out; /* 이동 시 애니메이션 효과 추가 */
+}
+.mission_box.show {
+  left: 5000px; /* 스크롤 위치에 도달하면 왼쪽에서 나타나게 함 */
 }
 .mission > article > .mission_box > p:first-of-type{
   font-size: 40px;
@@ -579,3 +584,5 @@
   top: 50%;
   transform: translate(-50%,-50%);
 }
+
+
