@@ -267,11 +267,11 @@
   padding: 56px 0px;
   margin-bottom: 100px;
   position: relative;
-  left: -5000px; /* 초기 위치를 스크롤 위치에서 왼쪽으로 이동 */
+  left: -1000px; /* 초기 위치를 스크롤 위치에서 왼쪽으로 이동 */
   transition: 1s ease-out; /* 이동 시 애니메이션 효과 추가 */
 }
-.mission_box.show {
-  left: 5000px; /* 스크롤 위치에 도달하면 왼쪽에서 나타나게 함 */
+.left_on{
+  left: 0px !important; /* 스크롤 위치에 도달하면 왼쪽에서 나타나게 함 */
 }
 .mission > article > .mission_box > p:first-of-type{
   font-size: 40px;
@@ -299,6 +299,12 @@
   background: rgba(27,27,27,.78);
   border-radius: 30px;
   padding: 56px 0px;
+  position: relative;
+  right: -1000px; /* 초기 위치를 스크롤 위치에서 왼쪽으로 이동 */
+  transition: 1s ease-out; /* 이동 시 애니메이션 효과 추가 */
+}
+.right_on{
+  right: 0px !important; /* 스크롤 위치에 도달하면 왼쪽에서 나타나게 함 */
 }
 .mission > article > .vision_box > p:first-of-type{
   font-size: 40px;
