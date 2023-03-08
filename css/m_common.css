@@ -124,8 +124,10 @@ header{
 .m_gnb > li{
   height:50px;
   line-height: 50px;
-  border:1px solid #333;
   background: #f8f8f8;
+}
+.m_gnb > li:nth-child(6){
+  border-top:1px solid rgba(0, 0, 0, 0.1);
 }
 .m_gnb > li > label{
   width:100%;
@@ -135,6 +137,31 @@ header{
 .m_lnb_wrap{
   width:60%;
   position: relative;
+}
+.m_lnb_wrap li{
+  height:50px;
+  line-height: 50px;
+}
+.m_lnb_wrap .m_family li{
+  height:30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.m_lnb_wrap li a, .m_lnb_wrap li label{
+  display:flex;
+  align-items: center;
+  padding:0px 20px;
+  font-weight: bold;
+  position:relative;
+}
+.m_lnb_wrap li label
+.m_lnb_wrap div:not(:nth-child(6), :nth-child(7)) li a::after, .m_lnb_wrap li label::after{
+  position: fixed;
+  right:30px;
+  content:'\f107';
+  font:var(--fa-font-solid);
+  font-size: 16px;
+  cursor:pointer;
 }
 #m_intro:checked ~ .m_lnb_wrap .m_intro,
 #m_ir:checked ~ .m_lnb_wrap .m_ir,
@@ -147,4 +174,13 @@ header{
 }
 .m_lnb{
   position: absolute;
+}
+#m_intro:checked ~ .m_gnb li:first-child,
+#m_ir:checked ~ .m_gnb li:nth-child(2),
+#m_esg:checked ~ .m_gnb li:nth-child(3),
+#m_crew:checked ~ .m_gnb li:nth-child(4),
+#m_pr:checked ~ .m_gnb li:nth-child(5),
+#m_family:checked ~ .m_gnb li:nth-child(6),
+#m_member:checked ~ .m_gnb li:last-child{
+  background: #fff;
 }
