@@ -384,9 +384,9 @@
   transform: translate(26px, 0px);
 }
 .history_on{
-  border: 5px solid #fff;
-  background: var(--color-black);
-  box-sizing: border-box;
+  border: 5px solid #fff !important;
+  background: var(--color-black) !important;
+  box-sizing: border-box !important;
 }
 .history > article > dl > dd{
   text-indent: 150px;
@@ -446,6 +446,7 @@
 }
 .strategy > article > ul > li img{
   width: 100%;
+  cursor: pointer;
 }
 .strategy .hidden_box{
   width: 100%;
@@ -476,6 +477,7 @@
   padding-top: 17px;
   width: 30.83px;
   transform: rotate(45deg);
+  cursor: pointer;
 }
 
 
