@@ -3,6 +3,7 @@
 header{
   position: fixed;
   width:100%;
+  z-index: 100;
 }
 #m_header_wrap{
   height:100px;
@@ -198,4 +199,14 @@ header{
 #m_family:checked ~ .m_gnb li:nth-child(6),
 #m_member:checked ~ .m_gnb li:last-child{
   background: #fff;
+}
+
+.t_more{
+  position:absolute;
+  top:30px;
+  right:20px;
+  align-items: center;
+}
+.t_more i.fa-angle-right{
+  margin-left:5px;
 }

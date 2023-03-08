@@ -72,7 +72,14 @@ i.fa-chevron-left, i.fa-chevron-right{
   background: var(--color-green);
   cursor: pointer;
 }
-
+#slide_btn{
+  position:absolute;
+  z-index: 100;
+  top:845px;
+  left:610px;
+  color: rgba(255, 255, 255, .6);
+  cursor: pointer;
+}
 
 /* 메인 탭메뉴 서식 */
 #main_tab{}
@@ -104,10 +111,6 @@ i.fa-chevron-left, i.fa-chevron-right{
 .m_tab_con > ul > li:not(#main_tab .m_tab .m_tab_con > ul > li:last-child):hover{
   background:rgb(0, 129, 119,.6);
   color:#fff;
-}
-.m_tab_con > ul > li img{
-  width:47px;height:47px;
-  margin-bottom:10px;
 }
 .t_label{
   width:100%;
@@ -204,6 +207,7 @@ i.fa-chevron-left, i.fa-chevron-right{
 {
   align-items: center;
   gap:50px;
+  transition:0.5;
 }
 .guest_wrap > ul > li,
 .investor_wrap > ul > li,
@@ -213,12 +217,15 @@ i.fa-chevron-left, i.fa-chevron-right{
   height:300px;
   border-radius:0 20px 0 20px;
   color:#fff;
+  transition:0.5s;
+  background-size: cover;
+  position: relative;
 }
 
 .guest_wrap > ul > li:hover,
 .investor_wrap > ul > li:hover,
 .crew_wrap > ul > li:hover{
-  box-shadow: 0 0 0 3px var(--color-green);
+  filter:brightness(0.9);
 }
 .guest_wrap > ul > li h4,
 .investor_wrap > ul > li h4,
@@ -243,47 +250,46 @@ i.fa-chevron-left, i.fa-chevron-right{
 
 .guest_wrap > ul > li:first-child{
   background: url(../images/main/tab01.png) center center no-repeat;
-  background-size: 550px;
-  object-fit: cover;
+  background-size: cover;
 }
 .guest_wrap > ul > li:nth-child(2){
   background: url(../images/main/tab02.png) center center no-repeat;
-  background-size: 550px;
+  background-size: cover;
 }
 .guest_wrap > ul > li:last-child{
   background: url(../images/main/tab03.png) center center no-repeat;
-  background-size: 550px;
+  background-size: cover;
 }
 
 .investor_wrap > ul > li:first-child{
   background: url(../images/main/tab04.png) center center no-repeat;
-  background-size: 550px;
+  background-size: cover;
 }
 .investor_wrap > ul > li:nth-child(2){
   background: url(../images/main/tab05.png) center center no-repeat;
-  background-size: 550px;
+  background-size: cover;
 }
 .investor_wrap > ul > li:last-child{
   background: url(../images/main/tab06.png) center center no-repeat;
-  background-size: 550px;
+  background-size: cover;
 }
 
 .crew_wrap > ul > li:first-child{
   background: url(../images/main/tab07.png) center center no-repeat;
-  background-size: 550px;
+  background-size: cover;
 }
 .crew_wrap > ul > li:nth-child(2){
   background: url(../images/main/tab08.png) center center no-repeat;
-  background-size: 550px;
+  background-size: cover;
 }
 .crew_wrap > ul > li:last-child{
   background: url(../images/main/tab09.png) center center no-repeat;
-  background-size: 550px;
+  background-size: cover;
 }
 
 /* 다운로드 서식 */
 .t_download{
-  padding:5% 0px 0px 30px;
+  padding:0px 0px 0px 30px;
 }
 .t_download h5, .t_download span{
   font-weight: bold;
@@ -295,13 +301,28 @@ i.fa-chevron-left, i.fa-chevron-right{
   margin-top:20px;
 }
 .g_download li{
-  width:25%;
+  width:160px;
   text-align: center;
   color:var(--color-black);
   background: #fff;
   border-radius: 20px;
-  padding:10px 0px;
   font-size:12px;
+  line-height: 32px;
   font-weight: bold;
-  margin-right:20px;
+  margin-right:16px;
+}
+.g_download li a{
+  line-height: 32px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.t_more{
+  position:absolute;
+  top:30px;
+  right:20px;
+  align-items: center;
+}
+.t_more i.fa-angle-right{
+  margin-left:5px;
 }

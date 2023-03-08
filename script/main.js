@@ -5,6 +5,7 @@ let m_slider_list = document.querySelectorAll('.m_slider_list > li');
 let prev_btn = document.getElementById('prev');
 let next_btn = document.getElementById('next');
 let img_progress = document.querySelectorAll('.ctrl_btn > li > span');
+let slide_btn = document.querySelector('#slide_btn');
 
 let s_num = 0; //현재 슬라이드 페이지
 let temp = 0; //임시
@@ -84,3 +85,36 @@ function slideSelect() {
 prev_btn.addEventListener('click', slideLeft);
 next_btn.addEventListener('click', slideRight);
 for(btn of ctrl_btn) btn.addEventListener('click', slideSelect);
+
+let slideNum = 0;
+
+slide_btn.addEventListener('click', function(){
+  if(slideNum === 0){
+    slide_btn.classList.remove('fa-pause');
+    slide_btn.classList.add('fa-play');
+    clearInterval(Timer);
+    temp = 0;
+    img_progress[s_num].style.width = temp+'px';
+    slideNum = 1;
+  } else{
+    slide_btn.classList.remove('fa-play');
+    slide_btn.classList.add('fa-pause');
+    clearInterval(Timer);
+    Timer = setInterval(slideProgress, 10);
+    slideNum = 0;
+  }
+});
+
+// 체크드 초기화
+let toggleBtn = document.querySelector('#burger');
+
+let tabCheck = document.getElementsByName('tac_check');
+let tabFirst = document.querySelector('#g_check');
+
+toggleBtn.addEventListener('click', function(){
+  for(let c=0; c < tabCheck.length; c++){
+
+    tabCheck[c].checked = false;
+    tabFirst.checked = true;
+  }
+});

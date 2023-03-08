@@ -1,2 +1,279 @@
 @charset "utf-8";
 
+/* 메인 영역 서식 */
+
+/* 메인 슬라이드 서식 */
+#main_slider{
+  width:100%;
+  height:calc(100vh + 85px);
+}
+.m_slider_list{
+  width:100%;
+}
+.m_slider_list li{
+  width:100%;
+  position:absolute;
+  transition:0.3s;
+}
+.m_slider_list li.fadeOut{
+  opacity:0;
+}
+.m_slider_list li.fadeIn{
+  z-index:1;
+}
+.m_slider_list li img{
+  width:100%;
+  height:calc(100vh + 85px);
+  object-fit: cover;
+}
+
+/* 컨트롤 버튼 서식 */
+.ctrl_btn{ 
+  width: 56px;
+  height:8px;
+  justify-content: space-evenly;
+  position:absolute;
+  z-index: 1;
+  bottom:30px;
+  left:50%;
+  transform: translateX(-50%);
+}
+.ctrl_btn li{
+  position: relative;
+  width:8px;
+  height:8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .6);
+  cursor: pointer;
+}
+.ctrl_btn li .bar{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:0px;
+  height:5px;
+  border-radius: 50%;
+  background: var(--color-green);
+  cursor: pointer;
+}
+#slide_btn{
+  position:absolute;
+  z-index: 100;
+  bottom:27px;
+  left:58%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, .6);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* 메인 탭메뉴 서식 */
+#main_tab{}
+#main_tab .m_tab{}
+.m_tab_con{
+  width:100%;
+  height:85px;
+  position:relative;
+  z-index: 3;
+  bottom:85px;
+}
+.ii{
+  width:100%;
+  height:100%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  background:rgb(0, 129, 119,.6);
+}
+.ii a{
+  color:#fff;
+  font-weight: bold;
+}
+.ii li:first-child a{
+  flex-direction: column;
+  text-align: left;
+  color:#fff;
+}
+.ii li:first-child p{
+  font-family: 'Hana2.0';
+  font-size:13px;
+}
+.ii #c{
+  font-family: 'Hana2.0';
+  line-height: 25px;
+  font-size: 15px;
+}
+.ii li:nth-child(2) a{
+  font-family: 'Hana2.0';
+  font-size: 20px;
+}
+.ii li:last-child a{
+  font-size: 13px;
+  flex-direction: column;
+  text-align: left;
+}
+.ii #n{
+  line-height:23px;
+}
+.ii i.fa-play{
+  color:#00f;
+}
+
+.m_tabc{
+  width:100%;
+  height:70px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.m_tabc > li{
+  width:33.3%;
+}
+.m_tabc >li > label{
+  display: block;
+  line-height: 70px;
+  font-family: 'Hana2.0';
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 탭메뉴 컨텐츠 서식 */
+#g_check:checked ~ #tab_con #guest,
+#i_check:checked ~ #tab_con #investor,
+#c_check:checked ~ #tab_con #crew
+{
+  display:block;
+}
+#g_check:checked ~ .m_tab .m_tab_con  .m_tabc > li:first-child,
+#i_check:checked ~ .m_tab .m_tab_con  .m_tabc > li:nth-child(2),
+#c_check:checked ~ .m_tab .m_tab_con  .m_tabc > li:nth-child(3)
+{
+  color:var(--color-green);
+  border-bottom:3px solid var(--color-green);
+}
+#tab_con{
+  width:100%;
+}
+#guest{}
+.guest_wrap,
+.investor_wrap,
+.crew_wrap
+{
+  width:90%;
+  margin:0 auto;
+  padding:50px 0px;
+}
+.guest_wrap > ul,
+.investor_wrap > ul,
+.crew_wrap > ul
+{
+  align-items: center;
+  gap:50px;
+  transition:0.5;
+}
+.guest_wrap > ul > li,
+.investor_wrap > ul > li,
+.crew_wrap > ul > li
+{
+  width:33.3%;
+  height:300px;
+  border-radius:0 20px 0 20px;
+  color:#fff;
+  transition:0.5s;
+  position: relative;
+}
+
+.guest_wrap > ul > li:hover,
+.investor_wrap > ul > li:hover,
+.crew_wrap > ul > li:hover{
+  filter:brightness(0.9);
+}
+.guest_wrap > ul > li h4,
+.investor_wrap > ul > li h4,
+.crew_wrap > ul > li h4
+{
+  font-family: 'Hana2.0';
+  font-weight: bold; 
+  font-size:24px;
+  padding:30px 0px 0px 30px;
+}
+.guest_wrap > ul > li p,
+.investor_wrap > ul > li p,
+.crew_wrap > ul > li p
+{
+  font-weight:bold;
+  font-size:16px;
+  line-height: 30px;
+  padding:20px 30px;
+}
+
+/* 탭 컨텐츠 배경이미지 */
+
+.guest_wrap > ul > li:first-child{
+  background: url(../images/main/tab01.png) center center no-repeat;
+}
+.guest_wrap > ul > li:nth-child(2){
+  background: url(../images/main/tab02.png) center center no-repeat;
+}
+.guest_wrap > ul > li:last-child{
+  background: url(../images/main/tab03.png) center center no-repeat;
+}
+
+.investor_wrap > ul > li:first-child{
+  background: url(../images/main/tab04.png) center center no-repeat;
+}
+.investor_wrap > ul > li:nth-child(2){
+  background: url(../images/main/tab05.png) center center no-repeat;
+}
+.investor_wrap > ul > li:last-child{
+  background: url(../images/main/tab06.png) center center no-repeat;
+}
+
+.crew_wrap > ul > li:first-child{
+  background: url(../images/main/tab07.png) center center no-repeat;
+}
+.crew_wrap > ul > li:nth-child(2){
+  background: url(../images/main/tab08.png) center center no-repeat;
+}
+.crew_wrap > ul > li:last-child{
+  background: url(../images/main/tab09.png) center center no-repeat;
+}
+
+/* 다운로드 서식 */
+.t_download{
+  padding:5% 0px 0px 30px;
+}
+.t_download h5, .t_download span{
+  font-weight: bold;
+  font-size:16px;
+  line-height: 21px;
+}
+.g_download{
+  align-items: center;
+  margin-top:20px;
+}
+.g_download li{
+  width:160px;
+  text-align: center;
+  color:var(--color-black);
+  background: #fff;
+  border-radius: 20px;
+  font-size:12px;
+  line-height: 32px;
+  font-weight: bold;
+  margin-right:20px;
+}
+.g_download li a{
+  line-height: 32px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.t_more{
+  position:absolute;
+  top:30px;
+  right:20px;
+  align-items: center;
+}
+.t_more i.fa-angle-right{
+  margin-left:5px;
+}

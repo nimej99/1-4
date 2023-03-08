@@ -64,7 +64,6 @@ header:hover #h_bot .gnb::after{
 }
 #h_top .select_tab .lang_tab .lang_con a:hover, #h_top .select_tab .f_site .site_con a:hover{
   color:var(--color-green);
-  font-weight: bold;
 }
 #h_top .select_tab li a{
   color:#fff;
@@ -212,7 +211,6 @@ header:hover #h_bot .gnb::after{
 }
 .lnb ul li a:hover{
   color:var(--color-green);
-  font-weight: bold;
 }
 #hover_bg{
   width:100%;
@@ -277,6 +275,9 @@ header:hover #h_bot .gnb::after{
   font-size:16px;
   line-height:36px;
   margin:0 30px;
+}
+.site_map2 a:hover, #member a:hover{
+  color:var(--color-green);
 }
 .site_map3{
   font-size:14px;
