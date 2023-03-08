@@ -124,10 +124,27 @@ header{
 .m_gnb > li{
   height:50px;
   line-height: 50px;
-  padding:0px 20px;
   border:1px solid #333;
   background: #f8f8f8;
 }
+.m_gnb > li > label{
+  width:100%;
+  display:block;
+  padding:0px 20px;
+}
 .m_lnb_wrap{
   width:60%;
+  position: relative;
+}
+#m_intro:checked ~ .m_lnb_wrap .m_intro,
+#m_ir:checked ~ .m_lnb_wrap .m_ir,
+#m_esg:checked ~ .m_lnb_wrap .m_esg,
+#m_crew:checked ~ .m_lnb_wrap .m_crew,
+#m_pr:checked ~ .m_lnb_wrap .m_pr,
+#m_family:checked ~ .m_lnb_wrap .m_family,
+#m_member:checked ~ .m_lnb_wrap .m_member{
+  display:block;
+}
+.m_lnb{
+  position: absolute;
 }

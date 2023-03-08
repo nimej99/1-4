@@ -20,7 +20,6 @@
   <!-- <script src="./script/common.js"  defer></script> -->
 
   <!-- 메인스크립트 -->
-  <script src="./script/main.js" defer></script>
 
   <title>하나금융그룹</title>
 </head>
@@ -55,38 +54,52 @@
       </label>
 
       <div id="m_sitemap" class="hidden">
-        <input type="checkbox" id="m_intro">
-        <input type="checkbox" id="m_ir">
-        <input type="checkbox" id="m_esg">
-        <input type="checkbox" id="m_crew">
-        <input type="checkbox" id="m_pr">
-        <input type="checkbox" id="m_family">
-        <input type="checkbox" id="m_member">
+        <input type="radio" name="m_sitemap" id="m_intro" class="hidden" checked>
+        <input type="radio" name="m_sitemap" id="m_ir" class="hidden">
+        <input type="radio" name="m_sitemap" id="m_esg" class="hidden">
+        <input type="radio" name="m_sitemap" id="m_crew" class="hidden">
+        <input type="radio" name="m_sitemap" id="m_pr" class="hidden">
+        <input type="radio" name="m_sitemap" id="m_family" class="hidden">
+        <input type="radio" name="m_sitemap" id="m_member" class="hidden">
         <ul class="m_gnb">
           <li>
-            그룹개요
+            <label for="m_intro">
+              그룹개요
+            </label>
           </li>
           <li>
-            투자정보
+            <label for="m_ir">
+              투자정보
+            </label>
           </li>
           <li>
-            ESG 경영
+            <label for="m_esg">
+              ESG 경영
+            </label>
           </li>
           <li>
-            인재채용
+            <label for="m_crew">
+              인재채용
+            </label>
           </li>
           <li>
-            PR센터
+            <label for="m_pr">
+              PR센터
+            </label>
           </li>
           <li>
-            Familysite
+            <label for="m_family">
+              Familysite
+            </label>
           </li>
           <li>
-            Login / Join
+            <label for="m_member">
+              Login / Join
+            </label>
           </li>
         </ul>
         <div class="m_lnb_wrap">
-          <div class="m_lnb m_intro">
+          <div class="m_lnb m_intro hidden">
             <ul>
               <li>
                 <a href="m_sub.html" title="그룹개요">
@@ -120,7 +133,7 @@
               </li>
             </ul>
           </div>
-          <div class="m_lnb m_ir">
+          <div class="m_lnb m_ir hidden">
             <ul>
               <li>
                 <a href="#none" title="기업지배구조">
@@ -154,7 +167,7 @@
               </li>
             </ul>
           </div>
-          <div class="m_lnb m_esg">
+          <div class="m_lnb m_esg hidden">
             <ul>
               <li>
                 <a href="#none" title="ESG전략">
@@ -183,7 +196,7 @@
               </li>
             </ul>
           </div>
-          <div class="m_lnb m_crew">
+          <div class="m_lnb m_crew hidden">
             <ul>
               <li>
                 <a href="#none" title="인재상">
@@ -207,7 +220,7 @@
               </li>
             </ul>
           </div>
-          <div class="m_lnb m_pr">
+          <div class="m_lnb m_pr hidden">
             <ul>
               <li>
                 <a href="m_board.html" title="공지사항">
@@ -231,7 +244,7 @@
               </li>
             </ul>
           </div>
-          <div class="m_lnb m_family">
+          <div class="m_lnb m_family hidden">
             <ul>
               <li>
                 <a href="https://www.hanafn.com:8002/main.do" title="하나금융그룹">
@@ -315,7 +328,7 @@
               </li>
             </ul>
           </div>
-          <div class="m_lnb m_member">
+          <div class="m_lnb m_member hidden">
             <ul>
               <li>
                 <a href="m_login.html" title="로그인바로가기">
