@@ -38,10 +38,12 @@ header{
 }
 .m_lang_con{
   position: absolute;
+  z-index:5000;
   top:30px;
   left:50%;
   transform: translateX(-50%);
   border-radius: 10px;
+  border:1px solid var(--color-black);
   background: #fff;
 }
 .m_lang_con > a{
@@ -138,8 +140,10 @@ header{
   width:60%;
   position: relative;
 }
+.m_lnb_wrap div{
+  width:100%;
+}
 .m_lnb_wrap li{
-  height:50px;
   line-height: 50px;
 }
 .m_lnb_wrap .m_family li{
@@ -147,15 +151,26 @@ header{
   line-height: 30px;
   font-size: 14px;
 }
-.m_lnb_wrap li a, .m_lnb_wrap li label{
+.m_lnb_wrap div li a, .m_lnb_wrap li label{
   display:flex;
   align-items: center;
   padding:0px 20px;
   font-weight: bold;
   position:relative;
+  transition: 0.5s;
 }
-.m_lnb_wrap li label
-.m_lnb_wrap div:not(:nth-child(6), :nth-child(7)) li a::after, .m_lnb_wrap li label::after{
+.m_intro_3depth{
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.5s;
+}
+#m_intro_desc:checked ~ .m_intro_3depth{
+  max-height:150px;
+}
+#m_intro_desc:checked + label::after{
+  transform: rotate(180deg);
+}
+.m_lnb_wrap > div:not(:nth-child(6), :nth-child(7)) ul:not(.m_intro_3depth) > li > a::after, .m_lnb_wrap li label::after{
   position: fixed;
   right:30px;
   content:'\f107';
