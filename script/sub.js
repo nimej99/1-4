@@ -21,9 +21,9 @@ $(function(){
   $("#main_intro_txt").fadeIn(1000);
   $("#main_intro_txt02").fadeIn(2000);
   
+  // 스크롤 함수
   $(window).scroll(function(){
     let sPos = $(this).scrollTop();
-    console.log(sPos);
 
     //첫화면 텍스트 효과 스크롤값
     if(sPos>=937){
@@ -85,27 +85,28 @@ $(function(){
       $('.mission_box').removeClass('left_on');
       $('.vision_box').removeClass('right_on');
     }
+
+     // 연혁 불 들어오게
+    // if(sPos>=3250){
+    //   $('.history > article > dl:first-child > dt::after').addClass('history_on');
+    // }else if(sPos>=3350){
+    //   $('.history > article > dl:nth-child(2) > dt::after').addClass('history_on');
+    // }
+    // else if(sPos>=3450){
+    //   $('.history > article > dl:nth-child(3) > dt::after').addClass('history_on');
+    // }
+    // else if(sPos>=3550){
+    //   $('.history > article > dl:nth-child(4) > dt::after').addClass('history_on');
+    // }else{
+    //   $('.history > article > dl:last-child > dt::after').addClass('history_on');
+    // }
+
+    //전략목표 텍스트 fadIn, click시 숨겨진 박스 나타나게 하기
+    if(sPos>=5100 && sPos<=6100){
+      $("#v_box").fadeIn();
+      $("#m_btn").click(function(){
+        $("#m_box").css('display','block');
+      });
+    }
   });
-
-  // 연혁 불 들어오게
-  if(sPos>=3260){
-    $('.history > article > dl > dt::after').addClass('history_on');
-
-  }
-  
-
 });
-
-
-
-
-// const missionBox = document.querySelector('.mission_box');
-
-// window.addEventListener('scroll', () => {
-//   const scrollPosition = window.scrollY + window.innerHeight;
-//   const missionBoxPosition = missionBox.offsetTop + missionBox.offsetHeight / 2;
-  
-//   if (scrollPosition > missionBoxPosition) {
-//     missionBox.classList.add('show');
-//   }
-// });
