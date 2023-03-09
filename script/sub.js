@@ -1,4 +1,6 @@
 $(function(){
+  
+  let historyOn = false; // 스크롤 on off 체크
 
   // 스크롤 버튼 클릭시 아래 내용으로 이동
   $('#down_btn').click(function(){
@@ -7,9 +9,9 @@ $(function(){
 
   //원형내비게이션 클릭시 해당 콘텐츠로 이동
 
-  let mnu_n = $('#m_nav li')
+  let mnuN = $('#m_nav li')
 
-  mnu_n.click(function(){
+    mnuN.click(function(){
     let n = $(this).index();
     // console.log(n);
 
@@ -56,30 +58,30 @@ $(function(){
       
     if(sPos>=900 && sPos<=1875) {
         // 카운트를 적용시킬 요소
-        const $counter1 = document.querySelector(".count1");
-        const $counter2 = document.querySelector(".count2");
-        const $counter3 = document.querySelector(".count3");
-        const $counter4 = document.querySelector(".count4");
-        const $counter5 = document.querySelector(".count5");
+        const $counTer1 = document.querySelector(".count1");
+        const $counTer2 = document.querySelector(".count2");
+        const $counTer3 = document.querySelector(".count3");
+        const $counTer4 = document.querySelector(".count4");
+        const $counTer5 = document.querySelector(".count5");
         
         // 목표 수치
-        const max1 = 1971;
-        const max2 = 22007;
-        const max3 = 1112;
-        const max4 = 502;
-        const max5 = 71;
+        const mAx1 = 1971;
+        const mAx2 = 22007;
+        const mAx3 = 1112;
+        const mAx4 = 502;
+        const mAx5 = 71;
         
-        setTimeout(() => counter($counter1, max1), 2000);
-        setTimeout(() => counter($counter2, max2), 2000);
-        setTimeout(() => counter($counter3, max3), 2000);
-        setTimeout(() => counter($counter4, max4), 2000);
-        setTimeout(() => counter($counter5, max5), 2000);
+        setTimeout(() => counter($counTer1, mAx1), 2000);
+        setTimeout(() => counter($counTer2, mAx2), 2000);
+        setTimeout(() => counter($counTer3, mAx3), 2000);
+        setTimeout(() => counter($counTer4, mAx4), 2000);
+        setTimeout(() => counter($counTer5, mAx5), 2000);
       }
     }
 
     // 비전과 미션 박스 날아오게
-    if(sPos>=1800 && sPos<=3200){
-      $('.mission_box').addClass('left_on').animate({'left':'0px'},200,'easeOutExpo');
+    if(sPos>=1000 && sPos<=3200){
+      $('.mission_box').addClass('left_on');
       $('.vision_box').addClass('right_on');
     }else{
       $('.mission_box').removeClass('left_on');
@@ -88,8 +90,25 @@ $(function(){
 
      // 연혁 불 들어오게
     if(sPos>=3250){
-      $('.history > article > dl > dt:first-of-type div').addClass('history_on');
-      $('.history > article > dl > dt:first-of-type').addClass('txt_on');
+      let dtIdx = 0;
+      const dtCount = $('.history > article > dl > dt').length; // dt 요소의 총 개수
+      
+      if(historyOn == false) { //초기값 false line 2 에서 확인가능
+        historyOn = true; // true로 변경 (if문을 한번만 실행하기 위해서)
+        let historyInterval = setInterval(() => {
+          // 현재 선택된 dt 요소에서 클래스를 삭제
+          $('.history > article > dl > dt').stop().eq(dtIdx).find('div').removeClass('history_on');
+          $('.history > article > dl > dt').stop().eq(dtIdx).removeClass('txt_on');
+        
+          // 다음 dt 요소의 인덱스 계산
+          dtIdx = (dtIdx + 1) % dtCount; // 0, 1, 2, 3, 4 ~ 0, 1, 2, 3, 4 반복
+          if(dtIdx == dtCount - 1) clearInterval(historyInterval); // 4에 걸칠시 interval 지움
+        
+          // 다음 dt 요소에 클래스를 추가
+          $('.history > article > dl > dt').stop().eq(dtIdx).find('div').addClass('history_on');
+          $('.history > article > dl > dt').stop().eq(dtIdx).addClass('txt_on');
+        }, 2000);
+      }
     }
     
     
@@ -121,7 +140,7 @@ $(function(){
 
   // 모달창 띄우기
   $('.video_box, .play_btn').click(function(){
-    const modal = `
+    const moDal = `
     <div class="modal">
       <img src="../images/sub/close_btn.png" alt="닫기버튼" id="c_btn">
       <div class="modal_wrap">
@@ -149,7 +168,7 @@ $(function(){
     `
 
     //body태그의 안쪽 맨뒤에 내용을 추가한다.
-    $('body').append(modal);
+    $('body').append(moDal);
     $('body').css('overflow', 'hidden');
 
     $('.modal:not(.modal_wrap), #c_btn').click(function(){

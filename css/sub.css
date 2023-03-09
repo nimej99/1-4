@@ -451,6 +451,7 @@ body{
 }
 .strategy > article > ul > li > div > img{
   width: 15%;
+  z-index: 10000;
 }
 .strategy > article > ul > li img{
   width: 100%;
