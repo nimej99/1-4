@@ -4,17 +4,12 @@
 header{
   background-color: #444;
 }
-header:hover{
-  background-color: #fff;
-}
-#hover_bg:hover{
-  background: #fff;
-}
+
 main{
-  padding-top:50px;
+  padding-top:100px;
 }
 #login{
-  height: calc(100vh - 336px);
+  height: calc(100vh - 274px);
   text-align: center;
   width: 90%;
   margin: 0 auto;
@@ -35,7 +30,7 @@ main{
   margin: 0 auto;
   flex-direction: column;
   text-align: center;
-  position: relative;
+
 }
 #l_wrap > input{
   width: 90%;
