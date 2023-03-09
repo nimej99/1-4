@@ -372,7 +372,7 @@
   padding-top: 150px;
   display: inline-block;
 }
-.history > article > dl > dt::after{
+.history > article > dl > dt div{
   position: absolute;
   z-index: 1;
   content: '';
@@ -381,12 +381,15 @@
   display: inline-block;
   background: #7B7B7B;
   border-radius: 50%;
-  transform: translate(26px, 0px);
+  transform: translate(27px, 0px);
 }
 .history_on{
   border: 5px solid #fff !important;
   background: var(--color-black) !important;
   box-sizing: border-box !important;
+}
+.txt_on{
+  color: #fff !important;
 }
 .history > article > dl > dd{
   text-indent: 150px;
@@ -421,6 +424,7 @@
 .strategy > article > ul > li{
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 .strategy > article > ul > li > div{
   position: absolute;
@@ -449,9 +453,9 @@
   cursor: pointer;
 }
 .strategy .hidden_box{
-  width: 100%;
+  width: 100.1%;
   height: 100%;
-  background: rgba(255,255,255,.9);
+  background: rgb(255,255,255);
   display: none;
 }
 .strategy .hidden_box > div{
@@ -475,7 +479,7 @@
 }
 .strategy .hidden_box > div > img{
   padding-top: 17px;
-  width: 30.83px;
+  width: 45px;
   transform: rotate(45deg);
   cursor: pointer;
 }
@@ -583,14 +587,16 @@
   border-radius: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 .hana_pr > article > .video_box > .play_btn > .fas{
   font-size: 50px;
   color: var(--color-black);
   position: relative;
-  left: 50%;
+  left: 54%;
   top: 50%;
   transform: translate(-50%,-50%);
 }
+
 
 

@@ -87,26 +87,37 @@ $(function(){
     }
 
      // 연혁 불 들어오게
-    // if(sPos>=3250){
-    //   $('.history > article > dl:first-child > dt::after').addClass('history_on');
-    // }else if(sPos>=3350){
-    //   $('.history > article > dl:nth-child(2) > dt::after').addClass('history_on');
-    // }
-    // else if(sPos>=3450){
-    //   $('.history > article > dl:nth-child(3) > dt::after').addClass('history_on');
-    // }
-    // else if(sPos>=3550){
-    //   $('.history > article > dl:nth-child(4) > dt::after').addClass('history_on');
-    // }else{
-    //   $('.history > article > dl:last-child > dt::after').addClass('history_on');
-    // }
-
+    if(sPos>=3250){
+      $('.history > article > dl > dt:first-of-type div').addClass('history_on');
+      $('.history > article > dl > dt:first-of-type').addClass('txt_on');
+    }
+    
+    
     //전략목표 텍스트 fadIn, click시 숨겨진 박스 나타나게 하기
     if(sPos>=5100 && sPos<=6100){
       $("#v_box").fadeIn();
-      $("#m_btn").click(function(){
-        $("#m_box").css('display','block');
+      $("#m_btn1,.strategy>article>ul>li:first-child>img").click(function(){
+      $("#m_box1").css('display','block');
+      });
+      $("#h_btn1, .strategy>article>ul>li:first-child>#m_box1").click(function(){
+      $("#m_box1").css('display','none');
+      });
+
+      $("#m_btn2, .strategy>article>ul>li:nth-child(2)>img").click(function(){
+      $("#m_box2").css('display','block');
+      });
+      $("#h_btn2, .strategy>article>ul>li:nth-child(2)>#m_box2").click(function(){
+      $("#m_box2").css('display','none');
+      });
+
+      $("#m_btn3,.strategy>article>ul>li:last-child>img").click(function(){
+      $("#m_box3").css('display','block');
+      });
+      $("#h_btn3, .strategy>article>ul>li:last-child>#m_box3").click(function(){
+      $("#m_box3").css('display','none');
       });
     }
   });
 });
+
+
