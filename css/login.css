@@ -82,4 +82,8 @@ main{
     cursor: pointer;
     font-size: 18px;
   }
+  #l_submit:focus{
+    background : var(--color-green) !important;
+    border-bottom:1px solid #fff !important;
+  }
 

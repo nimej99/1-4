@@ -305,15 +305,6 @@ i.fa-chevron-left, i.fa-chevron-right{
   position: relative;
 }
 
-<<<<<<< Updated upstream
-=======
-.guest_wrap > ul > li:hover,
-.investor_wrap > ul > li:hover,
-.crew_wrap > ul > li:hover{
-  /* filter:brightness(0.7); */
-}
-
->>>>>>> Stashed changes
 .guest_wrap > ul > li h4,
 .investor_wrap > ul > li h4,
 .crew_wrap > ul > li h4
@@ -335,24 +326,9 @@ i.fa-chevron-left, i.fa-chevron-right{
 
 /* 탭 컨텐츠 배경이미지 */
 
-<<<<<<< Updated upstream
 .guest_wrap > ul > li:first-child{
   background:url(../images/main/tab01.png) center center no-repeat;
   background-size: cover;
-=======
-.guest_wrap > ul > li:first-child::after{
-  content:'';
-  position: absolute;
-  z-index: -1;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  border-radius: 00px 20px 00px 20px;
-  background: url(../images/main/tab01.png) center center no-repeat;
-  transition: 0.5s;
-  /* background-size: cover; */
->>>>>>> Stashed changes
 }
 .guest_wrap > ul > li:nth-child(2){
   background: url(../images/main/tab02.png) center center no-repeat;
@@ -390,19 +366,12 @@ i.fa-chevron-left, i.fa-chevron-right{
 }
 
 /* 호버시 이미지 어둡게, 스케일 */
-<<<<<<< Updated upstream
 .guest_wrap > ul > li:first-child:hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab01.png);
-=======
-.guest_wrap > ul > li:first-child:hover::after{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab01.png);
-  /* background-size: 140%; */
->>>>>>> Stashed changes
   background-position: center center;
 }
 .guest_wrap > ul > li:nth-child(2):hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab02.png);
-<<<<<<< Updated upstream
   background-position: center center;
 }
 .guest_wrap > ul > li:last-child:hover{
@@ -434,14 +403,6 @@ i.fa-chevron-left, i.fa-chevron-right{
   background-position: center center;
 }
 
-=======
-  /* background-size: 140%; */
-  background-position: center center;
-}
-
-
-
->>>>>>> Stashed changes
 /* 다운로드 서식 */
 .t_download{
   padding:0px 0px 0px 30px;
