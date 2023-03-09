@@ -1,3 +1,10 @@
+  $(function(){
+    // 스크롤 버튼 클릭시 아래 내용으로 이동
+    $('#down_btn').click(function(){
+      $('html, body').animate({scrollTop:$('#main_tab').offset().top-0},500,'easeOutQuint');
+    });
+  });
+
 // 메인 슬라이드 서식
 
 let ctrl_btn = document.querySelectorAll('.ctrl_btn > li');
