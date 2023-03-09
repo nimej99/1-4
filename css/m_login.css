@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* 헤더영역 서식 */
+header{
+  background-color: #444;
+}
+header:hover{
+  background-color: #fff;
+}
+#hover_bg:hover{
+  background: #fff;
+}
+main{
+  padding-top:50px;
+}
+#login{
+  height: calc(100vh - 336px);
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+#login h2{
+  font-size: 30px;
+  font-weight:bolder;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+#login> p{
+  font-size: 18px;
+  color: #999999;
+}
+#l_wrap{
+  padding: 30px 0px;
+  width: 400px;
+  margin: 0 auto;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+#l_wrap > input{
+  width: 90%;
+  height: 50px;
+  margin: 5px 0px;
+  border:none;
+  border-bottom: 1px solid var(--color-green);
+}
+#i_store{
+  accent-color: var(--color-red);
+}
+.log_info{
+  margin: 20px 0px;
+  position: relative;
+  font-size: 14px;
+  width: 90%;
+}
+.log_info > li:first-child{
+  width: 30%;
+  text-align: end;
+}
+.log_info > li:nth-child(2){
+  width: 45%;
+  text-align:end;
+}
+.log_info > li:nth-child(2)> a:hover{
+  color: var(--color-green);
+  font-weight: bold;
+}
+.log_info >li:last-child{
+  width: 25%;
+  text-align: end;
+}
+.log_info >li:last-child span:hover{
+  color: var(--color-green);
+  font-weight: bold;
+}
+
+  #l_wrap >p{
+    margin: 5px 0px;
+  }
+  #l_submit{
+    background: var(--color-green);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+

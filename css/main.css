@@ -225,8 +225,9 @@ i.fa-chevron-left, i.fa-chevron-right{
 .guest_wrap > ul > li:hover,
 .investor_wrap > ul > li:hover,
 .crew_wrap > ul > li:hover{
-  filter:brightness(0.9);
+  filter:brightness(0.7);
 }
+
 .guest_wrap > ul > li h4,
 .investor_wrap > ul > li h4,
 .crew_wrap > ul > li h4
