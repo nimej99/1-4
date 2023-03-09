@@ -185,10 +185,42 @@
   position: relative;
 }
 
-.guest_wrap > ul > li:hover,
-.investor_wrap > ul > li:hover,
-.crew_wrap > ul > li:hover{
-  filter:brightness(0.9);
+/* 호버시 이미지 어둡게, 스케일 */
+.guest_wrap > ul > li:first-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab01.png);
+  background-position: center center;
+}
+.guest_wrap > ul > li:nth-child(2):hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab02.png);
+  background-position: center center;
+}
+.guest_wrap > ul > li:last-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab03.png);
+  background-position: center center;
+}
+.investor_wrap > ul > li:first-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab04.png);
+  background-position: center center;
+}
+.investor_wrap > ul > li:nth-child(2):hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab05.png);
+  background-position: center center;
+}
+.investor_wrap > ul > li:last-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab06.png);
+  background-position: center center;
+}
+.crew_wrap > ul > li:first-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab07.png);
+  background-position: center center;
+}
+.crew_wrap > ul > li:nth-child(2):hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab08.png);
+  background-position: center center;
+}
+.crew_wrap > ul > li:last-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab09.png);
+  background-position: center center;
 }
 .guest_wrap > ul > li h4,
 .investor_wrap > ul > li h4,

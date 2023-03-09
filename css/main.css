@@ -12,6 +12,7 @@
 }
 .m_slider_list li{
   width:100%;
+  height:calc(100vh + 100px);
   position:absolute;
   transition:0.3s;
 }
@@ -162,13 +163,16 @@ i.fa-chevron-left, i.fa-chevron-right{
 
 /* 메인 탭메뉴 서식 */
 #main_tab{}
-#main_tab .m_tab{}
+#main_tab .m_tab{
+  position: relative;
+}
 .m_tab_con{
   width:100%;
+  min-width:1260px;
   height:100px;
   position:absolute;
   z-index: 3;
-  bottom:-100px;
+  bottom:0px;
 }
 .m_tab_con > ul{
   width:100%;
@@ -277,6 +281,7 @@ i.fa-chevron-left, i.fa-chevron-right{
 .crew_wrap
 {
   width:90%;
+  min-width: 1260px;
   margin:0 auto;
   padding:50px 0px;
 }
@@ -300,12 +305,6 @@ i.fa-chevron-left, i.fa-chevron-right{
   position: relative;
 }
 
-.guest_wrap > ul > li:hover,
-.investor_wrap > ul > li:hover,
-.crew_wrap > ul > li:hover{
-  filter:brightness(0.7);
-}
-
 .guest_wrap > ul > li h4,
 .investor_wrap > ul > li h4,
 .crew_wrap > ul > li h4
@@ -327,20 +326,12 @@ i.fa-chevron-left, i.fa-chevron-right{
 
 /* 탭 컨텐츠 배경이미지 */
 
-.guest_wrap > ul > li:first-child::after{
-  content:'';
-  position: absolute;
-  z-index: -1;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  border-radius: 00px 20px 00px 20px;
+.guest_wrap > ul > li:first-child{
   background:url(../images/main/tab01.png) center center no-repeat;
   background-size: cover;
 }
 .guest_wrap > ul > li:nth-child(2){
-  background: rgb(0, 129, 119,.7)  url(../images/main/tab02.png) center center no-repeat;
+  background: url(../images/main/tab02.png) center center no-repeat;
   background-size: cover;
 }
 .guest_wrap > ul > li:last-child{
@@ -372,6 +363,44 @@ i.fa-chevron-left, i.fa-chevron-right{
 .crew_wrap > ul > li:last-child{
   background: url(../images/main/tab09.png) center center no-repeat;
   background-size: cover;
+}
+
+/* 호버시 이미지 어둡게, 스케일 */
+.guest_wrap > ul > li:first-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab01.png);
+  background-position: center center;
+}
+.guest_wrap > ul > li:nth-child(2):hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab02.png);
+  background-position: center center;
+}
+.guest_wrap > ul > li:last-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab03.png);
+  background-position: center center;
+}
+.investor_wrap > ul > li:first-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab04.png);
+  background-position: center center;
+}
+.investor_wrap > ul > li:nth-child(2):hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab05.png);
+  background-position: center center;
+}
+.investor_wrap > ul > li:last-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab06.png);
+  background-position: center center;
+}
+.crew_wrap > ul > li:first-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab07.png);
+  background-position: center center;
+}
+.crew_wrap > ul > li:nth-child(2):hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab08.png);
+  background-position: center center;
+}
+.crew_wrap > ul > li:last-child:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab09.png);
+  background-position: center center;
 }
 
 /* 다운로드 서식 */
@@ -410,6 +439,10 @@ i.fa-chevron-left, i.fa-chevron-right{
   right:20px;
   align-items: center;
   font-size:12px;
+  cursor: pointer;
+}
+.t_more a{
+  color:#fff;
 }
 .t_more i.fa-angle-right{
   margin-left:5px;
