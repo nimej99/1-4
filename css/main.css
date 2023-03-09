@@ -300,11 +300,12 @@ i.fa-chevron-left, i.fa-chevron-right{
   position: relative;
 }
 
-.guest_wrap > ul > li:hover::after,
+.guest_wrap > ul > li:hover,
 .investor_wrap > ul > li:hover,
 .crew_wrap > ul > li:hover{
-  background-blend-mode: darken;
+  filter:brightness(0.7);
 }
+
 .guest_wrap > ul > li h4,
 .investor_wrap > ul > li h4,
 .crew_wrap > ul > li h4

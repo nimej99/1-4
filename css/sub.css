@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+/* 가로스크롤 없애기 */
+body{
+  overflow-x: hidden;
+}
 /* 원형내비게이션 #m_nav서식 */
 #m_nav{
   position: fixed;
@@ -374,7 +378,6 @@
 }
 .history > article > dl > dt div{
   position: absolute;
-  z-index: 1;
   content: '';
   width: 32px;
   height: 32px;
@@ -382,6 +385,7 @@
   background: #7B7B7B;
   border-radius: 50%;
   transform: translate(27px, 0px);
+  z-index: 1;
 }
 .history_on{
   border: 5px solid #fff !important;
@@ -596,6 +600,55 @@
   left: 54%;
   top: 50%;
   transform: translate(-50%,-50%);
+}
+
+/* 모달창 서식 */
+.modal{
+  position: relative;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgba(0,0,0,.7);
+}
+.modal img{
+  width: 60px;
+  position: absolute;
+  cursor: pointer;
+  top: 180px;
+  right: 350px;
+}
+.modal_wrap{
+  width: 1200px;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.right_box{
+  background: #fff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 30px;
+  height: 450px;
+  overflow: hidden;
+  overflow: auto;
+  height: 450px; /* 스크롤바가 표시될 높이값 */
+}
+.right_box > h3{
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+.right_box > p{
+  font-size: 18px;
+  line-height: 25px;
+  color: #666;
+}
+.left_box iframe{
+  width: 800px;
+  height: 450px;
 }
 
 
