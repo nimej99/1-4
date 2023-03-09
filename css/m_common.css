@@ -200,13 +200,3 @@ header{
 #m_member:checked ~ .m_gnb li:last-child{
   background: #fff;
 }
-
-.t_more{
-  position:absolute;
-  top:30px;
-  right:20px;
-  align-items: center;
-}
-.t_more i.fa-angle-right{
-  margin-left:5px;
-}

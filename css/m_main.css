@@ -159,14 +159,16 @@
 .investor_wrap,
 .crew_wrap
 {
-  width:90%;
+  width:100%;
   margin:0 auto;
-  padding:50px 0px;
+  padding:50px 20px;
 }
 .guest_wrap > ul,
 .investor_wrap > ul,
 .crew_wrap > ul
 {
+  width:100%;
+  flex-direction: column;
   align-items: center;
   gap:50px;
   transition:0.5;
@@ -175,8 +177,8 @@
 .investor_wrap > ul > li,
 .crew_wrap > ul > li
 {
-  width:33.3%;
-  height:300px;
+  width:100%;
+  height:240px;
   border-radius:0 20px 0 20px;
   color:#fff;
   transition:0.5s;
@@ -194,7 +196,7 @@
 {
   font-family: 'Hana2.0';
   font-weight: bold; 
-  font-size:24px;
+  font-size:16px;
   padding:30px 0px 0px 30px;
 }
 .guest_wrap > ul > li p,
@@ -202,7 +204,7 @@
 .crew_wrap > ul > li p
 {
   font-weight:bold;
-  font-size:16px;
+  font-size:22px;
   line-height: 30px;
   padding:20px 30px;
 }
@@ -211,41 +213,50 @@
 
 .guest_wrap > ul > li:first-child{
   background: url(../images/main/tab01.png) center center no-repeat;
+  background-size: cover;
 }
 .guest_wrap > ul > li:nth-child(2){
   background: url(../images/main/tab02.png) center center no-repeat;
+  background-size: cover;
 }
 .guest_wrap > ul > li:last-child{
   background: url(../images/main/tab03.png) center center no-repeat;
+  background-size: cover;
 }
 
 .investor_wrap > ul > li:first-child{
   background: url(../images/main/tab04.png) center center no-repeat;
+  background-size: cover;
 }
 .investor_wrap > ul > li:nth-child(2){
   background: url(../images/main/tab05.png) center center no-repeat;
+  background-size: cover;
 }
 .investor_wrap > ul > li:last-child{
   background: url(../images/main/tab06.png) center center no-repeat;
+  background-size: cover;
 }
 
 .crew_wrap > ul > li:first-child{
   background: url(../images/main/tab07.png) center center no-repeat;
+  background-size: cover;
 }
 .crew_wrap > ul > li:nth-child(2){
   background: url(../images/main/tab08.png) center center no-repeat;
+  background-size: cover;
 }
 .crew_wrap > ul > li:last-child{
   background: url(../images/main/tab09.png) center center no-repeat;
+  background-size: cover;
 }
 
 /* 다운로드 서식 */
 .t_download{
-  padding:5% 0px 0px 30px;
+  padding:20px 0px 0px 30px;
 }
 .t_download h5, .t_download span{
   font-weight: bold;
-  font-size:16px;
+  font-size:22px;
   line-height: 21px;
 }
 .g_download{
@@ -273,6 +284,7 @@
   top:30px;
   right:20px;
   align-items: center;
+  font-size:12px;
 }
 .t_more i.fa-angle-right{
   margin-left:5px;
