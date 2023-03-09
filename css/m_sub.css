@@ -4,51 +4,6 @@
 body{
   overflow-x: hidden;
 }
-/* 원형내비게이션 #m_nav서식 */
-#m_nav{
-  position: fixed;
-  right: 40px;
-  top: 38%;
-  z-index: 1;
-}
-#m_nav > ul{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-#m_nav > ul > li{
-  height: 30px;
-  width: 30px;
-  line-height: 30px;
-  background: rgba(54, 54, 54, 0.5);
-  border-radius: 50px;
-  margin: 10px 0px;
-  text-align: center;
-  position: relative;
-  transition: 0.5s;
-  overflow: hidden;
-}
-#m_nav a{
-  width: 100%;
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-}
-#m_nav > ul > li > span{
-  width: 30px;
-  height: 30px;
-  font-size: 16px;
-  line-height: 30px;
-  border-radius: 50%;
-  color: #fff;
-  background: #7B7B7B;
-  position: absolute;
-  left: 0px;
-}
-#m_nav > ul > li:hover{
-  width:150px;
-}
 
 /* main itro 서식 */
 .main_intro{
@@ -57,7 +12,7 @@ body{
   width: 100%;
   height: 100vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/sub/intro_img.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .main_intro > h3{
@@ -66,24 +21,13 @@ body{
 .main_intro > p{
   position: absolute;
   text-align: center;
-}
-.main_intro > p:first-of-type{
-  top: 37%;
-  right: 50%;
-  transform: translate(50%, 50%);
-  font-size: 40px;
-  color: #ffff;
-  font-weight: bold;
-  font-family: 'Hana2.0';
-}
-.main_intro > p:last-of-type{
-  top: 45%;
+  top: 50%;
   right: 50%;
   transform: translate(50%, 50%);
   font-size: 20px;
-  color: #fff;
-  line-height: 35px;
-  font-weight: 400;
+  color: #ffff;
+  font-weight: bold;
+  font-family: 'Hana2.0';
 }
 .main_intro > a {
   position: absolute;
@@ -115,52 +59,6 @@ body{
   animation: sdb 2s infinite;
   box-sizing: border-box;
 }
-.main_intro > a span::after {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  width: 18px;
-  height: 18px;
-  content: '';
-  margin-left: -9px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  box-sizing: border-box;
-}
-@-webkit-keyframes sdb {
-  0% {
-    -webkit-transform: translate(0, 0);
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: translate(0, 20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes sdb {
-  0% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    transform: translate(0, 20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 
 /* 하나금융 소개 .intro 서식 */
 .intro{
@@ -171,18 +69,20 @@ body{
 }
 .intro > .intro_wrap > h4{
   position: absolute;
-  font-size: 40px;
+  font-size: 20px;
   color: #fff;
   font-family: 'Hana2.0';
-  top: 250px;
+  top: 48px;
   left: 50%;
   transform: translate(-50%, 0%);
 }
 .intro > .intro_wrap > p{
   position: absolute;
-  font-size: 25px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 15px;
   color: #fff;
-  top: 310px;
+  top: 80px;
   left: 50%;
   transform: translate(-50%, 0%);
 }
@@ -192,14 +92,15 @@ body{
 .intro > .intro_wrap .intro_bg{
   background-image: url(../images/sub/intro_bg.jpg);
   background-repeat: no-repeat;
-  background-size: 200%;
-  height: 100vh;
+  background-size: 300%;
+  height: 350px;
 }
 .intro > .intro_wrap > .intro_bg > ul{
   margin: 0px auto;
-  width: 1200px;
-  padding: 450px 0px;
+  width: 100%;
+  padding: 130px 0px;
   display: flex;
+  justify-content: center;
   justify-content: space-around;
   color: #fff;
   text-align: center;
@@ -209,49 +110,53 @@ body{
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p{
   line-height: 23px;
-  font-size: 18px;
+  font-size: 12px;
+  padding-top: 10px;
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p:first-of-type{
   display: inline-block;
-  margin-bottom: 25px;
-  padding-bottom: 5px;
+  margin-bottom: 15px;
+  padding-bottom: 2px;
   font-weight: bold;
   border-bottom: 3px solid #D91B27;
 }
 .intro >.intro_wrap > .intro_bg > ul > li > div{
-  width: 50px;
-  height: 50px;
-  padding: 50px;
+  width: 20px;
+  height: 20px;
+  padding: 20px;
   margin: 0px auto;
   background: #fff;
   border-radius: 50%;
   position: relative;
 }
 .intro >.intro_wrap > .intro_bg > ul > li > div > img{
-  width: 40px;
+  width: 20px;
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 25%;
+  left: 27%;
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p:nth-of-type(2){
-  padding-top: 30px;
+  padding-top: 15px;
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p:nth-of-type(2) > span{
-  font-size: 40px;
+  font-size: 14px;
   font-weight: bold;
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p:last-of-type{
   color: #C0C0C0;
-  padding-top: 12px;
-  line-height: 20px;
+  font-size: 10px;
+  line-height: 15px;
 }
 
 /* 하나금융 미션과 비전 .mission 서식 */
 .mission{
   width: 100%;
+  height: 500px;
   background-image: url(../images/sub/mission_bg.jpg);
-  background-size: 100%;
-  padding: 170px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  overflow: hidden;
 }
 .mission >  h3{
   display: none;
@@ -259,82 +164,45 @@ body{
 .mission > article > h4{
   display: none;
 }
-.mission > article > div{
+.mission > article > ul{
   text-align: center;
   color: #fff;
+  display: flex;
+  width: 200%;
 }
-.mission > article > .mission_box{
-  width: 1100px;
+.mission > article > .mission_box > li{
+  width: 100%;
   margin: 0px auto;
   background: rgba(27,27,27,.78);
-  border-radius: 30px;
-  padding: 56px 0px;
+  padding: 40px 20px;
   margin-bottom: 100px;
   position: relative;
-  left: -1000px; /* 초기 위치를 스크롤 위치에서 왼쪽으로 이동 */
-  transition: 1s ease-out; /* 이동 시 애니메이션 효과 추가 */
 }
-.left_on{
-  left: 0px !important; /* 스크롤 위치에 도달하면 왼쪽에서 나타나게 함 */
-}
-.mission > article > .mission_box > p:first-of-type{
-  font-size: 40px;
+.mission > article > .mission_box > li > p:first-of-type{
+  font-size: 20px;
   font-weight: bold;
-  padding-bottom: 28px;
+  padding-bottom: 10px;
 }
-.mission > article > .mission_box > p:nth-of-type(2){
-  font-size: 24px;
+.mission > article > .mission_box > li > p:nth-of-type(2){
+  font-size: 16px;
   font-weight: bold;
   color: #419390;
-  padding-bottom: 42px;
+  padding-bottom: 15px;
 }
-.mission > article > .mission_box > p:nth-of-type(3){
-  font-size: 20px;
-  line-height: 30px;
-  padding-bottom: 50px;
+.mission > article > .mission_box > li > p:nth-of-type(3){
+  font-size: 12px;
+  line-height: 22px;
+  padding-bottom: 20px;
 }
-.mission > article > .mission_box > p:last-of-type{
-  font-size: 20px;
-  line-height: 30px;
-}
-.mission > article > .vision_box{
-  width: 1100px;
-  margin: 0px auto;
-  background: rgba(27,27,27,.78);
-  border-radius: 30px;
-  padding: 56px 0px;
-  position: relative;
-  right: -1000px; /* 초기 위치를 스크롤 위치에서 왼쪽으로 이동 */
-  transition: 1s ease-out; /* 이동 시 애니메이션 효과 추가 */
-}
-.right_on{
-  right: 0px !important; /* 스크롤 위치에 도달하면 왼쪽에서 나타나게 함 */
-}
-.mission > article > .vision_box > p:first-of-type{
-  font-size: 40px;
-  font-weight: bold;
-  padding-bottom: 28px;
-}
-.mission > article > .vision_box > p:nth-of-type(2){
-  font-size: 24px;
-  font-weight: bold;
-  color: #419390;
-  padding-bottom: 42px;
-}
-.mission > article > .vision_box > p:nth-of-type(3){
-  font-size: 20px;
-  line-height: 30px;
-  padding-bottom: 50px;
-}
-.mission > article > .vision_box > p:last-of-type{
-  font-size: 20px;
-  line-height: 30px;
+.mission > article > .mission_box > li > p:last-of-type{
+  font-size: 12px;
+  line-height: 22px;
 }
 
 /* 연혁 .history */
 .history{
   background: var(--color-black);
-  padding: 200px 0px;
+  padding: 50px 0px;
 }
 .history > h3{
   display: none;
@@ -346,23 +214,24 @@ body{
 .history > article > h3{
   font-family: 'Hana2.0';
   font-weight: bold;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 20px;
+  line-height: 25px;
   text-align: center;
 }
 .history > article > img{
-  width: 60px;
+  width: 30px;
   position: absolute;
-  left: 39%;
+  left: 27%;
 }
 .history > article > dl{
-  width: 850px;
+  width: 400px;
   margin: 0px auto;
   z-index: -1;
+  margin: 0px auto;
 }
 .history > article > dl::after{
   position: absolute;
-  height: 1190px;
+  height: 1000px;
   width: 2px;
   background: #7B7B7B;
   content: '';
@@ -371,16 +240,16 @@ body{
 .history > article > dl > dt{
   text-align: left;
   color: #7B7B7B;
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 700;
-  padding-top: 150px;
+  padding-top: 100px;
   display: inline-block;
 }
 .history > article > dl > dt div{
   position: absolute;
   content: '';
-  width: 32px;
-  height: 32px;
+  width: 15px;
+  height: 15px;
   display: inline-block;
   background: #7B7B7B;
   border-radius: 50%;
@@ -391,23 +260,19 @@ body{
   border: 5px solid #fff !important;
   background: var(--color-black) !important;
   box-sizing: border-box !important;
-  transition: 0.5s;
-  opacity: 1;
 }
 .txt_on{
   color: #fff !important;
-  transition: 0.5s;
-  opacity: 1;
 }
 .history > article > dl > dd{
   text-indent: 150px;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 400;
   padding-bottom: 10px;
 }
 .history > article > dl > dd > span{
   font-weight: 600;
-  font-size: 28px;
+  font-size: 16px;
   color:#7B7B7B;
   padding-right: 10px;
 }
