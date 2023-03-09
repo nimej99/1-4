@@ -29,14 +29,17 @@ main{
   margin: 0 auto;
   flex-direction: column;
   text-align: center;
-
 }
 #l_wrap > input{
   width: 90%;
   height: 50px;
   margin: 5px 0px;
-  border:none;
-  border-bottom: 1px solid var(--color-green);
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+#l_wrap > input:focus{
+  outline-style:none; 
+  border-bottom:1px solid var(--color-green); background:#fff;
 }
 #i_store{
   accent-color: var(--color-red);
@@ -77,5 +80,9 @@ main{
     border: none;
     cursor: pointer;
     font-size: 18px;
+  }
+  #l_submit:focus{
+    background : var(--color-green) !important;
+    border-bottom:1px solid #fff !important;
   }
 

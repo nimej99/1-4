@@ -100,8 +100,6 @@ slide_btn.addEventListener('click', function(){
     slide_btn.classList.remove('fa-pause');
     slide_btn.classList.add('fa-play');
     clearInterval(Timer);
-    temp = 0;
-    img_progress[s_num].style.width = temp+'px';
     slideNum = 1;
   } else{
     slide_btn.classList.remove('fa-play');
