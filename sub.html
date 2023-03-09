@@ -26,11 +26,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- 제이쿼리 UI라이브러리 -->
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <!-- 제이쿼리 쿠키파일 -->
-  <script src="./script/jquery.cookie.js"></script>
-  <!-- 공통스크립트 -->
-  <script src="./script/layout.js"></script>
-  <!-- 콘텐츠스크립트 -->
   <script src="./script/common.js" defer></script>
   <script src="./script/sub.js"></script>
 
@@ -41,7 +36,7 @@
   <header>
     <!-- 헤더상단 -->
     <input type="checkbox" id="gnb" class="hidden">
-    <div id="hover_bg" class=""></div>
+    <div id="hover_bg"></div>
     <div id="h_top">
       <!-- Lang Familysite 서식 -->
       <ul class="select_tab flex">
@@ -101,7 +96,7 @@
       <!-- GNB 1뎁스 -->
       <ul class="gnb flex">
         <li>
-          <a href="#none" title="그룹소개">그룹소개</a>
+          <a href="sub.html" title="그룹소개">그룹소개</a>
         </li>
         <li>
           <a href="#none" title="투자정보">투자정보</a>
@@ -113,7 +108,7 @@
           <a href="#none" title="인재채용">인재채용</a>
         </li>
         <li>
-          <a href="#none" title="PR센터">PR센터</a>
+          <a href="notice.html" title="PR센터">PR센터</a>
         </li>
       </ul>
       <!-- LNB 2뎁스 -->
@@ -205,25 +200,27 @@
         </ul>
       </div>
     </div>
-    <div id="sitemap" class="hidden">
+    <div id="sitemap">
       <h2>
-        <img src="./images/common/header.logo.hover.svg" alt="로고">
+        <a href="index.html" title="메인페이지바로가기">
+          <img src="./images/common/header.logo.hover.svg" alt="로고">
+        </a>
       </h2>
       <ul class="sitemap_wrap">
         <li class="flex">
-          <a href="#none" title="그룹소개">그룹소개</a>
+          <a href="sub.html" title="그룹소개">그룹소개</a>
           <ul class="flex site_map2">
             <li>
-              <a href="#none" title="그룹개요">그룹개요</a>
+              <a href="sub.html" title="그룹개요">그룹개요</a>
               <ul class="site_map3">
                 <li>
-                  <a href="#none" title="회사소개">회사소개</a>
+                  <a href="sub.html" title="회사소개">회사소개</a>
                 </li>
                 <li>
-                  <a href="#none" title="비전과미션">비전과 미션</a>
+                  <a href="sub.html" title="비전과미션">비전과 미션</a>
                 </li>
                 <li>
-                  <a href="#none" title="전략목표">전략목표</a>
+                  <a href="sub.html" title="전략목표">전략목표</a>
                 </li>
               </ul>
             </li>
@@ -302,35 +299,36 @@
           </ul>
         </li>
         <li class="flex">
-          <a href="#none" title="PR센터">PR센터</a>
+          <a href="notice.html" title="PR센터">PR센터</a>
           <ul class="flex site_map2">
             <li>
-              <a href="#none" title="공지사항">공지사항</a>
+              <a href="notice.html" title="공지사항">공지사항</a>
             </li>
             <li>
-              <a href="#none" title="보도자료">보도자료</a>
+              <a href="notice.html" title="보도자료">보도자료</a>
             </li>
             <li>
-              <a href="#none" title="광고">광고</a>
+              <a href="notice.html" title="광고">광고</a>
             </li>
             <li>
-              <a href="#none" title="스포츠">스포츠</a>
+              <a href="notice.html" title="스포츠">스포츠</a>
             </li>
           </ul>
         </li>
       </ul>
       <ul id="member" class="flex">
         <li>
-          <a href="#none" title="LOGIN">LOGIN</a>
+          <a href="login.html" title="LOGIN">LOGIN</a>
         </li>
         <li>
-          <a href="#none" title="JOIN">JOIN</a>
+          <a href="join.html" title="JOIN">JOIN</a>
         </li>
       </ul>
     </div>
   </header>
 
   <!-- 메인영역 -->
+  <main>
   <!-- 원형내비게이션 -->
   <nav id="m_nav">
     <ul>
@@ -629,7 +627,7 @@
         
     </article>
   </section>
-
+</main>
   
 
 

@@ -79,7 +79,7 @@ $(function(){
 
     // 비전과 미션 박스 날아오게
     if(sPos>=1800 && sPos<=3200){
-      $('.mission_box').addClass('left_on');
+      $('.mission_box').addClass('left_on').animate({'left':'0px'},200,'easeOutExpo');
       $('.vision_box').addClass('right_on');
     }else{
       $('.mission_box').removeClass('left_on');

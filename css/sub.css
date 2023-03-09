@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+/* 가로스크롤 없애기 */
+body{
+  overflow-x: hidden;
+}
 /* 원형내비게이션 #m_nav서식 */
 #m_nav{
   position: fixed;
