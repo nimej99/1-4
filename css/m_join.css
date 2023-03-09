@@ -3,14 +3,11 @@
 header{
   background: #444;
 }
-header:hover{
-  background: #fff;
-}
 main{
-  padding-top:200px;
+  padding-top:100px;
 }
 #join{
-  height:calc(100vh - 336px);
+  height:calc(100vh - 274px);
   text-align: center;
 }
 #join > h2{
@@ -24,7 +21,8 @@ main{
 }
 #j_wrap{
   padding-top:20px;
-  width:400px;
+  width:90%;
+  height: 400px;
   margin: 0 auto;
   flex-direction: column;
   text-align: left;
@@ -61,4 +59,8 @@ main{
   border:none;
   font-size: 18px;
   cursor: pointer;
+}
+#j_submit:focus{
+  background : var(--color-green) !important;
+  border-bottom:1px solid #fff !important;
 }
