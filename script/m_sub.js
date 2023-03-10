@@ -113,7 +113,7 @@ $(function(){
     
     
     //전략목표 텍스트 fadIn, click시 숨겨진 박스 나타나게 하기
-    if(sPos>=5100 && sPos<=6100){
+    // if(sPos>=5100 && sPos<=6100){
       $("#v_box").fadeIn();
       $("#m_btn1,.strategy>article>ul>li:first-child>img").click(function(){
       $("#m_box1").css('display','block');
@@ -135,7 +135,7 @@ $(function(){
       $("#h_btn3, .strategy>article>ul>li:last-child>#m_box3").click(function(){
       $("#m_box3").css('display','none');
       });
-    }
+    // }
   });
 
   // 모달창 띄우기
