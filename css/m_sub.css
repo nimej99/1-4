@@ -138,47 +138,54 @@ body{
 .mission >  h3{
   display: none;
 }
-.mission > article > h4{
-  display: none;
+.mission > .swiper-container{
+  position: relative;
 }
-.mission > article{
-  padding: 0px 10px;
-}
-.mission > article > ul{
+.mission > .swiper-container > .swiper-wrapper{
   text-align: center;
   color: #fff;
   display: flex;
   width: 200%;
 }
-.mission > article > .mission_box > li{
+.mission .swiper-slide{
   width: 100%;
+  height: 450px;
+  box-sizing: border-box;
   margin: 0px auto;
   background: rgba(27,27,27,.78);
   padding: 40px 20px;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   position: relative;
 }
-.mission > article > .mission_box > li > p:first-of-type{
+.swiper-slide > h4{
   font-size: 28px;
   font-weight: bold;
   padding-bottom: 10px;
 }
-.mission > article > .mission_box > li > p:nth-of-type(2){
+.swiper-slide > p:first-of-type{
   font-size: 18px;
   font-weight: bold;
   color: #419390;
-  padding-bottom: 15px;
+  padding:2px 0px 20px 0px;
 }
-.mission > article > .mission_box > li > p:nth-of-type(3){
+.swiper-slide > p:nth-of-type(2){
   font-size: 16px;
-  line-height: 24px;
+  line-height: 28px;
   padding-bottom: 20px;
 }
-.mission > article > .mission_box > li > p:last-of-type{
+.swiper-slide > p:last-of-type{
   font-size: 16px;
-  line-height: 24px;
+  line-height: 28px;
 }
-
+.swiper-slide >p:first-of-type >span{
+  display: block;
+  padding-top: 8px;
+}
+.swiper-pagination{
+  position: absolute;
+  color: #fff !important;
+  bottom: -20px !important;
+}
 /* 연혁 .history */
 .history{
   background: var(--color-black);
