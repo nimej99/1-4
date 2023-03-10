@@ -47,7 +47,7 @@ i.fa-chevron-left, i.fa-chevron-right{
 
 /* 컨트롤 버튼 서식 */
 .ctrl_btn{ 
-  width: 528px;
+  width: 330px;
   height:5px;
   justify-content: space-evenly;
   position:absolute;
@@ -57,7 +57,7 @@ i.fa-chevron-left, i.fa-chevron-right{
 }
 .ctrl_btn li{
   position: relative;
-  width:160px;
+  width:100px;
   height:5px;
   border-radius: 10px;
   background: rgba(255, 255, 255, .6);

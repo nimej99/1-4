@@ -34,12 +34,12 @@ function pureGetIndex(el){
 function slideProgress(){
   img_progress[s_num].style.width = temp+'px';
   fadeInJS();
-  if(temp > 160){
+  if(temp > 100){
     temp = 0;
     img_progress[s_num].style.width = temp+'px';
     slideRight();
   } else {
-    temp += (160 / duration * 10);
+    temp += (100 / duration * 10);
   }
 };
 
