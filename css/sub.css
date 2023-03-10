@@ -252,6 +252,7 @@ body{
   background-image: url(../images/sub/mission_bg.jpg);
   background-size: 100%;
   padding: 170px 0px;
+  background-repeat: no-repeat;
 }
 .mission >  h3{
   display: none;
@@ -350,10 +351,8 @@ body{
   line-height: 60px;
   text-align: center;
 }
-.history > article > img{
+.history > article > h3 img{
   width: 60px;
-  position: absolute;
-  left: 39%;
 }
 .history > article > dl{
   width: 850px;
