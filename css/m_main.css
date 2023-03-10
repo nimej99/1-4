@@ -7,24 +7,13 @@
   width:100%;
   height:calc(100vh + 85px);
 }
-.m_slider_list{
+.swiper-slide{
   width:100%;
 }
-.m_slider_list li{
-  width:100%;
-  position:absolute;
-  transition:0.3s;
-  overflow: hidden;
-}
-.m_slider_list li.fadeOut{
-  opacity:0;
-}
-.m_slider_list li.fadeIn{
-  z-index:1;
-}
-.m_slider_list li img{
+.swiper-slide img{
   width:100%;
   object-fit: cover;
+  height:calc(100vh + 85px);
 }
 .swiper-button-next,
 .swiper-button-prev{
