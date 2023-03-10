@@ -173,6 +173,7 @@ header:hover #h_bot .gnb::after{
   transition:0.3s;
 }
 .lnb{
+  max-width:1260px;
   width:100%;
   position:absolute;
   z-index:101;
@@ -188,6 +189,7 @@ header:hover #h_bot .gnb::after{
 }
 .lnb ul li{
   width:100%;
+  max-width: 1260px;
 }
 .lnb li:hover::after{
   /* box-shadow: 0 0 0 3px var(--color-green) inset; */

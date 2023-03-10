@@ -103,11 +103,12 @@ gNb.addEventListener('change', function(){
       document.documentElement.scrollTop = 0;
       }
       
-// 가로너비로 측정해서 모바일 이동
-const isMobile = window.matchMedia("only screen and (max-width: 1024px)").matches;
-if (isMobile) {
-  let href = document.location.href;
-  let cut_href = href.substring(7);
-  console.log(cut_href);
-  location.href = 'm_'+cut_href;
-}
+// // 가로너비로 측정해서 모바일 이동
+// const isMobile = window.matchMedia("only screen and (max-width: 1024px)").matches;
+// if (isMobile) {
+// }
+let href = document.location.href;
+let cut_href = href.split('/', 3);
+console.log(cut_href);
+let cut_cut_href = 'm_'+cut_href;
+console.log(cut_cut_href);

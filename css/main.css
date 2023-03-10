@@ -48,7 +48,7 @@ i.fa-chevron-left, i.fa-chevron-right{
 
 /* 컨트롤 버튼 서식 */
 .ctrl_btn{ 
-  width: 528px;
+  width: 330px;
   height:5px;
   justify-content: space-evenly;
   position:absolute;
@@ -58,7 +58,7 @@ i.fa-chevron-left, i.fa-chevron-right{
 }
 .ctrl_btn li{
   position: relative;
-  width:160px;
+  width:100px;
   height:5px;
   border-radius: 10px;
   background: rgba(255, 255, 255, .6);
@@ -174,7 +174,6 @@ i.fa-chevron-left, i.fa-chevron-right{
   position:absolute;
   z-index: 3;
   bottom:0px;
-  overflow: hidden;
 }
 .m_tab_con > ul{
   width:100%;
@@ -303,7 +302,7 @@ i.fa-chevron-left, i.fa-chevron-right{
   height:300px;
   border-radius:0 20px 0 20px;
   color:#fff;
-  
+  transition:0.5s;
   position: relative;
 }
 
@@ -324,7 +323,6 @@ i.fa-chevron-left, i.fa-chevron-right{
   font-size:16px;
   line-height: 30px;
   padding:20px 30px;
-
 }
 
 /* 탭 컨텐츠 배경이미지 */
@@ -372,8 +370,6 @@ i.fa-chevron-left, i.fa-chevron-right{
 .guest_wrap > ul > li:first-child:hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab01.png);
   background-position: center center;
-  /* background-size: 150%; */
-
 }
 .guest_wrap > ul > li:nth-child(2):hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab02.png);
