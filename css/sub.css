@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+.main_intro,
+.intro,
+.mission,
+.history,
+.strategy,
+.trust,
+.hana_pr{
+  min-width: 1260px;
+}
 /* 가로스크롤 없애기 */
 body{
   overflow-x: hidden;
@@ -57,13 +66,14 @@ body{
   width: 100%;
   height: 100vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/sub/intro_img.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .main_intro > h3{
   display: none;
 }
 .main_intro > p{
+  width: 100%;
   position: absolute;
   text-align: center;
 }
@@ -169,22 +179,20 @@ body{
 .intro > h3{
   display: none;
 }
-.intro > .intro_wrap > h4{
-  position: absolute;
+.intro > .intro_wrap > .intro_bg > h4{
+  width: 100%;
+  text-align: center;
   font-size: 40px;
   color: #fff;
   font-family: 'Hana2.0';
-  top: 250px;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  padding-top: 260px;
 }
-.intro > .intro_wrap > p{
-  position: absolute;
+.intro > .intro_wrap > .intro_bg > p{
+  padding-top: 15px;
+  width: 100%;
+  text-align: center;
   font-size: 25px;
   color: #fff;
-  top: 310px;
-  left: 50%;
-  transform: translate(-50%, 0%);
 }
 .intro > .intro_wrap{
   position: relative;
@@ -192,13 +200,13 @@ body{
 .intro > .intro_wrap .intro_bg{
   background-image: url(../images/sub/intro_bg.jpg);
   background-repeat: no-repeat;
-  background-size: 200%;
+  background-size: cover;
   height: 100vh;
 }
 .intro > .intro_wrap > .intro_bg > ul{
   margin: 0px auto;
   width: 1200px;
-  padding: 450px 0px;
+  padding: 100px 0px;
   display: flex;
   justify-content: space-around;
   color: #fff;
@@ -250,7 +258,7 @@ body{
 .mission{
   width: 100%;
   background-image: url(../images/sub/mission_bg.jpg);
-  background-size: 100%;
+  background-size: cover;
   padding: 170px 0px;
   background-repeat: no-repeat;
 }
@@ -440,11 +448,13 @@ body{
   transform: translate(-50%,-50%);
 }
 .strategy > article > ul > li > div > p{
+  width: 100%;
   font-size: 40px;
   font-weight: 700;
   padding-bottom: 20px;
 }
 .strategy > article > ul > li > div > span{
+  width: 100%;
   font-size: 20px;
   font-weight: 600;
   line-height: 25px;
