@@ -103,12 +103,12 @@ gNb.addEventListener('change', function(){
       document.documentElement.scrollTop = 0;
       }
       
-// // 가로너비로 측정해서 모바일 이동
-// const isMobile = window.matchMedia("only screen and (max-width: 1024px)").matches;
-// if (isMobile) {
-// }
-let href = document.location.href;
-let cut_href = href.split('/', 3);
-console.log(cut_href);
-let cut_cut_href = 'm_'+cut_href;
-console.log(cut_cut_href);
+    // // 가로너비로 측정해서 모바일 이동
+    // const isMobile = window.matchMedia("only screen and (max-width: 767px)").matches;
+    // if (isMobile) {
+    //   let href = document.location.href;
+    //     let cut_href = href.split('/');
+    //     let cut_cut_href = 'm_' + cut_href[4];
+    //     console.log(cut_cut_href);
+    //     location.href='http://youjy12.dothome.co.kr/1-4/'+cut_cut_href;
+    // }
