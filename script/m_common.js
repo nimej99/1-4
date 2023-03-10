@@ -21,8 +21,8 @@ let mGnb = document.querySelector('#m_sitemap');
 // 스크롤 방지
 mGnb.addEventListener('change', function(){
   if(mGnb.checked==true){
-      document.querySelector('body').style.overflow = 'hidden';
+      document.querySelector('body').style.overflowY = 'hidden';
   } else {
-      document.querySelector('body').style.overflow = '';
+      document.querySelector('body').style.overflowY = '';
   }
 });

@@ -76,8 +76,38 @@ let familySite = document.querySelector('.Familysite');
 let gNb = document.querySelector('#gnb');
 gNb.addEventListener('change', function(){
   if(gNb.checked==true){
-      document.querySelector('body').style.overflow = 'hidden';
+      document.querySelector('body').style.overflowY = 'hidden';
   } else {
-      document.querySelector('body').style.overflow = '';
+      document.querySelector('body').style.overflowY = '';
   }
 });
+
+//스크롤값
+// top버튼
+    // 스크롤이 일정 값 이상일 때 TOP 버튼을 보이게 함
+    window.onscroll = function() {
+      scrollFunction();
+      };
+      
+      function scrollFunction() {
+      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 850) {
+          document.getElementById("top_btn").style.display = "block";
+      } else {
+          document.getElementById("top_btn").style.display = "none";
+      }
+      }
+      
+      // 페이지 상단으로 이동하는 함수
+      function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      }
+      
+// 가로너비로 측정해서 모바일 이동
+const isMobile = window.matchMedia("only screen and (max-width: 1024px)").matches;
+if (isMobile) {
+  let href = document.location.href;
+  let cut_href = href.substring(7);
+  console.log(cut_href);
+  location.href = 'm_'+cut_href;
+}

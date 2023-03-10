@@ -121,12 +121,14 @@ body{
   color: #C0C0C0;
   font-size: 16px;
   line-height: 20px;
+  display: inline;
+  margin: 0px auto;
 }
 
 /* 하나금융 미션과 비전 .mission 서식 */
 .mission{
   width: 100%;
-  height: 500px;
+  height: 600px;
   background-image: url(../images/sub/mission_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -138,6 +140,9 @@ body{
 }
 .mission > article > h4{
   display: none;
+}
+.mission > article{
+  padding: 0px 10px;
 }
 .mission > article > ul{
   text-align: center;
@@ -154,30 +159,32 @@ body{
   position: relative;
 }
 .mission > article > .mission_box > li > p:first-of-type{
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
   padding-bottom: 10px;
 }
 .mission > article > .mission_box > li > p:nth-of-type(2){
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #419390;
   padding-bottom: 15px;
 }
 .mission > article > .mission_box > li > p:nth-of-type(3){
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 24px;
   padding-bottom: 20px;
 }
 .mission > article > .mission_box > li > p:last-of-type{
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /* 연혁 .history */
 .history{
   background: var(--color-black);
   padding: 50px 0px;
+  height: 500px;
+  overflow: hidden;
 }
 .history > h3{
   display: none;
@@ -193,11 +200,8 @@ body{
   line-height: 35px;
   text-align: center;
 }
-.history > article > img{
+.history > article > h3 img{
   width: 45px;
-  position: absolute;
-  left: 18%;
-  top:-2px;
 }
 .history > article > dl{
   width: 400px;
@@ -207,11 +211,11 @@ body{
 }
 .history > article > dl::after{
   position: absolute;
-  height: 1000px;
+  height: 745px;
   width: 2px;
   background: #7B7B7B;
   content: '';
-  transform: translate(113px, -1200px);
+  transform: translate(102px, -756px);
 }
 .history > article > dl > dt{
   text-align: left;
@@ -253,7 +257,17 @@ body{
   color:#7B7B7B;
   padding-right: 10px;
 }
-
+.history div{
+  text-align: center;
+  transform: translate(0px, -492px);
+}
+.history div a{
+  color: #fff !important;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  text-align: center;
+}
 
 /* 전략목표 .strategy 서식 */
 .strategy{

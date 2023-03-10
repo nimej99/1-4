@@ -80,13 +80,13 @@ $(function(){
     }
 
     // 비전과 미션 박스 날아오게
-    // if(sPos>=1000 && sPos<=3200){
-    //   $('.mission_box').addClass('left_on');
-    //   $('.vision_box').addClass('right_on');
-    // }else{
-    //   $('.mission_box').removeClass('left_on');
-    //   $('.vision_box').removeClass('right_on');
-    // }
+    if(sPos>=1000 && sPos<=3200){
+      $('.mission_box').addClass('left_on');
+      $('.vision_box').addClass('right_on');
+    }else{
+      $('.mission_box').removeClass('left_on');
+      $('.vision_box').removeClass('right_on');
+    }
 
      // 연혁 불 들어오게
     if(sPos>=3250){
@@ -113,7 +113,7 @@ $(function(){
     
     
     //전략목표 텍스트 fadIn, click시 숨겨진 박스 나타나게 하기
-    // if(sPos>=5100 && sPos<=6100){
+    if(sPos>=5100 && sPos<=6100){
       $("#v_box").fadeIn();
       $("#m_btn1,.strategy>article>ul>li:first-child>img").click(function(){
       $("#m_box1").css('display','block');
@@ -135,7 +135,7 @@ $(function(){
       $("#h_btn3, .strategy>article>ul>li:last-child>#m_box3").click(function(){
       $("#m_box3").css('display','none');
       });
-    // }
+    }
   });
 
   // 모달창 띄우기
@@ -178,6 +178,9 @@ $(function(){
       }
     });
   });
+
+  $('#more_btn').click(function(){
+    $('.history').css('height','1000px');
+    $('#more_btn').hide();
+  });
 });
-
-
