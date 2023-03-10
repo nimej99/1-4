@@ -18,6 +18,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <!-- script 영역 -->
   <script src="./script/m_common.js"  defer></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./script/m_main.js" defer></script>
 
   <!-- 메인스크립트 -->
 
@@ -363,34 +369,25 @@
   <main>
     <section id="main_slider">
       <h2 class="hidden">메인 슬라이드</h2>
-      <article class="m_slider">
-        <h2 class="hidden">메인 슬라이드</h2>
-        <ul class="m_slider_list flex">
-          <li>
-            <img src="./images/main/banner01.png" alt="배너1" class="fadeIn">
-          </li>
-          <li>
-            <img src="./images/main/banner02.png" alt="배너2" class="fadeOut">
-          </li>
-          <li>
-            <img src="./images/main/banner03.png" alt="배너3" class="fadeOut">
-          </li>
-        </ul>
-        <ul class="ctrl_btn flex">
-          <li>
-            <span class="bar" id="bar1"></span>
-          </li>
-          <li>
-            <span class="bar" id="bar2"></span>
-          </li>
-          <li>
-            <span class="bar" id="bar3"></span>
-          </li>
-        </ul>
-        <i class="fa-solid fa-pause" id="slide_btn"></i>
-        <a href="#" title="아래로 이동" id="down_btn"><span></span><span></span><span></span></a>
-      </article>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/main/banner01.png" alt="배너1">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main/banner02.png" alt="배너2">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main/banner03.png" alt="배너3">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <a href="#" title="아래로 이동" id="down_btn"><span></span><span></span><span></span></a>
     </section>
+    
     <section id="main_tab">
       <h2 class="hidden">메인 탭매뉴</h2>
       <input type="radio" name="tac_check" id="g_check" class="hidden" checked>

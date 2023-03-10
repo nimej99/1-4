@@ -14,6 +14,7 @@
   width:100%;
   position:absolute;
   transition:0.3s;
+  overflow: hidden;
 }
 .m_slider_list li.fadeOut{
   opacity:0;
@@ -23,8 +24,14 @@
 }
 .m_slider_list li img{
   width:100%;
-  height:calc(100vh + 85px);
   object-fit: cover;
+}
+.swiper-button-next,
+.swiper-button-prev{
+  color: #fff !important;
+}
+.swiper-pagination-bullet{
+  background: #fff !important;
 }
 
 /* 컨트롤 버튼 서식 */
