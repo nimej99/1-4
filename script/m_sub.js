@@ -26,6 +26,7 @@ $(function(){
   // 스크롤 함수
   $(window).scroll(function(){
     let sPos = $(this).scrollTop();
+    console.log(sPos);
 
     //첫화면 텍스트 효과 스크롤값
     if(sPos>=937){
@@ -36,7 +37,7 @@ $(function(){
     }
 
     //숫자 올라가게
-    if(sPos>=900 && sPos<=1875){
+    if(sPos>=800 && sPos<=2200){
       const counter = ($counter, max) => {
         let now = max;
       
@@ -79,17 +80,8 @@ $(function(){
       }
     }
 
-    // 비전과 미션 박스 날아오게
-    if(sPos>=1000 && sPos<=3200){
-      $('.mission_box').addClass('left_on');
-      $('.vision_box').addClass('right_on');
-    }else{
-      $('.mission_box').removeClass('left_on');
-      $('.vision_box').removeClass('right_on');
-    }
-
      // 연혁 불 들어오게
-    if(sPos>=3250){
+    if(sPos>=2793){
       let dtIdx = 0;
       const dtCount = $('.history > article > dl > dt').length; // dt 요소의 총 개수
       
@@ -113,7 +105,7 @@ $(function(){
     
     
     //전략목표 텍스트 fadIn, click시 숨겨진 박스 나타나게 하기
-    if(sPos>=5100 && sPos<=6100){
+    if(sPos>=2649){
       $("#v_box").fadeIn();
       $("#m_btn1,.strategy>article>ul>li:first-child>img").click(function(){
       $("#m_box1").css('display','block');
