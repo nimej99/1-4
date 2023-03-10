@@ -53,7 +53,7 @@ i.fa-chevron-left, i.fa-chevron-right{
   justify-content: space-evenly;
   position:absolute;
   z-index: 1;
-  bottom:80px;
+  bottom:130px;
   left:80px;
 }
 .ctrl_btn li{
@@ -77,7 +77,7 @@ i.fa-chevron-left, i.fa-chevron-right{
 #slide_btn{
   position:absolute;
   z-index: 100;
-  bottom:74px;
+  bottom:124px;
   left:416px;
   color: rgba(255, 255, 255, .6);
   cursor: pointer;
