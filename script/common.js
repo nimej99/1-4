@@ -72,3 +72,12 @@ let familySite = document.querySelector('.Familysite');
  });
  
 
+// 스크롤 방지
+let gNb = document.querySelector('#gnb');
+gNb.addEventListener('change', function(){
+  if(gNb.checked==true){
+      document.querySelector('body').style.overflow = 'hidden';
+  } else {
+      document.querySelector('body').style.overflow = '';
+  }
+});

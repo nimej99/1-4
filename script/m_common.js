@@ -8,13 +8,21 @@ let tabCheck = document.getElementsByName('tac_check');
 let tabFirst = document.querySelector('#g_check');
 
 toggleBtn.addEventListener('click', function(){
-  for(let c=0; c < siteCheck.length; c++){
-    siteCheck[c].checked = false;
+    siteCheck.checked = false;
     siteFirst.checked = true;
 
-    tabCheck[c].checked = false;
+    tabCheck.checked = false;
     tabFirst.checked = true;
 
     introDesc.checked = false;
+});
+
+let mGnb = document.querySelector('#m_sitemap');
+// 스크롤 방지
+mGnb.addEventListener('change', function(){
+  if(mGnb.checked==true){
+      document.querySelector('body').style.overflow = 'hidden';
+  } else {
+      document.querySelector('body').style.overflow = '';
   }
 });
