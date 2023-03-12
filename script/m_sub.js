@@ -20,8 +20,8 @@ $(function(){
   });
 
   // 첫화면 텍스트 효과
-  $("#main_intro_txt").fadeIn(1000);
-  $("#main_intro_txt02").fadeIn(2000);
+  $("#main_intro_txt").fadeIn(2000);
+  $("#main_intro_txt02").fadeIn(4000);
   
   // 스크롤 함수
   $(window).scroll(function(){
@@ -32,8 +32,8 @@ $(function(){
     if(sPos>=937){
       $("#main_intro_txt, main_intro_txt02").hide();
     }else{
-      $("#main_intro_txt").fadeIn();
-      $("#main_intro_txt02").fadeIn();
+      $("#main_intro_txt").fadeIn(2000);
+      $("#main_intro_txt02").fadeIn(4000);
     }
 
     //숫자 올라가게
@@ -144,6 +144,13 @@ $(function(){
     }
   });
 
+
+  $('#more_btn').click(function(){
+    $('.history').css('height','1000px');
+    $('#more_btn').hide();
+  });
+});
+
   // 모달창 띄우기
   $('.video_box, .play_btn').click(function(){
     const moDal = `
@@ -185,8 +192,4 @@ $(function(){
     });
   });
 
-  $('#more_btn').click(function(){
-    $('.history').css('height','1000px');
-    $('#more_btn').hide();
-  });
-});
+ 
