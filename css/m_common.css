@@ -226,10 +226,11 @@ footer{
   padding: 20px 0px;
   align-items: center;
 }
-#m_footer_wrap .m_address_left> li >h2{
+#m_footer_wrap .m_address_left> li:first-child a{
   width:130px;
+  display:block;
 }
-#m_footer_wrap h2 a img{
+#m_footer_wrap .m_address_left> li:first-child a img{
   width
   :100%;
 }
