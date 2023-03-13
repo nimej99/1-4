@@ -476,14 +476,18 @@ body{
   width: 100.1%;
   height: 100%;
   background: rgb(255,255,255);
-  display: none;
+  position:absolute;
+  top:-509px;
+  transition:0.5s;
+  overflow:hidden;
 }
 .strategy .hidden_box > div{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
+  height:100%;
 }
 .strategy .hidden_box > div > p:first-of-type{
   font-size: 30px;

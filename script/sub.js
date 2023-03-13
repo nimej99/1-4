@@ -118,10 +118,10 @@ $(function(){
     if(sPos>=5100 && sPos<=6100){
       $("#v_box").fadeIn();
       $("#m_btn1,.strategy>article>ul>li:first-child>img").click(function(){
-      $("#m_box1").css('display','block');
+      $("#m_box1").css('top','50%');
       });
       $("#h_btn1, .strategy>article>ul>li:first-child>#m_box1").click(function(){
-      $("#m_box1").css('display','none');
+      $("#m_box1").css('top','-100%');
       });
 
       $("#m_btn2, .strategy>article>ul>li:nth-child(2)>img").click(function(){
