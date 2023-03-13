@@ -480,7 +480,7 @@ body{
   height: 100%;
   background: rgb(255,255,255);
   position:absolute;
-  top:-509px;
+  top:-100%;
   transition:0.5s;
   overflow:hidden;
 }
