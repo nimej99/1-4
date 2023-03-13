@@ -176,11 +176,12 @@ header:hover #h_bot .gnb::after{
   max-width:1260px;
   width:100%;
   position:absolute;
-  z-index:101;
+  z-index:-1;
   top:200px;
   right:50%;
   transform: translateX(50%);
-  display:none;
+  opacity: 0;
+  transition: 0.3s;
 }
 .lnb ul{
   width:20%;
@@ -219,10 +220,9 @@ header:hover #h_bot .gnb::after{
   /* background: rgba(255, 255, 255, 1); */
   background: #fff;
   position:absolute;
+  top:-440px;
   z-index:2;
-  opacity: 0;
   transition: 0.3s;
-  display: none;
 }
 
 /* 사이트맵 서식 */
@@ -240,7 +240,6 @@ header:hover #h_bot .gnb::after{
   z-index:-1;
   background: #fff;
   opacity: 0;
-  display: none;
   transition: 0.3s;
 }
 #sitemap h2{

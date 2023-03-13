@@ -5,17 +5,17 @@ let hoverBg = document.querySelector('#hover_bg');
 let loGo = document.querySelector('#logo > a > img');
 
   header.addEventListener('mouseenter', function(){
-    lNb.style.display='flex';
-    hoverBg.style.display='block';
-    hoverBg.style.opacity='1';
+    lNb.style.opacity='1';
+    lNb.style.zIndex='101';
+    hoverBg.style.top='0px';
     loGo.setAttribute('src', './images/common/header.logo.hover.svg');
     langCon.classList.add('hidden');
     siteCon.classList.add('hidden');
   });
   header.addEventListener('mouseleave', function(){
-    lNb.style.display='none';
-    hoverBg.style.display='none';
-    hoverBg.style.opacity='0';
+    lNb.style.opacity='0';
+    lNb.style.zIndex='-1';
+    hoverBg.style.top='-440px';
     loGo.setAttribute('src', './images/common/header.logo.svg');
     langCon.classList.add('hidden');
     siteCon.classList.add('hidden');
