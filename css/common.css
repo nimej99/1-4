@@ -68,7 +68,7 @@ header:hover #h_bot .gnb::after{
 #h_top .select_tab li a{
   color:#fff;
   font-family: 'Hana2.0'; 
-  font-weight: normal; 
+  font-weight: lighter; 
   font-size:12px;
   width:100%;
   display:block;
@@ -162,7 +162,7 @@ header:hover #h_bot .gnb::after{
 }
 .gnb > li a{
   font-family: "Hana2.0"; 
-  font-weight: normal; 
+  font-weight: bold; 
   font-size:20px;
   text-align: center;
   width: 100%; 

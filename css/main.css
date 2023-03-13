@@ -407,9 +407,9 @@ i.fa-chevron-left, i.fa-chevron-right{
 
 /* 다운로드 서식 */
 .t_download{
-  padding:0px 0px 0px 30px;
+  padding:30px 00px 0px 30px;
 }
-.t_download strong, .t_download span{
+.t_download span{
   display:block;
   font-weight: bold;
   font-size:16px;
@@ -423,7 +423,7 @@ i.fa-chevron-left, i.fa-chevron-right{
   width:160px;
   text-align: center;
   color:var(--color-black);
-  background: #fff;
+  background: #f8f8f8;
   border-radius: 20px;
   font-size:12px;
   line-height: 32px;
@@ -431,6 +431,8 @@ i.fa-chevron-left, i.fa-chevron-right{
   margin-right:16px;
 }
 .g_download li a{
+  font-size:14px;
+  font-weight: 600;
   line-height: 32px;
   justify-content: space-evenly;
   align-items: center;
