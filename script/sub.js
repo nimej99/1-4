@@ -126,17 +126,17 @@ $(function(){
       });
 
       $("#m_btn2, .strategy>article>ul>li:nth-child(2)>img").click(function(){
-      $("#m_box2").css('display','block');
+      $("#m_box2").css('top','50%');
       });
       $("#h_btn2, .strategy>article>ul>li:nth-child(2)>#m_box2").click(function(){
-      $("#m_box2").css('display','none');
+      $("#m_box2").css('top','-100%');
       });
 
       $("#m_btn3,.strategy>article>ul>li:last-child>img").click(function(){
-      $("#m_box3").css('display','block');
+      $("#m_box3").css('top','50%');
       });
       $("#h_btn3, .strategy>article>ul>li:last-child>#m_box3").click(function(){
-      $("#m_box3").css('display','none');
+      $("#m_box3").css('top','-100%');
       });
     }
   });
