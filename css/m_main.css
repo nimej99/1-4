@@ -92,20 +92,20 @@
   color:#fff;
 }
 .ii li:first-child p{
-  font-family: 'Hana2.0';
+  font-weight: bold;
   font-size:13px;
 }
 .ii #c{
-  font-family: 'Hana2.0';
-  line-height: 25px;
-  font-size: 15px;
+  font-weight: bold;
+  line-height: 26px;
+  font-size: 16px;
 }
 .ii li:nth-child(2) a{
   font-family: 'Hana2.0';
   font-size: 20px;
 }
 .ii li:last-child a{
-  font-size: 13px;
+  font-size: 14px;
   flex-direction: column;
   text-align: left;
 }
@@ -282,9 +282,9 @@
 
 /* 다운로드 서식 */
 .t_download{
-  padding:20px 0px 00px 30px;
+  padding:64px 0px 00px 30px;
 }
-.t_download strong, .t_download span{
+.t_download span{
   display:block;
   font-weight: bold;
   font-size:22px;
@@ -299,12 +299,11 @@
   width:120px;
   text-align: center;
   color:var(--color-black);
-  background: #fff;
+  background: #f8f8f8;
   border-radius: 20px;
   font-size:12px;
   line-height: 32px;
   font-weight: bold;
-  margin-top:30px;
   margin-right:20px;
 }
 .g_download li a{
