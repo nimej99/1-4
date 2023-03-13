@@ -80,7 +80,7 @@ header{
   margin-top:8px;
 }
 /* 체크드 지옥 */
-#m_sitemap:checked ~ #m_header_wrap #m_sitemap{
+#m_sitemap:checked ~ #m_header_wrap #m_gnb{
   display: flex;
 }
 #m_sitemap:checked ~ #m_header_wrap{
