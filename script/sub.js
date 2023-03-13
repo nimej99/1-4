@@ -122,7 +122,7 @@ $(function(){
       $("#m_box1").css('top','50%');
       });
       $("#h_btn1, .strategy>article>ul>li:first-child>#m_box1").click(function(){
-      $("#m_box1").css('top','-100%');
+      $("#m_box1").css('top','150%');
       });
 
       $("#m_btn2, .strategy>article>ul>li:nth-child(2)>img").click(function(){
@@ -136,7 +136,7 @@ $(function(){
       $("#m_box3").css('top','50%');
       });
       $("#h_btn3, .strategy>article>ul>li:last-child>#m_box3").click(function(){
-      $("#m_box3").css('top','-100%');
+      $("#m_box3").css('top','150%');
       });
     }
   });

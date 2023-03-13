@@ -475,12 +475,22 @@ body{
   width: 100%;
   cursor: pointer;
 }
-.strategy .hidden_box{
+.strategy #m_box2{
   width: 100.1%;
   height: 100%;
   background: rgb(255,255,255);
   position:absolute;
   top:-100%;
+  transition:0.5s;
+  overflow:hidden;
+}
+.strategy #m_box1,
+.strategy #m_box3{
+  width: 100.1%;
+  height: 100%;
+  background: rgb(255,255,255);
+  position:absolute;
+  top:150%;
   transition:0.5s;
   overflow:hidden;
 }
