@@ -253,7 +253,7 @@ footer .f_top{
   top:0px;
 }
 .m_address_left li{
-  font-weight: bold;
+  font-weight: normal;
 }
 .m_address > p{
   font-size: 0.6rem;
@@ -265,7 +265,7 @@ footer .f_top{
   color:#fff;
 }
 .m_address_right >  li:nth-child(2n){
-  font-weight: bold;
+  font-weight: normal;
 }
 .m_address_right > li:nth-child(2n-1){
   font-weight: lighter;

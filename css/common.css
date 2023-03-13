@@ -332,13 +332,13 @@ address{
   line-height:24px;
 }
 .address_left li{
-  font-weight: bold;
+  font-weight: normal;
 }
 .address_right li a{
   color:#fff;
 }
 .address_right >  li:nth-child(2n){
-  font-weight: bold;
+  font-weight: normal;
 }
 .address_right > li:nth-child(2n-1){
   font-weight: lighter;
