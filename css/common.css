@@ -252,15 +252,13 @@ header:hover #h_bot .gnb::after{
   width:100%;
 }
 .sitemap_wrap{
-  max-width:1260px;
+  min-width:1260px;
   width:100%;
-  margin:0 auto;
-  display: flex;
+  margin-left:300px;
   flex-direction: column;
 }
 .sitemap_wrap > li{
   height:10vh;
-  align-items:flex-start;
   font-family: 'Hana2.0';
   font-weight: bold;
   font-size:20px;
