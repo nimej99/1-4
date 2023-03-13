@@ -112,3 +112,4 @@ gNb.addEventListener('change', function(){
         console.log(cut_cut_href);
         location.href='http://youjy12.dothome.co.kr/1-4/'+cut_cut_href;
     }
+    

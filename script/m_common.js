@@ -41,6 +41,7 @@ mGnb.addEventListener('change', function(){
             document.getElementById("top_btn").style.display = "none";
         }
 
+        // 모바일 헤더 픽스드 일정 스크롤 내려올 시 헤더 백그라운드
         if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 850) {
             document.querySelector("header").style.background = "#444";
         } else {

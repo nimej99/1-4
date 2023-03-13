@@ -183,6 +183,8 @@ $(function(){
     //body태그의 안쪽 맨뒤에 내용을 추가한다.
     $('body').append(moDal);
     $('body').css('overflow', 'hidden');
+    $('#top_btn').css('z-index', '1');
+
 
     $('.modal:not(.modal_wrap), #c_btn').click(function(){
       if (!$(event.target).closest('.modal_wrap').length) {
