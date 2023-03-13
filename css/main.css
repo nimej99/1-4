@@ -199,6 +199,7 @@ i.fa-chevron-left, i.fa-chevron-right{
 .t_label{
   width:100%;
   height:100%;
+  font-family: 'Hana2.0';
   font-weight: bold;
   font-size:16px;
   flex-direction: column;
