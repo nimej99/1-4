@@ -165,6 +165,9 @@ header{
   max-height: 0;
   transition: 0.5s;
 }
+.m_intro_3depth > li:hover a{
+  color: var(--color-green);
+}
 #m_intro_desc:checked ~ .m_intro_3depth{
   max-height:150px;
 }
