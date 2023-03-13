@@ -118,12 +118,12 @@
 .m_tabc{
   width:100%;
   height:70px;
-  background: #f8f8f8;
   text-align: center;
 }
 
 .m_tabc > li{
   width:33.3%;
+  background: #f8f8f8;
 }
 .m_tabc >li > label{
   display: block;
@@ -218,10 +218,11 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab09.png);
   background-position: center center;
 }
-.guest_wrap > ul > li h4,
-.investor_wrap > ul > li h4,
-.crew_wrap > ul > li h4
+.guest_wrap > ul > li > strong,
+.investor_wrap > ul > li > strong,
+.crew_wrap > ul > li > strong
 {
+  display:block;
   font-family: 'Hana2.0';
   font-weight: bold; 
   font-size:16px;
@@ -282,7 +283,8 @@
 .t_download{
   padding:20px 0px 00px 30px;
 }
-.t_download h5, .t_download span{
+.t_download strong, .t_download span{
+  display:block;
   font-weight: bold;
   font-size:22px;
   line-height: 21px;

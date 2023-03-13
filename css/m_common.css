@@ -80,34 +80,34 @@ header{
   margin-top:8px;
 }
 /* 체크드 지옥 */
-#m_sitemap:checked ~ #m_header_wrap #m_gnb{
+#m_gnb:checked ~ #m_header_wrap #m_sitemap{
   display: flex;
 }
-#m_sitemap:checked ~ #m_header_wrap{
+#m_gnb:checked ~ #m_header_wrap{
   background: #fff;
 }
-#m_sitemap:checked ~ #m_header_wrap > h1 > a{
+#m_gnb:checked ~ #m_header_wrap > h1 > a{
   background: url(../images/common/header.logo.hover.svg) no-repeat;
   background-size: contain;
 }
-#m_sitemap:checked ~ #m_header_wrap .m_lang_tab > label{
+#m_gnb:checked ~ #m_header_wrap .m_lang_tab > label{
   background: url(../images/common/lang.hover.png) no-repeat;
 }
-#m_sitemap:checked ~ #m_header_wrap{
+#m_gnb:checked ~ #m_header_wrap{
   border-bottom:1px solid rgba(0, 0, 0, 0.1);
 }
-#m_sitemap:checked ~ #m_header_wrap #burger span{
+#m_gnb:checked ~ #m_header_wrap #burger span{
   background-color: var(--color-black);
 }
-#m_sitemap:checked ~ #m_header_wrap #burger .burger1{
+#m_gnb:checked ~ #m_header_wrap #burger .burger1{
   transform: rotate(45deg);
   margin-top:10px;
 }
-#m_sitemap:checked ~ #m_header_wrap #burger .burger2{
+#m_gnb:checked ~ #m_header_wrap #burger .burger2{
   transform: rotate(-45deg);
   margin-top:-2px;
 }
-#m_sitemap:checked ~ #m_header_wrap #burger .burger3{
+#m_gnb:checked ~ #m_header_wrap #burger .burger3{
   transform: scale(0);
 }
 
