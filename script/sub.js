@@ -28,6 +28,7 @@ $(function(){
   // 스크롤 함수
   $(window).scroll(function(){
     let sPos = $(this).scrollTop();
+    console.log(sPos);
 
     //첫화면 텍스트 효과 스크롤값
     if(sPos>=937){
@@ -91,7 +92,7 @@ $(function(){
     }
 
      // 연혁 불 들어오게
-    if(sPos>=3250){
+    if(sPos>=3640){
       let dtIdx = 0;
       const dtCount = $('.history > article > dl > dt').length; // dt 요소의 총 개수
       
