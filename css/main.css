@@ -306,10 +306,11 @@ i.fa-chevron-left, i.fa-chevron-right{
   position: relative;
 }
 
-.guest_wrap > ul > li h4,
-.investor_wrap > ul > li h4,
-.crew_wrap > ul > li h4
+.guest_wrap > ul > li > strong,
+.investor_wrap > ul > li > strong,
+.crew_wrap > ul > li > strong
 {
+  display:block;
   font-family: 'Hana2.0';
   font-weight: bold; 
   font-size:20px;
@@ -408,7 +409,8 @@ i.fa-chevron-left, i.fa-chevron-right{
 .t_download{
   padding:0px 0px 0px 30px;
 }
-.t_download h5, .t_download span{
+.t_download strong, .t_download span{
+  display:block;
   font-weight: bold;
   font-size:16px;
   line-height: 21px;

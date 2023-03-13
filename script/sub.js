@@ -15,13 +15,15 @@ $(function(){
     let n = $(this).index();
     // console.log(n);
 
+    $('nav#m_nav ul li span').css('background-color', '#7B7B7B');
+    $(this).find('span').css('background-color', '#008177');
     $('html, body').animate({scrollTop:$('section').eq(n+1).offset().top-0},500);
     return false;
   });
 
   // 첫화면 텍스트 효과
-  $("#main_intro_txt").fadeIn(1000);
-  $("#main_intro_txt02").fadeIn(2000);
+  $("#main_intro_txt").fadeIn(2000);
+  $("#main_intro_txt02").fadeIn(4000);
   
   // 스크롤 함수
   $(window).scroll(function(){
@@ -31,8 +33,8 @@ $(function(){
     if(sPos>=937){
       $("#main_intro_txt, main_intro_txt02").hide();
     }else{
-      $("#main_intro_txt").fadeIn();
-      $("#main_intro_txt02").fadeIn();
+      $("#main_intro_txt").fadeIn(2000);
+      $("#main_intro_txt02").fadeIn(4000);
     }
 
     //숫자 올라가게
