@@ -279,7 +279,7 @@ header:hover #h_bot .gnb::after{
   color:var(--color-green);
 }
 .site_map3{
-  font-size:14x;
+  font-size:14px;
   font-weight: normal;
   line-height: 34px;
 } 

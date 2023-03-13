@@ -292,7 +292,7 @@ i.fa-chevron-left, i.fa-chevron-right{
 {
   align-items: center;
   gap:50px;
-  transition:0.5;
+  transition:0.5s;
 }
 .guest_wrap > ul > li,
 .investor_wrap > ul > li,
