@@ -40,6 +40,12 @@ mGnb.addEventListener('change', function(){
         } else {
             document.getElementById("top_btn").style.display = "none";
         }
+
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 850) {
+            document.querySelector("header").style.background = "#444";
+        } else {
+            document.querySelector("header").style.background = "none";
+        }
         }
         
         // 페이지 상단으로 이동하는 함수

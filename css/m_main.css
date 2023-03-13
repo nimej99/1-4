@@ -319,6 +319,9 @@
   align-items: center;
   font-size:12px;
 }
+.t_more a{
+  color:#fff;
+}
 .t_more i.fa-angle-right{
   margin-left:5px;
 }
