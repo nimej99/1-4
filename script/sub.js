@@ -199,11 +199,9 @@ $(function(){
     $('body').css('overflow', 'hidden');
     $('#top_btn').css('z-index', '1');
 
-    $('.modal:not(.left_box,.right_box), #c_btn').click(function(){
-      if (!$(event.target).closest('.modal_wrap').length) {
+    $('.modal:not(.left_box,.right_box), #c_btn').click(function(e){
         $('.modal').hide();
         $('body').css('overflow','auto');
-      }
     });
   });
 });
