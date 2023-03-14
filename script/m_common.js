@@ -13,7 +13,6 @@ toggleBtn.addEventListener('click', function(){
     siteFirst.checked = true;
 
     tabCheck.checked = false;
-    tabFirst.checked = true;
 
     introDesc.checked = false;
     langCheck.checked = false;

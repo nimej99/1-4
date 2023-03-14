@@ -14,3 +14,10 @@ var swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+//체크드 초기화
+let tabFirst = document.querySelector('#g_check');
+
+toggleBtn.addEventListener('click', function(){
+    tabFirst.checked = true;
+});
