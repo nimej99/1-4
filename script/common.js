@@ -110,6 +110,6 @@ gNb.addEventListener('change', function(){
         let cut_href = href.split('/');
         let cut_cut_href = 'm_' + cut_href[4];
         console.log(cut_cut_href);
-        location.href='http://youjy12.dothome.co.kr/1-4/'+cut_cut_href;
+        // location.href='http://youjy12.dothome.co.kr/1-4/'+cut_cut_href;
     }
     
