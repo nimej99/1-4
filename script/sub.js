@@ -39,7 +39,7 @@ $(function(){
     }
 
     //숫자 올라가게
-    if(sPos>=930 && sPos<=1870){
+    if(sPos>=665 && sPos<=1870){
       const counter = ($counter, max) => {
         let now = max;
       
@@ -126,7 +126,7 @@ $(function(){
     
     //전략목표 텍스트 fadIn, click시 숨겨진 박스 나타나게 하기
     if(sPos>=5100 && sPos<=6100){
-      $("#v_box").fadeIn();
+      $("#v_box01, #v_box02, #v_box03").fadeIn();
       $("#m_btn1,.strategy>article>ul>li:first-child>img").click(function(){
       $("#m_box1").css('top','50%');
       });
@@ -170,7 +170,7 @@ $(function(){
     const moDal = `
     <div class="modal">
       <div class="modal_wrap">
-      <img src="../images/sub/close_btn.png" alt="닫기버튼" id="c_btn">
+      <img src="./images/sub/close_btn.png" alt="닫기버튼" id="c_btn">
         <div class="left_box">
         <iframe src="https://www.youtube.com/embed/mJwVPKbKq_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
