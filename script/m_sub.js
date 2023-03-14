@@ -118,7 +118,7 @@ $(function(){
     
     //전략목표 텍스트 fadIn, click시 숨겨진 박스 나타나게 하기
     if(sPos>=2649){
-      $("#v_box").fadeIn();
+      $("#v_box01, #v_box02, #v_box03").fadeIn();
       $("#m_btn1,.strategy>article>ul>li:first-child>img").click(function(){
       $("#m_box1").css('display','block');
       });

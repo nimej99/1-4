@@ -434,6 +434,9 @@ body{
 .strategy > article{
   position: relative;
 }
+.strategy > article > h3{
+  display: none;
+}
 .strategy > article > h3,p{
   /* position: absolute; */
   z-index: 1;
