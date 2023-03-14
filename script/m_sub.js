@@ -171,6 +171,7 @@ $(function(){
     $('body').append(moDal);
     $('body').css('overflow', 'hidden');
     $('#top_btn').css('z-index', '1');
+    $('header').css('z-index', '1');
 
 
     $('.modal:not(.modal_wrap), .modal > .modal_wrap > #c_btn').click(function(){
