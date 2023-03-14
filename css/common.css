@@ -230,6 +230,7 @@ header:hover #h_bot .gnb::after{
   display:block;
   z-index:5000;
   opacity: 1;
+  overflow-x: auto;
 }
 #sitemap{
   width:100%;

@@ -82,13 +82,17 @@ $(function(){
 
 
     // 비전과 미션 스와이퍼 슬라이드
-    let swiper = new Swiper('.swiper-container', {
-      autoplay : false,
+    var swiper = new Swiper('.swiper-container', {
+      autoplay: false,
       loop : true,   // 슬라이드 반복 여부
       loopAdditionalSlides : 1,
       pagination: {
         el: '.swiper-pagination',
         clickable: true, // 버튼 클릭 여부
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     });
 

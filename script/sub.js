@@ -1,3 +1,4 @@
+
 $(function(){
   
   let historyOn = false; // 스크롤 on off 체크
@@ -91,11 +92,14 @@ $(function(){
       $('.mission_box').addClass('left_on');
       $('.vision_box').addClass('right_on');
       $('#m_nav li').find('span').eq(1).css('background-color', '#008177');
+      // $('body').css('overflow-x','hidden');
     }else{
       $('.mission_box').removeClass('left_on');
       $('.vision_box').removeClass('right_on');
       $('#m_nav li').find('span').eq(1).css('background-color', '#7B7B7B');
+      // $('body').css('overflow-x','auto');
     }
+    
 
      // 연혁 불 들어오게
     if(sPos>=3260 && sPos<=5100){
