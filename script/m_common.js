@@ -62,3 +62,10 @@ mGnb.addEventListener('change', function(){
 //         console.log(cut3[1]);
 //         location.href='http://youjy12.dothome.co.kr/1-4/'+cut3[1];
 //     }
+
+//100vh 버그 픽스
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);

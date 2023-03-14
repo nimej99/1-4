@@ -6,6 +6,7 @@
 #main_slider{
   width:100%;
   height:calc(100vh + 85px);
+  height: calc(var(--vh, 1vh) * 100 + 85px);
   overflow: hidden;
 }
 .swiper-slide{
@@ -15,6 +16,7 @@
   width:100%;
   object-fit: cover;
   height:calc(100vh + 85px);
+  height: calc(var(--vh, 1vh) * 100 + 85px);
 }
 .swiper-button-next,
 .swiper-button-prev{

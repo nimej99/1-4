@@ -8,6 +8,7 @@ main{
 }
 #join{
   height:calc(100vh - 274px);
+  height: calc(var(--vh, 1vh) * 100 - 274px);
   text-align: center;
   width: 400px;
   margin : 0 auto;
