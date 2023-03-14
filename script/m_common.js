@@ -17,7 +17,7 @@ toggleBtn.addEventListener('click', function(){
     introDesc.checked = false;
 });
 
-let mGnb = document.querySelector('#m_sitemap');
+let mGnb = document.querySelector('#m_gnb');
 // 스크롤 방지
 mGnb.addEventListener('change', function(){
   if(mGnb.checked==true){
