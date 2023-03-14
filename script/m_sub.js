@@ -30,7 +30,7 @@ $(function(){
 
     //첫화면 텍스트 효과 스크롤값
     if(sPos>=937){
-      $("#main_intro_txt, main_intro_txt02").hide();
+      $("#main_intro_txt, #main_intro_txt02").hide();
     }else{
       $("#main_intro_txt").fadeIn(2000);
       $("#main_intro_txt02").fadeIn(4000);
@@ -185,11 +185,9 @@ $(function(){
 
 
     $('.modal:not(.modal_wrap), .modal > .modal_wrap > #c_btn').click(function(){
-      if (!$(event.target).closest('.modal_wrap').length) {
         $('.modal').hide();
         $('body').css('overflow','auto');
-      }
     });
   });
 
- 
+
