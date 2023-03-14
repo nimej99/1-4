@@ -28,6 +28,7 @@ $(function(){
   // 스크롤 함수
   $(window).scroll(function(){
     let sPos = $(this).scrollTop();
+    console.log(sPos);
 
     //첫화면 텍스트 효과 스크롤값
     if(sPos>=937){
@@ -91,7 +92,7 @@ $(function(){
     }
 
      // 연혁 불 들어오게
-    if(sPos>=3250){
+    if(sPos>=3640){
       let dtIdx = 0;
       const dtCount = $('.history > article > dl > dt').length; // dt 요소의 총 개수
       
@@ -118,24 +119,24 @@ $(function(){
     if(sPos>=5100 && sPos<=6100){
       $("#v_box").fadeIn();
       $("#m_btn1,.strategy>article>ul>li:first-child>img").click(function(){
-      $("#m_box1").css('display','block');
+      $("#m_box1").css('top','50%');
       });
       $("#h_btn1, .strategy>article>ul>li:first-child>#m_box1").click(function(){
-      $("#m_box1").css('display','none');
+      $("#m_box1").css('top','150%');
       });
 
       $("#m_btn2, .strategy>article>ul>li:nth-child(2)>img").click(function(){
-      $("#m_box2").css('display','block');
+      $("#m_box2").css('top','50%');
       });
       $("#h_btn2, .strategy>article>ul>li:nth-child(2)>#m_box2").click(function(){
-      $("#m_box2").css('display','none');
+      $("#m_box2").css('top','-100%');
       });
 
       $("#m_btn3,.strategy>article>ul>li:last-child>img").click(function(){
-      $("#m_box3").css('display','block');
+      $("#m_box3").css('top','50%');
       });
       $("#h_btn3, .strategy>article>ul>li:last-child>#m_box3").click(function(){
-      $("#m_box3").css('display','none');
+      $("#m_box3").css('top','150%');
       });
     }
   });
@@ -172,6 +173,7 @@ $(function(){
     //body태그의 안쪽 맨뒤에 내용을 추가한다.
     $('body').append(moDal);
     $('body').css('overflow', 'hidden');
+    $('#top_btn').css('z-index', '1');
 
     $('.modal:not(.modal_wrap), #c_btn').click(function(){
       if (!$(event.target).closest('.modal_wrap').length) {

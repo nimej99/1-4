@@ -331,80 +331,90 @@ i.fa-chevron-left, i.fa-chevron-right{
 
 .guest_wrap > ul > li:first-child{
   background:url(../images/main/tab01.png) center center no-repeat;
-  background-size: cover;
+  background-size: 130%;
 }
 .guest_wrap > ul > li:nth-child(2){
   background: url(../images/main/tab02.png) center center no-repeat;
-  background-size: cover;
+   background-size: 130%;
 }
 .guest_wrap > ul > li:last-child{
   background: url(../images/main/tab03.png) center center no-repeat;
-  background-size: cover;
+   background-size: 130%;
 }
 
 .investor_wrap > ul > li:first-child{
   background: url(../images/main/tab04.png) center center no-repeat;
-  background-size: cover;
+   background-size: 130%;
 }
 .investor_wrap > ul > li:nth-child(2){
   background: url(../images/main/tab05.png) center center no-repeat;
-  background-size: cover;
+   background-size: 130%;
 }
 .investor_wrap > ul > li:last-child{
   background: url(../images/main/tab06.png) center center no-repeat;
-  background-size: cover;
+   background-size: 130%;
 }
 
 .crew_wrap > ul > li:first-child{
   background: url(../images/main/tab07.png) center center no-repeat;
-  background-size: cover;
+   background-size: 130%;
 }
 .crew_wrap > ul > li:nth-child(2){
   background: url(../images/main/tab08.png) center center no-repeat;
-  background-size: cover;
+   background-size: 130%;
 }
 .crew_wrap > ul > li:last-child{
   background: url(../images/main/tab09.png) center center no-repeat;
-  background-size: cover;
+   background-size: 130%;
 }
 
 /* 호버시 이미지 어둡게, 스케일 */
 .guest_wrap > ul > li:first-child:hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab01.png);
   background-position: center center;
+  background-size: 140%;
 }
 .guest_wrap > ul > li:nth-child(2):hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab02.png);
   background-position: center center;
+  background-size: 140%;
 }
 .guest_wrap > ul > li:last-child:hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab03.png);
   background-position: center center;
+  background-size: 140%;
 }
 .investor_wrap > ul > li:first-child:hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab04.png);
   background-position: center center;
+  background-size: 140%;
 }
 .investor_wrap > ul > li:nth-child(2):hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab05.png);
   background-position: center center;
+  background-size: 140%;
 }
 .investor_wrap > ul > li:last-child:hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab06.png);
   background-position: center center;
+  background-size: 140%;
 }
 .crew_wrap > ul > li:first-child:hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab07.png);
   background-position: center center;
+  background-size: 140%;
 }
 .crew_wrap > ul > li:nth-child(2):hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab08.png);
   background-position: center center;
+  background-size: 140%;
 }
 .crew_wrap > ul > li:last-child:hover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../images/main/tab09.png);
   background-position: center center;
+  background-size: 140%;
 }
+
 
 /* 다운로드 서식 */
 .t_download{

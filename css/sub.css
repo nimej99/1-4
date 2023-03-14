@@ -58,6 +58,9 @@ body{
 #m_nav > ul > li:hover{
   width:150px;
 }
+.active {
+  background-color: #FFA500; /* 예시 색상: 주황색 */
+}
 
 /* main itro 서식 */
 .main_intro{
@@ -188,7 +191,7 @@ body{
   padding-top: 260px;
 }
 .intro > .intro_wrap > .intro_bg > p{
-  padding-top: 15px;
+  padding-top: 20px;
   width: 100%;
   text-align: center;
   font-size: 25px;
@@ -217,7 +220,7 @@ body{
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p{
   line-height: 23px;
-  font-size: 18px;
+  font-size: 20px;
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p:first-of-type{
   display: inline-block;
@@ -245,13 +248,14 @@ body{
   padding-top: 30px;
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p:nth-of-type(2) > span{
-  font-size: 40px;
+  font-size: 36px;
   font-weight: bold;
 }
 .intro >.intro_wrap > .intro_bg > ul > li > p:last-of-type{
   color: #C0C0C0;
+  font-size: 16px;
   padding-top: 12px;
-  line-height: 20px;
+  line-height: 26px;
 }
 
 /* 하나금융 미션과 비전 .mission 서식 */
@@ -261,6 +265,7 @@ body{
   background-size: cover;
   padding: 170px 0px;
   background-repeat: no-repeat;
+  overflow:hidden;
 }
 .mission >  h3{
   display: none;
@@ -280,8 +285,8 @@ body{
   padding: 56px 0px;
   margin-bottom: 100px;
   position: relative;
-  left: -1000px; /* 초기 위치를 스크롤 위치에서 왼쪽으로 이동 */
-  transition: 1s ease-out; /* 이동 시 애니메이션 효과 추가 */
+  left: -1502px; /* 초기 위치를 스크롤 위치에서 왼쪽으로 이동 */
+  transition: 1.2s ease-out; /* 이동 시 애니메이션 효과 추가 */
 }
 .left_on{
   left: 0px !important; /* 스크롤 위치에 도달하면 왼쪽에서 나타나게 함 */
@@ -313,8 +318,8 @@ body{
   border-radius: 30px;
   padding: 56px 0px;
   position: relative;
-  right: -1000px; /* 초기 위치를 스크롤 위치에서 왼쪽으로 이동 */
-  transition: 1s ease-out; /* 이동 시 애니메이션 효과 추가 */
+  right: -1502px; /* 초기 위치를 스크롤 위치에서 왼쪽으로 이동 */
+  transition: 1.2s ease-out; /* 이동 시 애니메이션 효과 추가 */
 }
 .right_on{
   right: 0px !important; /* 스크롤 위치에 도달하면 왼쪽에서 나타나게 함 */
@@ -470,18 +475,32 @@ body{
   width: 100%;
   cursor: pointer;
 }
-.strategy .hidden_box{
+.strategy #m_box2{
   width: 100.1%;
   height: 100%;
   background: rgb(255,255,255);
-  display: none;
+  position:absolute;
+  top:-100%;
+  transition:0.5s;
+  overflow:hidden;
+}
+.strategy #m_box1,
+.strategy #m_box3{
+  width: 100.1%;
+  height: 100%;
+  background: rgb(255,255,255);
+  position:absolute;
+  top:150%;
+  transition:0.5s;
+  overflow:hidden;
 }
 .strategy .hidden_box > div{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
+  height:100%;
 }
 .strategy .hidden_box > div > p:first-of-type{
   font-size: 30px;
@@ -493,7 +512,7 @@ body{
 }
 .strategy .hidden_box > div > p:last-of-type{
   font-size: 18px;
-  line-height: 25px;
+  line-height: 28px;
 }
 .strategy .hidden_box > div > img{
   padding-top: 17px;
@@ -505,7 +524,7 @@ body{
 
 /* 하나인의 정직 .trust 서식 */
 .trust{
-  padding: 150px;
+  padding: 50px;
 }
 .trust > h3{
   display: none;
@@ -559,7 +578,7 @@ body{
 
 /* 하나 홍보영상 서식 */
 .hana_pr{
-  padding: 100px 0px 150px;
+  padding: 80px 0px 160px;
 }
 .hana_pr > h3{
   display: none;
