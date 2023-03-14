@@ -485,12 +485,12 @@ body{
   left: 0px;
   background: rgba(0,0,0,.7);
 }
-.modal img{
-  width: 60px;
+.modal > .modal_wrap img{
   position: absolute;
+  width: 60px;
   cursor: pointer;
-  top: 153px;
-  right: 4px;
+  top: -60px;
+  right: 0px;
 }
 .modal_wrap{
   padding: 0px 10px;

@@ -18,7 +18,7 @@ body{
   position: fixed;
   right: 40px;
   top: 38%;
-  z-index: 1;
+  z-index: 2;
 }
 #m_nav > ul{
   display: flex;
@@ -648,10 +648,12 @@ body{
   background: rgba(0,0,0,.7);
   z-index: 10;
 }
-.modal img{
+.modal > .modal_wrap img{
+  position: absolute;
   width: 60px;
   cursor: pointer;
-  transform: translate(1662px, 268px);
+  top: -70px;
+  right: -10px;
 }
 .modal_wrap{
   width: 1200px;
