@@ -82,7 +82,8 @@ $(function(){
 
     // 비전과 미션 스와이퍼 슬라이드
     var swiper = new Swiper('.swiper-container', {
-      loop : true,   // 슬라이드 반복 여부
+      autoplay : false,
+      loop : false,   // 슬라이드 반복 여부
       loopAdditionalSlides : 1,
       pagination: {
         el: '.swiper-pagination',
