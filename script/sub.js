@@ -7,7 +7,7 @@ $(function(){
     $('html, body').animate({scrollTop:$('.intro').offset().top-0},500,'easeOutQuint');
   });
 
-  //원형내비게이션 클릭시 해당 콘텐츠로 이동
+  //원형내비게이션 클릭시 해당 콘텐츠로 이동 및 클릭시 해당 SPAN 배경색 변경
 
   let mnuN = $('#m_nav li')
 
@@ -23,7 +23,7 @@ $(function(){
 
   // 첫화면 텍스트 효과
   $("#main_intro_txt").fadeIn(2000);
-  $("#main_intro_txt02").fadeIn(4000);
+  $("#main_intro_txt02").fadeIn(3000);
   
   // 스크롤 함수
   $(window).scroll(function(){
@@ -31,15 +31,15 @@ $(function(){
     console.log(sPos);
 
     //첫화면 텍스트 효과 스크롤값
-    if(sPos>=937){
-      $("#main_intro_txt, main_intro_txt02").hide();
+    if(sPos>=936){
+      $("#main_intro_txt, #main_intro_txt02").hide();
     }else{
       $("#main_intro_txt").fadeIn(2000);
-      $("#main_intro_txt02").fadeIn(4000);
+      $("#main_intro_txt02").fadeIn(3000);
     }
 
     //숫자 올라가게
-    if(sPos>=900 && sPos<=1875){
+    if(sPos>=930 && sPos<=1870){
       const counter = ($counter, max) => {
         let now = max;
       
@@ -58,8 +58,10 @@ $(function(){
           now -= step;
         }, 50);
       }
+      $('#m_nav li').find('span').eq(0).css('background-color', '#008177');  
+
       
-    if(sPos>=900 && sPos<=1875) {
+    if(sPos>=930 && sPos<=1870) {
         // 카운트를 적용시킬 요소
         const $counTer1 = document.querySelector(".count1");
         const $counTer2 = document.querySelector(".count2");
@@ -80,19 +82,23 @@ $(function(){
         setTimeout(() => counter($counTer4, mAx4), 2000);
         setTimeout(() => counter($counTer5, mAx5), 2000);
       }
+    }else{
+      $('#m_nav li').find('span').eq(0).css('background-color', '#7B7B7B');
     }
 
     // 비전과 미션 박스 날아오게
-    if(sPos>=1000 && sPos<=3200){
+    if(sPos>=1874 && sPos<=3200){
       $('.mission_box').addClass('left_on');
       $('.vision_box').addClass('right_on');
+      $('#m_nav li').find('span').eq(1).css('background-color', '#008177');
     }else{
       $('.mission_box').removeClass('left_on');
       $('.vision_box').removeClass('right_on');
+      $('#m_nav li').find('span').eq(1).css('background-color', '#7B7B7B');
     }
 
      // 연혁 불 들어오게
-    if(sPos>=3640){
+    if(sPos>=3260 && sPos<=5100){
       let dtIdx = 0;
       const dtCount = $('.history > article > dl > dt').length; // dt 요소의 총 개수
       
@@ -112,6 +118,9 @@ $(function(){
           $('.history > article > dl > dt').stop().eq(dtIdx).addClass('txt_on');
         }, 2000);
       }
+      $('#m_nav li').find('span').eq(2).css('background-color', '#008177');
+    }else{
+      $('#m_nav li').find('span').eq(2).css('background-color', '#7B7B7B');
     }
     
     
@@ -138,6 +147,21 @@ $(function(){
       $("#h_btn3, .strategy>article>ul>li:last-child>#m_box3").click(function(){
       $("#m_box3").css('top','150%');
       });
+      $('#m_nav li').find('span').eq(3).css('background-color', '#008177');
+    }else{
+      $('#m_nav li').find('span').eq(3).css('background-color', '#7B7B7B');
+    }
+
+    if(sPos>=6170 && sPos<=7080){
+      $('#m_nav li').find('span').eq(4).css('background-color', '#008177');
+    }else{
+      $('#m_nav li').find('span').eq(4).css('background-color', '#7B7B7B');
+    }
+
+    if(sPos>=7082){
+      $('#m_nav li').find('span').eq(5).css('background-color', '#008177');
+    }else{
+      $('#m_nav li').find('span').eq(5).css('background-color', '#7B7B7B');
     }
   });
 
@@ -145,8 +169,8 @@ $(function(){
   $('.video_box, .play_btn').click(function(){
     const moDal = `
     <div class="modal">
-      <img src="../images/sub/close_btn.png" alt="닫기버튼" id="c_btn">
       <div class="modal_wrap">
+      <img src="../images/sub/close_btn.png" alt="닫기버튼" id="c_btn">
         <div class="left_box">
         <iframe src="https://www.youtube.com/embed/mJwVPKbKq_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -175,7 +199,7 @@ $(function(){
     $('body').css('overflow', 'hidden');
     $('#top_btn').css('z-index', '1');
 
-    $('.modal:not(.modal_wrap), #c_btn').click(function(){
+    $('.modal:not(.left_box,.right_box), #c_btn').click(function(){
       if (!$(event.target).closest('.modal_wrap').length) {
         $('.modal').hide();
         $('body').css('overflow','auto');

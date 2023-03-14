@@ -153,8 +153,8 @@ $(function(){
   $('.video_box, .play_btn').click(function(){
     const moDal = `
     <div class="modal">
-      <img src="../images/sub/close_btn.png" alt="닫기버튼" id="c_btn">
       <div class="modal_wrap">
+      <img src="../images/sub/close_btn.png" alt="닫기버튼" id="c_btn">
         <div class="left_box">
         <iframe src="https://www.youtube.com/embed/mJwVPKbKq_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -184,7 +184,7 @@ $(function(){
     $('#top_btn').css('z-index', '1');
 
 
-    $('.modal:not(.modal_wrap), #c_btn').click(function(){
+    $('.modal:not(.modal_wrap), .modal > .modal_wrap > #c_btn').click(function(){
       if (!$(event.target).closest('.modal_wrap').length) {
         $('.modal').hide();
         $('body').css('overflow','auto');
