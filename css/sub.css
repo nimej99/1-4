@@ -5,11 +5,13 @@
 .mission,
 .history,
 .strategy,
-.trust,
-.hana_pr{
+.trust{
   min-width: 1260px;
 }
 /* 가로스크롤 없애기 */
+html{
+  scroll-behavior: smooth;
+}
 body{
   overflow-x: hidden;
 }
@@ -485,9 +487,7 @@ body{
   height: 100%;
   cursor: pointer;
 }
-.strategy #m_box1{
-  border-right: 1px solid #dddddd;
-}
+.strategy #m_box1,
 .strategy #m_box2{
   border-right: 1px solid #dddddd;
 }
@@ -509,7 +509,6 @@ body{
   top:150%;
   transition:0.5s;
   overflow:hidden;
-  border-bottom: shadow;
 }
 .strategy .hidden_box > div{
   display:flex;
@@ -590,6 +589,7 @@ body{
 /* 하나 홍보영상 서식 */
 .hana_pr{
   padding: 80px 0px 160px;
+  width: 100%;
 }
 .hana_pr > h3{
   display: none;
