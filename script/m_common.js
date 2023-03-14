@@ -63,5 +63,5 @@ if (isPc) {
     let cut2 = cut_href[4];
     let cut3 = cut2.split('_');
         console.log(cut3[1]);
-        // location.href='http://youjy12.dothome.co.kr/1-4/'+cut3[1];
+        location.href='http://youjy12.dothome.co.kr/1-4/'+cut3[1];
     }
