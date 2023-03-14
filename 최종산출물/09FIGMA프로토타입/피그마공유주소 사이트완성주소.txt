@@ -1,1 +1,4 @@
-AFSDFASD
+PC : https://www.figma.com/proto/LtIhRFLeAU3D7cizhVVawb/D%EC%A1%B0-%EC%9D%BC%EC%84%9D%EC%82%AC%EC%A1%B0-%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%EA%B7%B8%EB%A3%B9?node-id=54%3A2&viewport=510%2C2258%2C0.04&scaling=scale-down&starting-point-node-id=1289%3A10100&show-proto-sidebar=1
+
+
+MOBILE : https://www.figma.com/proto/LtIhRFLeAU3D7cizhVVawb/D%EC%A1%B0-%EC%9D%BC%EC%84%9D%EC%82%AC%EC%A1%B0-%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%EA%B7%B8%EB%A3%B9?node-id=54%3A2&viewport=510%2C2258%2C0.04&scaling=scale-down&starting-point-node-id=1289%3A8938&show-proto-sidebar=1
