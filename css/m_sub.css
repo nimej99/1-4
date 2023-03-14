@@ -329,6 +329,10 @@ body{
   width: 100%;
   cursor: pointer;
 }
+.strategy #m_box1,
+.strategy #m_box2{
+  border-bottom: 1px solid #dddddd;
+}
 .strategy .hidden_box{
   width: 100%;
   height: 300px;
