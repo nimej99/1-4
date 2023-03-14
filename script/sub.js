@@ -39,7 +39,7 @@ $(function(){
     }
 
     //숫자 올라가게
-    if(sPos>=930 && sPos<=1874){
+    if(sPos>=930 && sPos<=1870){
       const counter = ($counter, max) => {
         let now = max;
       
@@ -60,7 +60,7 @@ $(function(){
         $('#m_nav li').find('span').eq(0).css('background-color', '#008177');  
       }
       
-    if(sPos>=930 && sPos<=1874) {
+    if(sPos>=930 && sPos<=1870) {
         // 카운트를 적용시킬 요소
         const $counTer1 = document.querySelector(".count1");
         const $counTer2 = document.querySelector(".count2");
