@@ -69,7 +69,7 @@
           <div class="f_site flex">
             <a href="#none" title="familysite" class="Familysite">Familysite</a>
             <div class="site_con hidden">
-              <a href="https://www.hanafn.com:8002/main.do" title="하나금융그룹">하나금융그룹</a>
+              <a href="https://www.hanafn.com/main/index.do" title="하나금융그룹">하나금융그룹</a>
               <a href="https://www.kebhana.com/" title="하나은행">하나은행</a>
               <a href="https://www.hanaw.com/main/main/index.cmd" title="하나증권">하나증권</a>
               <a href="https://www.hanacard.co.kr/" title="하나카드">하나카드</a>
@@ -139,9 +139,6 @@
           </li>
           <li>
             <a href="sub.html" title="기업아이덴티티">기업 아이덴티티</a>
-          </li>
-          <li>
-            <a href="sub.html" title="연혁">연혁</a>
           </li>
           <li>
             <a href="sub.html" title="회사위치">회사 위치</a>
@@ -246,9 +243,6 @@
             </li>
             <li>
               <a href="sub.html" title="기업아이덴티티">기업 아이덴티티</a>
-            </li>
-            <li>
-              <a href="sub.html" title="연혁">연혁</a>
             </li>
             <li>
               <a href="sub.html" title="회사위치">회사 위치</a>

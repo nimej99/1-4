@@ -1,3 +1,14 @@
+// 피시버전 돌아가기
+const isPc = window.matchMedia("only screen and (min-width: 767px)").matches;
+if (isPc) {
+    let hRef = document.location.href;
+    let cut_href = hRef.split('/');
+    let cut2 = cut_href[4];
+    let cut3 = cut2.split('_');
+    console.log(cut3[1]);
+        location.href='http://youjy12.dothome.co.kr/1-4/'+cut3[1];
+    }
+
 // 모바일 체크드 초기화
 let toggleBtn = document.querySelector('#burger');
 let siteCheck = document.getElementsByName('m_sitemap');
@@ -52,13 +63,10 @@ mGnb.addEventListener('change', function(){
         document.documentElement.scrollTop = 0;
         }
 
-// 피시버전 돌아가기
-// const isPc = window.matchMedia("only screen and (min-width: 767px)").matches;
-// if (isPc) {
-//     let hRef = document.location.href;
-//     let cut_href = hRef.split('/');
-//     let cut2 = cut_href[4];
-//     let cut3 = cut2.split('_');
-//         console.log(cut3[1]);
-//         location.href='http://youjy12.dothome.co.kr/1-4/'+cut3[1];
-//     }
+
+//100vh 버그 픽스
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);

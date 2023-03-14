@@ -276,7 +276,7 @@
           <div class="m_lnb m_family hidden">
             <ul>
               <li>
-                <a href="https://www.hanafn.com:8002/main.do" title="하나금융그룹">
+                <a href="https://www.hanafn.com/main/index.do" title="하나금융그룹">
                   하나금융그룹
                 </a>
               </li>
@@ -451,16 +451,16 @@ function fregisterform_submit(f) { // submit 최종 폼체크
           </ul>
           <ul class="m_address_right">
             <li>
-              <a href="map" title="하나맵">하나맵</a>
+              <a href="#none" title="하나맵">하나맵</a>
             </li>
             <li>
-              <a href="개인정보처리방침" title="개인정보처리방침">개인정보처리방침</a>
+              <a href="#none" title="개인정보처리방침">개인정보처리방침</a>
             </li>
             <li>
-              <a href="고객정보취급방침" title="고객정보취급방침">고객정보취급방침</a>
+              <a href="#none" title="고객정보취급방침">고객정보취급방침</a>
             </li>
             <li>
-              <a href="신용정보취급활용체제" title="신용정보취급활용체제">신용정보취급활용체제</a>
+              <a href="#none" title="신용정보취급활용체제">신용정보취급활용체제</a>
             </li>
           </ul>
         </div>

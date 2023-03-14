@@ -1,3 +1,13 @@
+// 가로너비로 측정해서 모바일 이동
+const isMobile = window.matchMedia("only screen and (max-width: 767px)").matches;
+if (isMobile) {
+  let href = document.location.href;
+    let cut_href = href.split('/');
+    let cut_cut_href = 'm_' + cut_href[4];
+    console.log(cut_cut_href);
+    location.href='http://youjy12.dothome.co.kr/1-4/'+cut_cut_href;
+}
+
 // 헤더 GNB 마우스 오버 서식
 let header = document.querySelector('header');
 let lNb = document.querySelector('.lnb');
@@ -103,13 +113,11 @@ gNb.addEventListener('change', function(){
       document.documentElement.scrollTop = 0;
       }
       
-    // 가로너비로 측정해서 모바일 이동
-    const isMobile = window.matchMedia("only screen and (max-width: 767px)").matches;
-    if (isMobile) {
-      let href = document.location.href;
-        let cut_href = href.split('/');
-        let cut_cut_href = 'm_' + cut_href[4];
-        console.log(cut_cut_href);
-        location.href='http://youjy12.dothome.co.kr/1-4/'+cut_cut_href;
-    }
+
+//100vh 버그 픽스
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
     

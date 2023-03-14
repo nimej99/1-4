@@ -9,6 +9,7 @@ main{
 }
 #login{
   height:calc(100vh - 274px);
+  height: calc(var(--vh, 1vh) * 100 - 274px);
   width: 400px;
   margin: 0 auto;
   text-align: center;
@@ -99,6 +100,7 @@ label[for="i_store"]{
   .user_info{
     width: 400px;
     height:calc(100vh - 274px);
+    height: calc(var(--vh, 1vh) * 100 - 274px);
     margin:0 auto;
   }
   .user_info table{
