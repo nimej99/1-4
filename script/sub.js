@@ -170,7 +170,7 @@ $(function(){
     const moDal = `
     <div class="modal">
       <div class="modal_wrap">
-      <img src="../images/sub/close_btn.png" alt="닫기버튼" id="c_btn">
+      <img src="./images/sub/close_btn.png" alt="닫기버튼" id="c_btn">
         <div class="left_box">
         <iframe src="https://www.youtube.com/embed/mJwVPKbKq_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
