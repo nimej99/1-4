@@ -75,7 +75,7 @@ label[for="i_store"]{
   font-weight: bold;
 }
 .log_info >li:last-child{
-  width: 21%;
+  width: 17%;
   text-align: end;
 }
 .log_info >li:last-child span:hover{
