@@ -1,0 +1,173 @@
+@charset "utf-8";
+.faq_h{
+width: 100%;
+height:432px;
+position: relative;
+}
+
+.faq_h>img{
+width: 100%;
+height: 120%;
+object-fit: cover; 
+}
+
+.faq_h > h2{
+font-size: 63px;
+color: #fff;
+position: absolute; z-index: 0;
+top: 65%; left: 50%;
+transform: translate(-50%,-50%);
+}
+
+/* 게시글 몸통 */
+article{
+margin: 165px auto 0 auto;
+width: 1130px;
+}
+
+h3{
+margin-bottom: 20px;
+font-size: 20px;
+display: none;
+}
+h3:first-child{
+    display:block !important;
+
+}
+
+article > h3 > span {
+color: #008177;
+font-size: 20px;
+padding-left: 6px;
+}
+
+dl{
+margin: 0px auto;
+padding-left:15px;   
+border-top: 1px solid #000;
+width: 1130px; height: 210px;
+background: #F6F6F6;
+}
+
+dt{
+text-align: left;
+font-size: 22px;
+font-weight:bold;
+/* border-top: 1px solid #000; */
+padding: 30px 0 10px 0;
+}
+
+dd{
+font-size: 16px;
+margin: 30px 0 10px 0;
+line-height: 24px;
+}
+
+dl > dd:first-child{line-height: 24px;}
+dd:last-child{
+    font-size: 14px;
+}
+
+
+
+/* 글쓰기 수정하기 */
+.n_page{
+    width: 1130px;  height: 64px;
+    /* border: 1px solid #333; */
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+.n_page > li{
+    width: 100px; height: 30px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 20px;
+}
+.n_page > li > a{
+    padding: 25px;
+}
+.n_page > li:hover{
+    background: #008177;
+    color: #fff;
+}
+.n_page > li > a:hover{
+    color: #fff;
+}
+
+
+
+
+
+/* 1234 리스트 */
+.n_list{
+    margin: 0px auto;
+    display: flex;
+    width: 300px; height: 64px;
+}
+.n_list > li{
+    width: 40px;
+    text-align: center;
+}
+
+/* 검색창 */
+.n_kind{
+    margin: 0px auto; 
+    width: 1130px; height: 125px;
+    background: #EEEEEE;
+    text-align: center;
+    line-height: 125px;
+}
+
+.n_kind select{
+    width: 138px; height: 46px ;
+    font-size: 16px; 
+    text-align: center;
+    font-weight: 400;
+}
+.n_kind input[type=text]{
+    width: 810px; height: 46px;
+}
+.n_kind input[type=submit]{
+    cursor: pointer;
+    border: #419390;
+    color: #fff;
+    background: #419390;
+    width: 80px; height: 46px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* top버튼 */
+.n_top{
+    text-align: center;
+    line-height: 50px;
+    width: 50px; height: 50px;
+    border:  1px solid #333;
+    position: fixed; right: 10px; bottom: 5%;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+}
+#topBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 30px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #000;
+    cursor: pointer;
+    width: 50px; height: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+
+  }
+  
+  #topBtn:hover {
+    background-color: #419390;
+    color: #fff;
+  }
