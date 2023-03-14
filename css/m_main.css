@@ -145,8 +145,8 @@
 #i_check:checked ~ .m_tab .m_tab_con  .m_tabc > li:nth-child(2),
 #c_check:checked ~ .m_tab .m_tab_con  .m_tabc > li:nth-child(3)
 {
-  color:var(--color-green);
-  border-bottom:3px solid var(--color-green);
+  color:#0E7C74;
+  border-bottom:3px solid #0E7C74;
 }
 #tab_con{
   width:100%;
