@@ -478,6 +478,12 @@ body{
   width: 100%;
   cursor: pointer;
 }
+.strategy #m_box1,
+.strategy #m_box2,
+.strategy #m_box3{
+  box-sizing: border-box;
+  box-shadow:2px 3px 5px 0px;
+}
 .strategy #m_box2{
   width: 100.1%;
   height: 100%;
