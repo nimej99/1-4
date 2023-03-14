@@ -21,6 +21,7 @@
   <!-- 폰트어썸CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <!-- script 영역 -->
+  <script src="./script/m_common.js" defer></script>
 </head>
 <body>
   <!-- 헤더영역 서식 -->
