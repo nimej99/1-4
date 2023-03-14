@@ -129,6 +129,11 @@ header{
   line-height: 50px;
   background: #f8f8f8;
 }
+.m_family > ul > li > a:hover,
+.m_member > ul > li > a:hover
+{
+  color:var(--color-green);
+}
 .m_gnb > li:nth-child(6){
   border-top:1px solid rgba(0, 0, 0, 0.1);
 }

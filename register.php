@@ -1,34 +1,56 @@
- 
+<!-- 회원가입 -->
+<?php
+  include('./db_conn.php'); //데이터베이스에 접근을 하기 위한 내용
+  if(isset($_SESSION['ss_mb_id'])&&$_GET['mode']=='modify'){
+    //세션이 있고 회원수정mode라면 회원정보를 가져온다.
+
+    $mb_id = $_SESSION['ss_mb_id'];//세션정보에서 아이디값을 변수에 담고
+    $sql = "SELECT * FROM member WHERE mb_id = '$mb_id'";//회원정보를 조회한다.
+    $result = mysqli_query($conn, $sql); //변수에 데이터접소정보와 조회데이터를 변수에 담아
+    $mb = mysqli_fetch_assoc($result); //반복문으로 돌려서 변수에 담아 아래에서 출력하도록한다
+    mysqli_close($conn);//데이터 베이스 접속 종료
+    $mode = "modify";
+    $title = "회원수정";
+    $modify_mb_info = "readonly";
+  }else{
+    $mode = "insert";
+    $title = "회원가입";
+    $modify_mb_info = '';
+    $mb = [
+      'mb_id' => '',
+      'mb_password' => '',
+      'mb_name' => ''
+    ];
+  }
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>faq</title>
-  <link rel="shortcut icon" type="image/x-icon" href="./images/common/favicon.ico">
+  <title>하나금융그룹</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/common/favicon.ico">
   <!-- 초기화 -->
   <link rel="stylesheet" href="./css/css_reset.css" type="text/css">
   <!-- 기본서식 -->
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <!-- 공통서식 -->
   <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <!-- 메인서식 -->
-  <link rel="stylesheet" href="./css/main.css" type="text/css">
-  <!-- faq서식 -->
-  <link rel="stylesheet" href="./css/faq.css">
+  <!-- join서식 -->
+  <link rel="stylesheet" href="./css/join.css" type="text/css">
   <!-- 폰트어썸CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <!-- script 영역 -->
   <script src="./script/common.js" defer></script>
-
 </head>
 <body>
+
   <!-- 헤더영역 서식 -->
- <header>
+  <header>
     <!-- 헤더상단 -->
     <input type="checkbox" id="gnb" class="hidden">
-    <div id="hover_bg" class="hidden"></div>
+    <div id="hover_bg"></div>
     <div id="h_top">
       <!-- Lang Familysite 서식 -->
       <ul class="select_tab flex">
@@ -88,7 +110,7 @@
       <!-- GNB 1뎁스 -->
       <ul class="gnb flex">
         <li>
-          <a href="#none" title="그룹소개">그룹소개</a>
+          <a href="sub.html" title="그룹소개">그룹소개</a>
         </li>
         <li>
           <a href="#none" title="투자정보">투자정보</a>
@@ -100,29 +122,29 @@
           <a href="#none" title="인재채용">인재채용</a>
         </li>
         <li>
-          <a href="#none" title="PR센터">PR센터</a>
+          <a href="notice_list.php" title="PR센터">PR센터</a>
         </li>
       </ul>
       <!-- LNB 2뎁스 -->
       <div class="lnb flex">
         <ul class="lnb_intro flex">
           <li>
-            <a href="#none" title="그룹개요">그룹개요</a>
+            <a href="sub.html" title="그룹개요">그룹개요</a>
           </li>
           <li>
-            <a href="#none" title="경영진">경영진</a>
+            <a href="sub.html" title="경영진">경영진</a>
           </li>
           <li>
-            <a href="#none" title="하나네트워크">하나 네트워크</a>
+            <a href="sub.html" title="하나네트워크">하나 네트워크</a>
           </li>
           <li>
-            <a href="#none" title="기업아이덴티티">기업 아이덴티티</a>
+            <a href="sub.html" title="기업아이덴티티">기업 아이덴티티</a>
           </li>
           <li>
-            <a href="#none" title="연혁">연혁</a>
+            <a href="sub.html" title="연혁">연혁</a>
           </li>
           <li>
-            <a href="#none" title="회사위치">회사 위치</a>
+            <a href="sub.html" title="회사위치">회사 위치</a>
           </li>
         </ul>
         <ul class="lnb_ir flex">
@@ -178,56 +200,58 @@
         </ul>
         <ul class="lnb_pr flex">
           <li>
-            <a href="#none" title="공지사항">공지사항</a>
+            <a href="notice_list.php" title="공지사항">공지사항</a>
           </li>
           <li>
-            <a href="#none" title="보도자료">보도자료</a>
+            <a href="notice_list.php" title="보도자료">보도자료</a>
           </li>
           <li>
-            <a href="#none" title="광고">광고</a>
+            <a href="notice_list.php" title="광고">광고</a>
           </li>
           <li>
-            <a href="#none" title="스포츠">스포츠</a>
+            <a href="notice_list.php" title="스포츠">스포츠</a>
           </li>
         </ul>
       </div>
     </div>
-    <div id="sitemap" class="hidden">
+    <div id="sitemap">
       <h2>
-        <img src="./images/common/header.logo.hover.svg" alt="로고">
+        <a href="index.html" title="메인페이지바로가기">
+          <img src="./images/common/header.logo.hover.svg" alt="로고">
+        </a>
       </h2>
       <ul class="sitemap_wrap">
         <li class="flex">
-          <a href="#none" title="그룹소개">그룹소개</a>
+          <a href="sub.html" title="그룹소개">그룹소개</a>
           <ul class="flex site_map2">
             <li>
-              <a href="#none" title="그룹개요">그룹개요</a>
+              <a href="sub.html" title="그룹개요">그룹개요</a>
               <ul class="site_map3">
                 <li>
-                  <a href="#none" title="회사소개">회사소개</a>
+                  <a href="sub.html" title="회사소개">회사소개</a>
                 </li>
                 <li>
-                  <a href="#none" title="비전과미션">비전과 미션</a>
+                  <a href="sub.html" title="비전과미션">비전과 미션</a>
                 </li>
                 <li>
-                  <a href="#none" title="전략목표">전략목표</a>
+                  <a href="sub.html" title="전략목표">전략목표</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#none" title="경영진">경영진</a>
+              <a href="sub.html" title="경영진">경영진</a>
             </li>
             <li>
-              <a href="#none" title="하나네트워크">하나 네트워크</a>
+              <a href="sub.html" title="하나네트워크">하나 네트워크</a>
             </li>
             <li>
-              <a href="#none" title="기업아이덴티티">기업 아이덴티티</a>
+              <a href="sub.html" title="기업아이덴티티">기업 아이덴티티</a>
             </li>
             <li>
-              <a href="#none" title="연혁">연혁</a>
+              <a href="sub.html" title="연혁">연혁</a>
             </li>
             <li>
-              <a href="#none" title="회사위치">회사 위치</a>
+              <a href="sub.html" title="회사위치">회사 위치</a>
             </li>
           </ul>
         </li>
@@ -289,107 +313,123 @@
           </ul>
         </li>
         <li class="flex">
-          <a href="#none" title="PR센터">PR센터</a>
+          <a href="notice_list.php" title="PR센터">PR센터</a>
           <ul class="flex site_map2">
             <li>
-              <a href="#none" title="공지사항">공지사항</a>
+              <a href="notice_list.php" title="공지사항">공지사항</a>
             </li>
             <li>
-              <a href="#none" title="보도자료">보도자료</a>
+              <a href="notice_list.php" title="보도자료">보도자료</a>
             </li>
             <li>
-              <a href="#none" title="광고">광고</a>
+              <a href="notice_list.php" title="광고">광고</a>
             </li>
             <li>
-              <a href="#none" title="스포츠">스포츠</a>
+              <a href="notice_list.php" title="스포츠">스포츠</a>
             </li>
           </ul>
         </li>
       </ul>
       <ul id="member" class="flex">
         <li>
-          <a href="#none" title="LOGIN">LOGIN</a>
+          <a href="login.php" title="LOGIN">LOGIN</a>
         </li>
         <li>
-          <a href="#none" title="JOIN">JOIN</a>
+          <a href="register.php" title="JOIN">JOIN</a>
         </li>
       </ul>
     </div>
   </header>
 
+    <!-- 메인영역 서식 -->
+    <main>
+    <article id="join">
+      <h2><?php echo $title ?></h2>
+      <p>하나금융 그룹의 다양한 서비스와 혜택을 누리세요.</p>
+      <form action="./register_update.php" onsubmit="" method="post">
+        <fieldset id="j_wrap" class="flex">
+          <legend class="hidden">레전드 회원가입 폼</legend>
+          <input type="hidden" name="mode" value="<?php echo $mode ?>"></input>
+          <!-- 이름 -->
+          <input type="text" placeholder='이름' name="mb_name" value="<?php echo $mb['mb_name'] ?>"<?php echo $modify_mb_info ?>>
+          <!-- 아이디 -->
+          <input type="text" placeholder='아이디' name="mb_id" value="<?php echo $mb['mb_id']?>" <?php echo $modify_mb_info ?>>
+          <!-- 비밀번호 -->
+          <input type="password" name="mb_password" placeholder='패스워드'>
+          <p>
+            <input type="checkbox" name="u_agree" id="u_agree">
+            <label for="u_agree">서비스 이용약관에 동의합니다. (필수)</label>
+          </p>
+          <p>
+            <input type="checkbox" name="p_agree" id="p_agree">
+            <label for="p_agree">개인정보 수집이용과 처리방침에 동의합니다. (선택)</label>
+          </p>
+        </fieldset>
+        <div class="j_btnwrap flex">
+          <a href="./login.php" id="j_cancel">취소</a>
+          <input type="submit" value="<?php echo $title ?>" id="j_submit">
+        </div>
+      </form>
+    </article>
+  </main>
 
+  <script>
+function fregisterform_submit(f) { // submit 최종 폼체크
 
-<main>
-<div class="faq_h">
-  <img src="./images/faq/faq.png" alt="asd">
-  <h2>하나뉴스</h2>
-</div>
+   if (f.mb_id.value.length < 1) { // 회원아이디 검사
+      alert("아이디를 입력하십시오.");
+      f.mb_id.focus();
+      return false;
+   }
 
-<article>
-<h3>총 게시글 <span>7</span>개</h3>
+   if (f.mb_name.value.length < 1) { // 이름 검사
+      alert("이름을 입력하십시오.");
+      f.mb_name.focus();
+      return false;
+   }
 
-<dl>
-  <dt>하나은행, 서민금융상품 햇살론 취약계층 지원 나선다</dt>
-  <dd>하나은행은 고금리 지속으로 어려움을 겪고 있는 사회적 취약계층의 실질적인 금융지원을 위해 ‘햇살론15’ 상품을 이용 중인 차주에게 「이자 캐시백(CASH BACK)
-    희망 프로그램」을 1년간 실시한다고 밝혔다.</dd>
-  <dd>2023.02.17</dd>
+   if (f.mb_password.value.length < 3) {
+      alert("비밀번호를 3글자 이상 입력하십시오.");
+      f.mb_password.focus();
+      return false;
+   }
 
-  <dt>회사와 직원, 지속적 성장을 위한 ‘노사상생 협약식’ 진행</dt>
-  <dd>하나카드 노사는 지난 15일 하나카드 본사 15층 대회의실(서울 명동)에서 하나카드 이호성 대표이사와 정종우 노조위원장 및 관계자 등이 참석한 가운데, 하나금융그룹 ‘23년 3대 전략 과제의 성공적 달성 및 하나카드 중/장기 성장기반 확보를 위한 ‘노사상생 협약식’을 진행했다고 16일 밝혔다.</dd>
-  <dd>2023.02.16</dd>
+   return true;
 
-  <dt>하나증권, (세전) 연 5.2% 수익률 특판 RP형 CMA 출시</dt>
-  <dd>하나증권은 하이브리드형 고객 상담 서비스 ‘프라임케어 라운지’를 확대 개편했다고 13일 밝혔다.</dd>
-  <dd>2023.02.15</dd>
-
-  <dt>하나증권, (세전) 연 5.2% 수익률 특판 RP형 CMA 출시</dt>
-  <dd>하나증권은 하이브리드형 고객 상담 서비스 ‘프라임케어 라운지’를 확대 개편했다고 13일 밝혔다.</dd>
-  <dd>2023.02.15</dd>
-
-  <dt>하나증권, (세전) 연 5.2% 수익률 특판 RP형 CMA 출시</dt>
-  <dd>하나증권은 하이브리드형 고객 상담 서비스 ‘프라임케어 라운지’를 확대 개편했다고 13일 밝혔다.</dd>
-  <dd>2023.02.15</dd>
-
-  <dt>하나증권, (세전) 연 5.2% 수익률 특판 RP형 CMA 출시</dt>
-  <dd>하나증권은 하이브리드형 고객 상담 서비스 ‘프라임케어 라운지’를 확대 개편했다고 13일 밝혔다.</dd>
-  <dd>2023.02.15</dd>
-
-  <dt>하나증권, (세전) 연 5.2% 수익률 특판 RP형 CMA 출시</dt>
-  <dd>하나증권은 하이브리드형 고객 상담 서비스 ‘프라임케어 라운지’를 확대 개편했다고 13일 밝혔다.</dd>
-  <dd>2023.02.15</dd>
-
-  <dt>하나증권, (세전) 연 5.2% 수익률 특판 RP형 CMA 출시</dt>
-  <dd>하나증권은 하이브리드형 고객 상담 서비스 ‘프라임케어 라운지’를 확대 개편했다고 13일 밝혔다.</dd>
-  <dd>2023.02.15</dd>
-
-  <dt>하나증권, (세전) 연 5.2% 수익률 특판 RP형 CMA 출시</dt>
-  <dd>하나증권은 하이브리드형 고객 상담 서비스 ‘프라임케어 라운지’를 확대 개편했다고 13일 밝혔다.</dd>
-  <dd>2023.02.15</dd>
-
-  <dt>하나증권, (세전) 연 5.2% 수익률 특판 RP형 CMA 출시</dt>
-  <dd>하나증권은 하이브리드형 고객 상담 서비스 ‘프라임케어 라운지’를 확대 개편했다고 13일 밝혔다.</dd>
-  <dd>2023.02.15</dd>
-  
-  </dl>
-
-  <ul class="faq_m">
-    <li>a</li>
-    <li>a</li>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>b</li>
-    <li>b</li>
-  </ul>
-
-
-</article>
-
-
-</main>
-
-
+}
+</script>
+  <!-- 푸터영역 서식 -->
+  <footer>
+    <!-- 탑버튼 서식 -->
+    <a href="#" title="상단으로바로가기" id="top_btn"><div class="t_btn_b"></div></a>
+    <div id="footer_wrap" class="flex">
+      <h2>
+        <a href="index.html" title="">
+          <img src="./images/common/header.logo.svg" alt="로고">
+        </a>
+      </h2>
+      <address class="flex">
+        <ul class="address_left">
+          <li>서울특별시 중구 을지로 00</li>
+          <li>00-0000-0000</li>
+          <li>Copyright &copy; HANA FINANCIAL GROUP 2012. ALL RIGHT RESERVED.</li>
+        </ul>
+        <ul class="address_right">
+          <li>
+            <a href="#none" title="하나맵">하나맵</a>
+          </li>
+          <li>
+            <a href="#none" title="개인정보처리방침">개인정보처리방침</a>
+          </li>
+          <li>
+            <a href="#none" title="고객정보취급방침">고객정보취급방침</a>
+          </li>
+          <li>
+            <a href="#none" title="신용정보취급활용체제">신용정보취급활용체제</a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </footer>
 </body>
 </html>
