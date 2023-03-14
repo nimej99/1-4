@@ -286,6 +286,9 @@ body{
 .strategy > article{
   position: relative;
 }
+.strategy > article > h2{
+  display: none;
+}
 .strategy > article > h3,p{
   z-index: 1;
 }
