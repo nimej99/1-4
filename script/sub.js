@@ -57,8 +57,9 @@ $(function(){
           // 값을 적용시키면서 다음 차례에 영향을 끼침
           now -= step;
         }, 50);
-        $('#m_nav li').find('span').eq(0).css('background-color', '#008177');  
       }
+      $('#m_nav li').find('span').eq(0).css('background-color', '#008177');  
+
       
     if(sPos>=930 && sPos<=1870) {
         // 카운트를 적용시킬 요소
@@ -151,13 +152,13 @@ $(function(){
       $('#m_nav li').find('span').eq(3).css('background-color', '#7B7B7B');
     }
 
-    if(sPos>=6170 && sPos<=7123){
+    if(sPos>=6170 && sPos<=7080){
       $('#m_nav li').find('span').eq(4).css('background-color', '#008177');
     }else{
       $('#m_nav li').find('span').eq(4).css('background-color', '#7B7B7B');
     }
 
-    if(sPos>=7126){
+    if(sPos>=7082){
       $('#m_nav li').find('span').eq(5).css('background-color', '#008177');
     }else{
       $('#m_nav li').find('span').eq(5).css('background-color', '#7B7B7B');
