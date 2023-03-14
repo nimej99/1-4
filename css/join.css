@@ -12,54 +12,81 @@ main{
 #join{
   height:calc(100vh - 336px);
   text-align: center;
+  width: 500px;
+  margin : 0 auto;
 }
 #join > h2{
-  font-size: 30px;
-  padding-top:60px;
+  font-size: 28px;
+  font-weight: bolder;
+  padding-top:50px;
   padding-bottom: 30px;
 }
 #join> p{
-  font-size: 18px;
+  font-size: 20px;
   color: #999999;
 }
 #j_wrap{
-  padding-top:20px;
-  width:400px;
+  padding:20px 0px;
+  width:500px;
   margin: 0 auto;
   flex-direction: column;
   text-align: left;
 }
 #j_wrap > input{
   height:50px;
-  margin:5px 0px;
+  margin:15px 0px;
   border:none;
   border-bottom: 1px solid #ddd;
+  font-size: 16px;
   text-indent: 10px;
 }
 #j_wrap > input:focus{
   outline-style:none; 
   border-bottom:1px solid var(--color-green); background:#fff;
 }
+label[for="u_agree"]{
+  cursor: pointer;
+}
+label[for="p_agree"]{
+  cursor: pointer;
+}
 #j_wrap > p{
   margin:5px 0px;
+  font-size: 16px;
+  white-space: nowrap;
 }
 #j_wrap > p:first-of-type{
-  margin-top:20px;
+  margin:10px 0px 10px 0px;
 }
-#j_wrap > p:last-of-type{
-  margin-bottom:20px;
-}
-#j_wrap #u_agree{
+
+#j_wrap #u_agree, #j_wrap #p_agree{
+  position: relative;
+  top: -2.5px;
+  width: 20px; height: 20px;
   accent-color: var(--color-red);
 }
-#j_wrap #p_agree{
-  accent-color: var(--color-red);
+.j_btnwrap{
+  position:relative;
+}
+#join #j_cancel{
+  width: 50%;
+  display: inline-block;
+  line-height: 55px;
+  text-align: center;
+  height: 55px;
+  background: #fff;
+  color: var(--color-green);
+  border: 2px solid var(--color-green);
+  font-size: 16px;
+  cursor:pointer;
 }
 #j_submit{
+  width: 50%;
+  height: 55px !important;
   background: var(--color-green);
   color:#fff;
   border:none;
-  font-size: 18px;
+  font-size:16px !important;
   cursor: pointer;
 }
 #j_submit:focus{

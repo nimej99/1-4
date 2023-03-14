@@ -1,29 +1,55 @@
+<!-- 회원가입 -->
+<?php
+  include('./db_conn.php'); //데이터베이스에 접근을 하기 위한 내용
+  if(isset($_SESSION['ss_mb_id'])&&$_GET['mode']=='modify'){
+    //세션이 있고 회원수정mode라면 회원정보를 가져온다.
+
+    $mb_id = $_SESSION['ss_mb_id'];//세션정보에서 아이디값을 변수에 담고
+    $sql = "SELECT * FROM member WHERE mb_id = '$mb_id'";//회원정보를 조회한다.
+    $result = mysqli_query($conn, $sql); //변수에 데이터접소정보와 조회데이터를 변수에 담아
+    $mb = mysqli_fetch_assoc($result); //반복문으로 돌려서 변수에 담아 아래에서 출력하도록한다
+    mysqli_close($conn);//데이터 베이스 접속 종료
+    $mode = "modify";
+    $title = "회원수정";
+    $modify_mb_info = "readonly";
+  }else{
+    $mode = "insert";
+    $title = "회원가입";
+    $modify_mb_info = '';
+    $mb = [
+      'mb_id' => '',
+      'mb_password' => '',
+      'mb_name' => ''
+    ];
+  }
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" type="image/x-icon" href="./images/common/favicon.ico">
+  <title>하나금융그룹</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/common/favicon.ico">
   <!-- 초기화 -->
   <link rel="stylesheet" href="./css/css_reset.css" type="text/css">
   <!-- 기본서식 -->
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <!-- 공통서식 -->
   <link rel="stylesheet" href="./css/m_common.css" type="text/css">
-  <!-- 로그인서식 -->
+  <!-- join서식 -->
   <link rel="stylesheet" href="./css/m_join.css" type="text/css">
   <!-- 폰트어썸CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
-  <title>모바일 회원가입</title>
+  <!-- script 영역 -->
+  <script src="./script/m_common.js" defer></script>
 </head>
 <body>
+
   <!-- 헤더영역 서식 -->
   <header>
     <input type="checkbox" id="m_lang" class="hidden">
-    <input type="checkbox" id="m_sitemap" class="hidden">
+    <input type="checkbox" id="m_gnb" class="hidden">
     <div id="m_header_wrap" class="flex">
 
       <h1>
@@ -43,7 +69,7 @@
       </div>
 
       <!-- 토글버튼 서식 -->
-      <label id="burger" for="m_sitemap">
+      <label id="burger" for="m_gnb">
         <span class="burger1">&nbsp;</span>
         <span class="burger2">&nbsp;</span>
         <span class="burger3">&nbsp;</span>
@@ -226,22 +252,22 @@
           <div class="m_lnb m_pr hidden">
             <ul>
               <li>
-                <a href="m_board.html" title="공지사항">
+                <a href="m_notice_list.php" title="공지사항">
                   공지사항
                 </a>
               </li>
               <li>
-                <a href="m_board.html" title="보도자료">
+                <a href="m_notice_list.php" title="보도자료">
                   보도자료
                 </a>
               </li>
               <li>
-                <a href="m_board.html" title="광고">
+                <a href="m_notice_list.php" title="광고">
                   광고
                 </a>
               </li>
               <li>
-                <a href="m_board.html" title="스포츠">
+                <a href="m_notice_list.php" title="스포츠">
                   스포츠
                 </a>
               </li>
@@ -334,12 +360,12 @@
           <div class="m_lnb m_member hidden">
             <ul>
               <li>
-                <a href="m_login.html" title="로그인바로가기">
+                <a href="m_login.php" title="로그인바로가기">
                   Login
                 </a>
               </li>
               <li>
-                <a href="m_join.html" title="회원가입바로가기">
+                <a href="m_register.php" title="회원가입바로가기">
                   Join
                 </a>
               </li>
@@ -350,18 +376,21 @@
     </div>
   </header>
 
-  <!-- 메인영역 서식 -->
-  <main>
+    <!-- 메인영역 서식 -->
+    <main>
     <article id="join">
-      <h2>회원가입</h2>
+      <h2><?php echo $title ?></h2>
       <p>하나금융 그룹의 다양한 서비스와 혜택을 누리세요.</p>
-      <form action="회원가입저장php" method="post" name="join">
+      <form action="./register_update.php" onsubmit="" method="post">
         <fieldset id="j_wrap" class="flex">
           <legend class="hidden">레전드 회원가입 폼</legend>
-          <input type="text" name="j_name" placeholder="이름">
-          <input type="text" name="j_id" placeholder="아이디">
-          <input type="password" name="j_pw" placeholder="패스워드">
-          <input type="password" name="j_pwc" placeholder="패스워드 확인">
+          <input type="hidden" name="mode" value="<?php echo $mode ?>"></input>
+          <!-- 이름 -->
+          <input type="text" placeholder='이름' name="mb_name" value="<?php echo $mb['mb_name'] ?>"<?php echo $modify_mb_info ?>>
+          <!-- 아이디 -->
+          <input type="text" placeholder='아이디' name="mb_id" value="<?php echo $mb['mb_id']?>" <?php echo $modify_mb_info ?>>
+          <!-- 비밀번호 -->
+          <input type="password" name="mb_password" placeholder='패스워드'>
           <p>
             <input type="checkbox" name="u_agree" id="u_agree">
             <label for="u_agree">서비스 이용약관에 동의합니다. (필수)</label>
@@ -370,13 +399,40 @@
             <input type="checkbox" name="p_agree" id="p_agree">
             <label for="p_agree">개인정보 수집이용과 처리방침에 동의합니다. (선택)</label>
           </p>
-          <input type="submit" name="j_submit" value="회원가입" id="j_submit">
         </fieldset>
+        <div class="j_btnwrap flex">
+          <a href="./m_login.php" id="j_cancel">취소</a>
+          <input type="submit" value="<?php echo $title ?>" id="j_submit">
+        </div>
       </form>
     </article>
   </main>
 
+  <script>
+function fregisterform_submit(f) { // submit 최종 폼체크
 
+   if (f.mb_id.value.length < 1) { // 회원아이디 검사
+      alert("아이디를 입력하십시오.");
+      f.mb_id.focus();
+      return false;
+   }
+
+   if (f.mb_name.value.length < 1) { // 이름 검사
+      alert("이름을 입력하십시오.");
+      f.mb_name.focus();
+      return false;
+   }
+
+   if (f.mb_password.value.length < 3) {
+      alert("비밀번호를 3글자 이상 입력하십시오.");
+      f.mb_password.focus();
+      return false;
+   }
+
+   return true;
+
+}
+</script>
   <!-- 푸터영역 서식 -->
   <footer>
   <!-- 탑버튼 서식 -->

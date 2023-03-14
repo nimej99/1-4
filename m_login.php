@@ -1,9 +1,13 @@
+<?php
+ include('./db_conn.php'); //db연결을 위한 같은 경로의 db_conn.php 를 인클루드한다.(import 느낌)
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하나금융그룹</title>
   <!-- 파비콘 -->
   <link rel="shortcut icon" type="image/x-icon" href="./images/common/favicon.ico">
   <!-- 초기화 -->
@@ -16,14 +20,13 @@
   <link rel="stylesheet" href="./css/m_login.css" type="text/css">
   <!-- 폰트어썸CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
-  <title>모바일 로그인</title>
+  <!-- script 영역 -->
 </head>
 <body>
   <!-- 헤더영역 서식 -->
   <header>
     <input type="checkbox" id="m_lang" class="hidden">
-    <input type="checkbox" id="m_sitemap" class="hidden">
+    <input type="checkbox" id="m_gnb" class="hidden">
     <div id="m_header_wrap" class="flex">
 
       <h1>
@@ -43,7 +46,7 @@
       </div>
 
       <!-- 토글버튼 서식 -->
-      <label id="burger" for="m_sitemap">
+      <label id="burger" for="m_gnb">
         <span class="burger1">&nbsp;</span>
         <span class="burger2">&nbsp;</span>
         <span class="burger3">&nbsp;</span>
@@ -127,11 +130,6 @@
               <li>
                 <a href="m_sub.html" title="기업아이덴티티">
                   기업 아이덴티티
-                </a>
-              </li>
-              <li>
-                <a href="m_sub.html" title="연혁">
-                  연혁
                 </a>
               </li>
               <li>
@@ -231,22 +229,22 @@
           <div class="m_lnb m_pr hidden">
             <ul>
               <li>
-                <a href="m_board.html" title="공지사항">
+                <a href="m_notice_list.php" title="공지사항">
                   공지사항
                 </a>
               </li>
               <li>
-                <a href="m_board.html" title="보도자료">
+                <a href="m_notice_list.php" title="보도자료">
                   보도자료
                 </a>
               </li>
               <li>
-                <a href="m_board.html" title="광고">
+                <a href="m_notice_list.php" title="광고">
                   광고
                 </a>
               </li>
               <li>
-                <a href="m_board.html" title="스포츠">
+                <a href="m_notice_list.php" title="스포츠">
                   스포츠
                 </a>
               </li>
@@ -339,12 +337,12 @@
           <div class="m_lnb m_member hidden">
             <ul>
               <li>
-                <a href="m_login.html" title="로그인바로가기">
+                <a href="m_login.php" title="로그인바로가기">
                   Login
                 </a>
               </li>
               <li>
-                <a href="m_join.html" title="회원가입바로가기">
+                <a href="m_register.php" title="회원가입바로가기">
                   Join
                 </a>
               </li>
@@ -357,27 +355,70 @@
 
   <!-- 메인영역 서식 -->
   <main>
+
+<?php if(!isset($_SESSION['ss_mb_id'])){ //로그인 세션이 없을 경우 로그인 화면 ?>
+
     <article id="login">
       <h2>로그인</h2>
       <p>하나금융 그룹에 오신 것을 환영합니다.</p>
-      <form action="로그인php" method="post" name="login">
+      <form name='login' method='post' action='./login_checkout.php'>
         <fieldset id="l_wrap" class="flex">
           <legend class="hidden">레전드 로그인 폼</legend>
-          <input type="text" name="l_id" placeholder="아이디">
-          <input type="password" name="l_pw" placeholder="패스워드">
+          <input type="text" name="mb_id" placeholder="아이디">
+          <input type="password" name="mb_password" placeholder="패스워드">
           <ul class="log_info flex">
             <li>
               <input type="checkbox" name="i_store" id="i_store">
               <label for="i_store">아이디 저장</label>
             </li>
             <li><a href="#">아이디/비밀번호 찾기&nbsp; </a></li>
-            <li><a href="#">| &nbsp;<span>회원가입</span></a></li>
+            <li><a href="./m_register.php" title='회원가입하기'>| &nbsp;<span>회원가입</span></a></li>
           </ul>
-          <input type="submit" name="l_submit" value="로그인" id="l_submit">
+          <input type="submit" value="로그인" id="l_submit">
         </fieldset>
       </form>
     </article>
-  </main>
+
+<?php } else { //로그인 세션이 없을경우 로그인 완료 화면 ?>
+
+
+<?php
+  $mb_id = $_SESSION['ss_mb_id'];
+
+  $sql = "select * from member where mb_id = trim('$mb_id')"; //데이터조회
+  $result = mysqli_query($conn, $sql); //조회한 결과를 변수에 담고
+  $mb = mysqli_fetch_assoc($result); //회원정보를 반복문을 통해 변수에 담는다.
+
+  mysqli_close($conn); //데이터 가져왔으니 더이상 필요없어서 종료함.
+?>
+<article class='user_info'>
+<h2 class='info_h2'>회원정보</h2>
+<table class="info_box">
+  <tr>
+    <th>아이디</th>
+    <td><?php echo $mb['mb_id'] ?></td>
+  </tr>
+  <tr>
+    <th>이름</th>
+    <td><?php echo $mb['mb_name'] ?></td>
+  </tr>
+  <tr>
+    <th>회원가입일</th>
+    <td><?php echo $mb['mb_datetime'] ?></td>
+  </tr>
+  <tr>
+    <th>회원정보 수정일</th>
+    <td><?php echo $mb['mb_modify_datetime'] ?></td>
+  </tr>
+</table>
+<p class='info_btn flex'>
+  <a href="./register.php?mode=modify" title='회원정보수정'>회원정보수정</a>
+  <a href="./logout.php" title='로그아웃'>로그아웃</a>
+</p>
+</article>
+<?php } ?>
+
+</main>
 
   <!-- 푸터영역 서식 -->
   <footer>
@@ -414,5 +455,6 @@
       </address>
     </div>
   </footer>
+
 </body>
 </html>

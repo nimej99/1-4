@@ -4,23 +4,23 @@
 header{
   background-color: #444;
 }
-
 main{
   padding-top:100px;
 }
 #login{
-  text-align: center;
-  width: 90%;
+  height:calc(100vh - 274px);
+  width: 400px;
   margin: 0 auto;
+  text-align: center;
 }
 #login h2{
-  font-size: 30px;
+  font-size: 28px;
   font-weight:bolder;
   padding-top: 100px;
   padding-bottom: 50px;
 }
 #login> p{
-  font-size: 18px;
+  font-size: 20px;
   color: #999999;
 }
 #l_wrap{
@@ -31,31 +31,41 @@ main{
   text-align: center;
 }
 #l_wrap > input{
-  width: 90%;
   height: 50px;
-  margin: 5px 0px;
+  margin: 15px 0px;
   border: none;
   border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  text-indent: 10px;
 }
 #l_wrap > input:focus{
   outline-style:none; 
   border-bottom:1px solid var(--color-green); background:#fff;
 }
+label[for="i_store"]{
+  cursor: pointer;
+}
 #i_store{
+  top:-2.5px;
+  position: relative;
+  width:20px; height:20px;
   accent-color: var(--color-red);
 }
 .log_info{
-  margin: 20px 0px;
+  margin: 30px 0px;
   position: relative;
-  font-size: 14px;
-  width: 90%;
+  align-items: center;
+}
+.log_info li{
+  font-size: 16px;
+  line-height: 20px;
 }
 .log_info > li:first-child{
   width: 30%;
-  text-align: end;
+  text-align: left;
 }
 .log_info > li:nth-child(2){
-  width: 45%;
+  width: 50%;
   text-align:end;
 }
 .log_info > li:nth-child(2)> a:hover{
@@ -63,7 +73,7 @@ main{
   font-weight: bold;
 }
 .log_info >li:last-child{
-  width: 25%;
+  width: 20%;
   text-align: end;
 }
 .log_info >li:last-child span:hover{
@@ -71,18 +81,101 @@ main{
   font-weight: bold;
 }
 
-  #l_wrap >p{
-    margin: 5px 0px;
-  }
   #l_submit{
+    margin-top: 40px !important;
+    height: 55px !important;
     background: var(--color-green);
     color: #fff;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px !important;
   }
   #l_submit:focus{
     background : var(--color-green) !important;
     border-bottom:1px solid #fff !important;
   }
 
+  /* 로그인 완료세션 회원정보 */
+  .user_info{
+    width: 400px;
+    height:calc(100vh - 274px);
+    margin:0 auto;
+  }
+  .user_info table{
+    width:100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  .info_h2{
+    text-align: center;
+    font-size: 24px;
+    padding:50px 0px 30px 0px;
+  }
+  .user_info tr{
+    width:100%;
+    height:40px;
+    line-height:50px;
+    text-align: center;
+  }
+  .user_info th, .user_info td{
+    font-size:16px;
+  }
+  .info_btn{
+    width:400px;
+    padding-top:30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .info_btn a:first-child{
+    padding-right:20px;
+  }
+    /* 회원정보 수정*/
+  .user_info >h2{
+    font-size: 24px;
+    padding-bottom: 50px;
+  }
+  .info_box{
+    background: #fff;
+    border-radius: 5px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 400px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .info_box th{
+    width: 30%;
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 55px;
+    color: #fff;
+    background-color: var(--color-green);
+  }
+  .info_box tr{
+    border-bottom: 2px solid #ececec;
+    box-sizing: border-box;
+    line-height: 55px;
+  }
+  .user_info .info_btn> a:first-child{
+    width: 50%;
+    display: inline-block;
+    line-height: 55px;
+    text-align: center;
+    height: 55px;
+    background: #fff;
+    color: var(--color-green);
+    border: 2px solid var(--color-green);
+    font-size:16px;
+    cursor:pointer;
+  }
+  .user_info .info_btn> a:last-child{
+    width: 50%;
+    height: 55px !important;
+    line-height: 55px;
+    text-align: center;
+    background: var(--color-green);
+    color:#fff;
+    border:none;
+    font-size: 16px !important;
+    cursor: pointer;
+  }
