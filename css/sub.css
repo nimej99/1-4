@@ -480,6 +480,11 @@ body{
   width: 100%;
   cursor: pointer;
 }
+.strategy #m_box1,
+.strategy #m_box2,
+.strategy #m_box3{
+  box-shadow: 0px 0px 10px #dfdfdf inset;
+}
 .strategy #m_box2{
   width: 100.1%;
   height: 100%;
@@ -498,6 +503,7 @@ body{
   top:150%;
   transition:0.5s;
   overflow:hidden;
+  border-bottom: shadow;
 }
 .strategy .hidden_box > div{
   display:flex;
