@@ -81,17 +81,6 @@ $(function(){
     }
 
 
-    // 비전과 미션 스와이퍼 슬라이드
-    let swiper = new Swiper('.swiper-container', {
-      autoplay : false,
-      loop : true,   // 슬라이드 반복 여부
-      loopAdditionalSlides : 1,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true, // 버튼 클릭 여부
-      },
-    });
-
      // 연혁 불 들어오게
     if(sPos>=2793){
       let dtIdx = 0;
@@ -182,6 +171,7 @@ $(function(){
     $('body').append(moDal);
     $('body').css('overflow', 'hidden');
     $('#top_btn').css('z-index', '1');
+    $('header').css('z-index', '1');
 
 
     $('.modal:not(.modal_wrap), .modal > .modal_wrap > #c_btn').click(function(){
@@ -189,5 +179,18 @@ $(function(){
         $('body').css('overflow','auto');
     });
   });
+
+  $(function(){
+    // 비전과 미션 스와이퍼 슬라이드
+    var swiper = new Swiper('.swiper-container', {
+      autoplay: false,
+      loop : true,   // 슬라이드 반복 여부
+      loopAdditionalSlides : 1,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true, // 버튼 클릭 여부
+      },
+    });
+});
 
 

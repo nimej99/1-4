@@ -14,3 +14,17 @@ var swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+//체크드 초기화
+let burgerBtn = document.querySelector('#burger');
+
+let tabCheck = document.getElementsByName('tac_check');
+let tabFirst = document.querySelector('#g_check');
+
+burgerBtn.addEventListener('click', function(){
+  if(tabFirst.checked == false){
+    tabFirst.checked = true;
+
+    tabCheck.checked = false;
+  }
+});

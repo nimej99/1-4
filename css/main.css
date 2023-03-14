@@ -7,6 +7,7 @@ main
 #main_slider{
   width:100%;
   height:calc(100vh + 100px);
+  height: calc(var(--vh, 1vh) * 100 + 100px);
 }
 .m_slider_list{
   width:100%;
@@ -14,6 +15,7 @@ main
 .m_slider_list li{
   width:100%;
   height:calc(100vh + 100px);
+  height: calc(var(--vh, 1vh) * 100 + 100px);
   position:absolute;
   transition:0.3s;
 }
@@ -26,6 +28,7 @@ main
 .m_slider_list li img{
   width:100%;
   height:calc(100vh + 100px);
+  height: calc(var(--vh, 1vh) * 100 + 100px);
   object-fit: cover;
 }
 
