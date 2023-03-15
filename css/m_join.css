@@ -62,6 +62,7 @@ label[for="p_agree"]{
 }
 .j_btnwrap{
   position:relative;
+  padding-bottom:50px;
 }
 #join #j_cancel{
   width: 50%;
