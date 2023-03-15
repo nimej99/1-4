@@ -254,9 +254,8 @@ header:hover #h_bot .gnb::after{
   width:100%;
 }
 .sitemap_wrap{
-  min-width:1260px;
-  width:100%;
-  padding-left:15%;
+  width:1260px;
+  margin:0 auto;
   flex-direction: column;
 }
 .sitemap_wrap > li{
@@ -267,15 +266,27 @@ header:hover #h_bot .gnb::after{
   line-height: 34px;
   margin-bottom:80px;
 }
+.sitemap_wrap > li:not(:first-child)::after{
+  content:'';
+  display:block;
+  width:1260px;
+  position:absolute;
+  border-top:1px solid rgba(0,0,0,0.2);
+  margin-top:-20px;
+}
 .sitemap_wrap > li > a{
   margin:0 50px;
+  white-space: nowrap;
+}
+.site_map2{
+  width:100%;
 }
 .site_map2 > li{
   font-family: 'Hana2.0';
   font-weight: 600;
   font-size:16px;
   line-height:36px;
-  margin:0 30px;
+  margin:0 64px;
 }
 .site_map2 a:hover, #member a:hover{
   color:var(--color-green);
