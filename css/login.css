@@ -11,8 +11,6 @@ main{
   padding-top:200px;
 }
 #login{
-  height: calc(100vh - 336px);
-  height: calc(var(--vh, 1vh) * 100 - 336px);
   text-align: center;
 }
 #login h2{
@@ -99,8 +97,6 @@ label[for="i_store"]{
   /* 로그인 완료세션 회원정보 */
   .user_info{
     width: 600px;
-    height: calc(100vh - 336px);
-    height: calc(var(--vh, 1vh) * 100 - 336px);
     margin:0 auto;
   }
   .user_info table{

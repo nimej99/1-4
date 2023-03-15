@@ -10,8 +10,6 @@ main{
   padding-top:200px;
 }
 #join{
-  height: calc(100vh - 336px);
-  height: calc(var(--vh, 1vh) * 100 - 336px);
   text-align: center;
   width: 500px;
   margin : 0 auto;

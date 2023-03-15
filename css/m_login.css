@@ -99,8 +99,6 @@ label[for="i_store"]{
   /* 로그인 완료세션 회원정보 */
   .user_info{
     width: 400px;
-    height:calc(100vh - 274px);
-    height: calc(var(--vh, 1vh) * 100 - 274px);
     margin:0 auto;
   }
   .user_info table{
