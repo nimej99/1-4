@@ -9,9 +9,6 @@
   min-width: 1260px;
 }
 /* 가로스크롤 없애기 */
-html{
-  scroll-behavior: smooth;
-}
 body{
   overflow-x: hidden;
 }
